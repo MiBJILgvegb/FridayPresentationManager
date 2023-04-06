@@ -11,7 +11,10 @@ namespace FridayPresentationManager
         internal readonly static string[] presentationEXT = { ".ppt",".pdf" };
         internal readonly static string imagesEXT = ".png";
 
-        internal readonly static string imagesDefaultPhoto = "default" + imagesEXT;
+        internal readonly static string imagesDefaultPhoto = "_default" /*+ imagesEXT*/;
+        internal readonly static string imagesErrorPhoto = "err" /*+ imagesEXT*/;
+        internal readonly static string imagesCurrentPhoto = "cur" /*+ imagesEXT*/;
+        internal readonly static string imagesOKPhoto = "ok" /*+ imagesEXT*/;
 
         internal readonly static string iniConfigFileName = "config.ini";
         internal readonly static string configSectionsName_deputyfio = "deputyfio";

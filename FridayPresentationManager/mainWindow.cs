@@ -51,7 +51,7 @@ namespace FridayPresentationManager
                     Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + departmentName.Key] as PictureBox), image);
                 }
 
-                Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + departmentName.Key + "Marker"] as PictureBox), (Image)Properties.Resources.ResourceManager.GetObject("err"));
+                Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + departmentName.Key + "Marker"] as PictureBox), (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesErrorPhoto));
             }
         }
         private void InitializeINIParameters()
@@ -140,13 +140,13 @@ namespace FridayPresentationManager
         {
             foreach(var deputy in varDepartmentsNamesToDeputyNames)
             {
-                Gui.SetPicture(this.Controls["gbDeputyList"].Controls["pb" + deputy.Key + "Marker"] as PictureBox, Images.Properties.Resources.err);
+                Gui.SetPicture(this.Controls["gbDeputyList"].Controls["pb" + deputy.Key + "Marker"] as PictureBox, (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesErrorPhoto));
                 (this.Controls["gbDeputyList"].Controls["pb" + deputy.Key] as PictureBox).MouseClick += null;
             }
         }
         private void SetCurrentPresentationMarker(string deputyPBName)
         {
-            (this.Controls["gbDeputyList"].Controls[deputyPBName + "Marker"] as PictureBox).Image = Images.Properties.Resources.cur;
+            (this.Controls["gbDeputyList"].Controls[deputyPBName + "Marker"] as PictureBox).Image = (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesCurrentPhoto);
         }
         //============================================================================================
         internal bool PreparePresentationList(string path)
@@ -225,7 +225,7 @@ namespace FridayPresentationManager
             {
                 if (presentation.Value.Length > 0)
                 {
-                    Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + presentation.Key + "Marker"] as PictureBox), Images.Properties.Resources.ok);
+                    Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + presentation.Key + "Marker"] as PictureBox), (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesOKPhoto));
                 }
             }
         }

@@ -20,20 +20,27 @@ namespace FridayPresentationManager
         }
         private void InitializePreviosSettings()
         {
-            for(int i=0;i< MainWindow.mainWindow.varNamesToRealFIO.Count;i++)
-            //foreach(var deputyPair in MainWindow.mainWindow.varNamesToRealFIO)
+            for(int i=0;i< MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.Count;i++)
+            //foreach (var nameToRealFIO in MainWindow.mainWindow.varNamesToRealFIO)
             {
-                //MainWindow.mainWindow.varNamesToRealFIO[MainWindow.mainWindow.varIntToNames[i]]
-                this.Controls["tb"+ MainWindow.mainWindow.varIntToNames[i] + "_FIO"].Text= MainWindow.mainWindow.varNamesToRealFIO[MainWindow.mainWindow.varIntToNames[i]];
+                this.Controls["tb"+ MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key+"_FIO"].Text= MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Value;
+                this.Controls["tbFirstDeputyOf" + MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key+"_FIO"].Text= MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Value;
+                this.Controls["tbDeputyOf" + MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key+"_FIO"].Text= MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Value;
             }
         }
-        private void SaveInfo(Dictionary<string, string> info)
+        private void SaveInfo()
         {
             IniFiles INI = new IniFiles(Consts.iniConfigFileName);
 
-            foreach(var fio in info)
+            for(int i=0;i<MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.Count;i++)
             {
-                INI.Write("deputyfio",fio.Key,fio.Value);
+                INI.Write(Consts.configSectionsName_deputyfio, MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key, this.Controls["tb" + MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key + "_FIO"].Text);
+                INI.Write(Consts.configSectionsName_firstdeputyfio, MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key, this.Controls["tbFirstDeputyOf" + MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text);
+                INI.Write(Consts.configSectionsName_deputydeputyfio, MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key, this.Controls["tbDeputyOf" + MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text);
+
+                MainWindow.mainWindow.varDepartmentsNamesToDeputyNames[MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key] = this.Controls["tb" + MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key + "_FIO"].Text;
+                MainWindow.mainWindow.varFirstDeputyDeputyNames[MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key] = this.Controls["tb" + MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text;
+                MainWindow.mainWindow.varDeputyDeputyNames[MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key] = this.Controls["tb" + MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text;
             }
         }
         private void bExit_Click(object sender, EventArgs e)
@@ -43,14 +50,14 @@ namespace FridayPresentationManager
 
         private void bSave_Click(object sender, EventArgs e)
         {
-            SaveInfo(MainWindow.mainWindow.varNamesToRealFIO);
+            SaveInfo();
             Close();
         }
         private void DeputyFIOChange(TextBox textBox)
         {
             string dictKey = textBox.Name.Substring(2, textBox.Name.IndexOf('_') - 2);
 
-            MainWindow.mainWindow.varNamesToRealFIO[dictKey] = textBox.Text;
+            MainWindow.mainWindow.varDepartmentsNamesToDeputyNames[dictKey] = textBox.Text;
         }
         private void tbDeputyFIO_TextChanged(object sender, EventArgs e)
         {

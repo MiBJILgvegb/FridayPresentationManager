@@ -37,8 +37,8 @@ namespace FridayPresentationManager
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lvDeputyList = new System.Windows.Forms.ListView();
-            this.cbDeputyFilter = new System.Windows.Forms.ComboBox();
+            this.lbPresentationsDatesList = new System.Windows.Forms.ListBox();
+            this.cbPresentationByYearsFilter = new System.Windows.Forms.ComboBox();
             this.pbDeputyOfCityDistrictMarker = new System.Windows.Forms.PictureBox();
             this.pbDeputyOfCityDistrict = new System.Windows.Forms.PictureBox();
             this.pbDeputyOfPropertyRelationsMarker = new System.Windows.Forms.PictureBox();
@@ -57,11 +57,19 @@ namespace FridayPresentationManager
             this.pbDeputyOfEconomicDevelopment = new System.Windows.Forms.PictureBox();
             this.pbDeputyOfFinancePolicy = new System.Windows.Forms.PictureBox();
             this.gbDeputyList = new System.Windows.Forms.GroupBox();
+            this.pbEDDS = new System.Windows.Forms.PictureBox();
+            this.pbEDDSMarker = new System.Windows.Forms.PictureBox();
             this.pbGlava = new System.Windows.Forms.PictureBox();
             this.pbGlavaMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfMCU = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfMCUMarker = new System.Windows.Forms.PictureBox();
+            this.pbMCU = new System.Windows.Forms.PictureBox();
+            this.pbMCUMarker = new System.Windows.Forms.PictureBox();
             this.pbDeputyOfAPK = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbPresentationsFolderPath = new System.Windows.Forms.TextBox();
+            this.bExploreFolder = new System.Windows.Forms.Button();
+            this.bBrowseFolder = new System.Windows.Forms.Button();
+            this.folderPresentationsDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.presentationsNamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrictMarker)).BeginInit();
@@ -82,10 +90,12 @@ namespace FridayPresentationManager
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfEconomicDevelopment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfFinancePolicy)).BeginInit();
             this.gbDeputyList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEDDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEDDSMarker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlava)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlavaMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfMCU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfMCUMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMCU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMCUMarker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAPK)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +113,8 @@ namespace FridayPresentationManager
             // administrationToolStripMenuItem
             // 
             this.administrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deputyToolStripMenuItem});
+            this.deputyToolStripMenuItem,
+            this.presentationsNamesToolStripMenuItem});
             this.administrationToolStripMenuItem.Name = "administrationToolStripMenuItem";
             this.administrationToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.administrationToolStripMenuItem.Text = "Администрирование";
@@ -111,7 +122,7 @@ namespace FridayPresentationManager
             // deputyToolStripMenuItem
             // 
             this.deputyToolStripMenuItem.Name = "deputyToolStripMenuItem";
-            this.deputyToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.deputyToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.deputyToolStripMenuItem.Text = "Заместители";
             this.deputyToolStripMenuItem.Click += new System.EventHandler(this.deputyToolStripMenuItem_Click);
             // 
@@ -124,42 +135,50 @@ namespace FridayPresentationManager
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 655);
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(0, 604);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(800, 22);
             this.progressBar1.TabIndex = 1;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lvDeputyList);
-            this.groupBox1.Controls.Add(this.cbDeputyFilter);
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.lbPresentationsDatesList);
+            this.groupBox1.Controls.Add(this.cbPresentationByYearsFilter);
             this.groupBox1.Location = new System.Drawing.Point(0, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 628);
+            this.groupBox1.Size = new System.Drawing.Size(237, 577);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // lvDeputyList
+            // lbPresentationsDatesList
             // 
-            this.lvDeputyList.HideSelection = false;
-            this.lvDeputyList.Location = new System.Drawing.Point(6, 37);
-            this.lvDeputyList.Name = "lvDeputyList";
-            this.lvDeputyList.Size = new System.Drawing.Size(231, 585);
-            this.lvDeputyList.TabIndex = 1;
-            this.lvDeputyList.UseCompatibleStateImageBehavior = false;
-            this.lvDeputyList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvDeputyList_MouseUp);
+            this.lbPresentationsDatesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPresentationsDatesList.FormattingEnabled = true;
+            this.lbPresentationsDatesList.Location = new System.Drawing.Point(6, 37);
+            this.lbPresentationsDatesList.Name = "lbPresentationsDatesList";
+            this.lbPresentationsDatesList.Size = new System.Drawing.Size(225, 537);
+            this.lbPresentationsDatesList.TabIndex = 1;
+            this.lbPresentationsDatesList.SelectedIndexChanged += new System.EventHandler(this.lbPresentationsDatesList_SelectedIndexChanged);
             // 
-            // cbDeputyFilter
+            // cbPresentationByYearsFilter
             // 
-            this.cbDeputyFilter.FormattingEnabled = true;
-            this.cbDeputyFilter.Location = new System.Drawing.Point(6, 10);
-            this.cbDeputyFilter.Name = "cbDeputyFilter";
-            this.cbDeputyFilter.Size = new System.Drawing.Size(231, 21);
-            this.cbDeputyFilter.TabIndex = 0;
+            this.cbPresentationByYearsFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbPresentationByYearsFilter.FormattingEnabled = true;
+            this.cbPresentationByYearsFilter.Location = new System.Drawing.Point(6, 10);
+            this.cbPresentationByYearsFilter.Name = "cbPresentationByYearsFilter";
+            this.cbPresentationByYearsFilter.Size = new System.Drawing.Size(225, 21);
+            this.cbPresentationByYearsFilter.TabIndex = 0;
+            this.cbPresentationByYearsFilter.SelectedIndexChanged += new System.EventHandler(this.cbPresentationByYearsFilter_SelectedIndexChanged);
             // 
             // pbDeputyOfCityDistrictMarker
             // 
-            this.pbDeputyOfCityDistrictMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfCityDistrictMarker.Image")));
             this.pbDeputyOfCityDistrictMarker.Location = new System.Drawing.Point(1, 51);
             this.pbDeputyOfCityDistrictMarker.Name = "pbDeputyOfCityDistrictMarker";
             this.pbDeputyOfCityDistrictMarker.Size = new System.Drawing.Size(90, 90);
@@ -169,18 +188,15 @@ namespace FridayPresentationManager
             // pbDeputyOfCityDistrict
             // 
             this.pbDeputyOfCityDistrict.AllowDrop = true;
-            this.pbDeputyOfCityDistrict.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfCityDistrict.Image")));
             this.pbDeputyOfCityDistrict.Location = new System.Drawing.Point(6, 56);
             this.pbDeputyOfCityDistrict.Name = "pbDeputyOfCityDistrict";
             this.pbDeputyOfCityDistrict.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfCityDistrict.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfCityDistrict.TabIndex = 12;
             this.pbDeputyOfCityDistrict.TabStop = false;
-            this.pbDeputyOfCityDistrict.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfPropertyRelationsMarker
             // 
-            this.pbDeputyOfPropertyRelationsMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfPropertyRelationsMarker.Image")));
             this.pbDeputyOfPropertyRelationsMarker.Location = new System.Drawing.Point(1, 142);
             this.pbDeputyOfPropertyRelationsMarker.Name = "pbDeputyOfPropertyRelationsMarker";
             this.pbDeputyOfPropertyRelationsMarker.Size = new System.Drawing.Size(90, 90);
@@ -189,7 +205,6 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfSecurityCouncilMarker
             // 
-            this.pbDeputyOfSecurityCouncilMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfSecurityCouncilMarker.Image")));
             this.pbDeputyOfSecurityCouncilMarker.Location = new System.Drawing.Point(1, 233);
             this.pbDeputyOfSecurityCouncilMarker.Name = "pbDeputyOfSecurityCouncilMarker";
             this.pbDeputyOfSecurityCouncilMarker.Size = new System.Drawing.Size(90, 90);
@@ -198,7 +213,6 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfJKHMarker
             // 
-            this.pbDeputyOfJKHMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfJKHMarker.Image")));
             this.pbDeputyOfJKHMarker.Location = new System.Drawing.Point(1, 324);
             this.pbDeputyOfJKHMarker.Name = "pbDeputyOfJKHMarker";
             this.pbDeputyOfJKHMarker.Size = new System.Drawing.Size(90, 90);
@@ -208,42 +222,36 @@ namespace FridayPresentationManager
             // pbDeputyOfPropertyRelations
             // 
             this.pbDeputyOfPropertyRelations.AllowDrop = true;
-            this.pbDeputyOfPropertyRelations.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfPropertyRelations.Image")));
             this.pbDeputyOfPropertyRelations.Location = new System.Drawing.Point(6, 147);
             this.pbDeputyOfPropertyRelations.Name = "pbDeputyOfPropertyRelations";
             this.pbDeputyOfPropertyRelations.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfPropertyRelations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfPropertyRelations.TabIndex = 16;
             this.pbDeputyOfPropertyRelations.TabStop = false;
-            this.pbDeputyOfPropertyRelations.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfSecurityCouncil
             // 
             this.pbDeputyOfSecurityCouncil.AllowDrop = true;
-            this.pbDeputyOfSecurityCouncil.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfSecurityCouncil.Image")));
             this.pbDeputyOfSecurityCouncil.Location = new System.Drawing.Point(6, 238);
             this.pbDeputyOfSecurityCouncil.Name = "pbDeputyOfSecurityCouncil";
             this.pbDeputyOfSecurityCouncil.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfSecurityCouncil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfSecurityCouncil.TabIndex = 17;
             this.pbDeputyOfSecurityCouncil.TabStop = false;
-            this.pbDeputyOfSecurityCouncil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfJKH
             // 
             this.pbDeputyOfJKH.AllowDrop = true;
-            this.pbDeputyOfJKH.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfJKH.Image")));
             this.pbDeputyOfJKH.Location = new System.Drawing.Point(6, 329);
             this.pbDeputyOfJKH.Name = "pbDeputyOfJKH";
             this.pbDeputyOfJKH.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfJKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfJKH.TabIndex = 18;
             this.pbDeputyOfJKH.TabStop = false;
-            this.pbDeputyOfJKH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfAKRMarker
             // 
-            this.pbDeputyOfAKRMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfAKRMarker.Image")));
+            this.pbDeputyOfAKRMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfAKRMarker.Location = new System.Drawing.Point(466, 51);
             this.pbDeputyOfAKRMarker.Name = "pbDeputyOfAKRMarker";
             this.pbDeputyOfAKRMarker.Size = new System.Drawing.Size(90, 90);
@@ -252,7 +260,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfSocialDevelopmentMarker
             // 
-            this.pbDeputyOfSocialDevelopmentMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfSocialDevelopmentMarker.Image")));
+            this.pbDeputyOfSocialDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfSocialDevelopmentMarker.Location = new System.Drawing.Point(466, 142);
             this.pbDeputyOfSocialDevelopmentMarker.Name = "pbDeputyOfSocialDevelopmentMarker";
             this.pbDeputyOfSocialDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
@@ -261,7 +269,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfEconomicDevelopmentMarker
             // 
-            this.pbDeputyOfEconomicDevelopmentMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfEconomicDevelopmentMarker.Image")));
+            this.pbDeputyOfEconomicDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfEconomicDevelopmentMarker.Location = new System.Drawing.Point(466, 233);
             this.pbDeputyOfEconomicDevelopmentMarker.Name = "pbDeputyOfEconomicDevelopmentMarker";
             this.pbDeputyOfEconomicDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
@@ -270,7 +278,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfFinancePolicyMarker
             // 
-            this.pbDeputyOfFinancePolicyMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfFinancePolicyMarker.Image")));
+            this.pbDeputyOfFinancePolicyMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfFinancePolicyMarker.Location = new System.Drawing.Point(466, 324);
             this.pbDeputyOfFinancePolicyMarker.Name = "pbDeputyOfFinancePolicyMarker";
             this.pbDeputyOfFinancePolicyMarker.Size = new System.Drawing.Size(90, 90);
@@ -279,7 +287,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfAPKMarker
             // 
-            this.pbDeputyOfAPKMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfAPKMarker.Image")));
+            this.pbDeputyOfAPKMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfAPKMarker.Location = new System.Drawing.Point(466, 415);
             this.pbDeputyOfAPKMarker.Name = "pbDeputyOfAPKMarker";
             this.pbDeputyOfAPKMarker.Size = new System.Drawing.Size(90, 90);
@@ -289,43 +297,40 @@ namespace FridayPresentationManager
             // pbDeputyOfAKR
             // 
             this.pbDeputyOfAKR.AllowDrop = true;
-            this.pbDeputyOfAKR.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfAKR.Image")));
+            this.pbDeputyOfAKR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfAKR.Location = new System.Drawing.Point(471, 56);
             this.pbDeputyOfAKR.Name = "pbDeputyOfAKR";
             this.pbDeputyOfAKR.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfAKR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfAKR.TabIndex = 24;
             this.pbDeputyOfAKR.TabStop = false;
-            this.pbDeputyOfAKR.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfSocialDevelopment
             // 
             this.pbDeputyOfSocialDevelopment.AllowDrop = true;
-            this.pbDeputyOfSocialDevelopment.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfSocialDevelopment.Image")));
+            this.pbDeputyOfSocialDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfSocialDevelopment.Location = new System.Drawing.Point(471, 147);
             this.pbDeputyOfSocialDevelopment.Name = "pbDeputyOfSocialDevelopment";
             this.pbDeputyOfSocialDevelopment.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfSocialDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfSocialDevelopment.TabIndex = 25;
             this.pbDeputyOfSocialDevelopment.TabStop = false;
-            this.pbDeputyOfSocialDevelopment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfEconomicDevelopment
             // 
             this.pbDeputyOfEconomicDevelopment.AllowDrop = true;
-            this.pbDeputyOfEconomicDevelopment.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfEconomicDevelopment.Image")));
+            this.pbDeputyOfEconomicDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfEconomicDevelopment.Location = new System.Drawing.Point(471, 238);
             this.pbDeputyOfEconomicDevelopment.Name = "pbDeputyOfEconomicDevelopment";
             this.pbDeputyOfEconomicDevelopment.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfEconomicDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfEconomicDevelopment.TabIndex = 26;
             this.pbDeputyOfEconomicDevelopment.TabStop = false;
-            this.pbDeputyOfEconomicDevelopment.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // pbDeputyOfFinancePolicy
             // 
             this.pbDeputyOfFinancePolicy.AllowDrop = true;
-            this.pbDeputyOfFinancePolicy.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfFinancePolicy.Image")));
+            this.pbDeputyOfFinancePolicy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfFinancePolicy.Location = new System.Drawing.Point(471, 329);
             this.pbDeputyOfFinancePolicy.Name = "pbDeputyOfFinancePolicy";
             this.pbDeputyOfFinancePolicy.Size = new System.Drawing.Size(80, 80);
@@ -336,10 +341,14 @@ namespace FridayPresentationManager
             // 
             // gbDeputyList
             // 
+            this.gbDeputyList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDeputyList.Controls.Add(this.pbEDDS);
+            this.gbDeputyList.Controls.Add(this.pbEDDSMarker);
             this.gbDeputyList.Controls.Add(this.pbGlava);
             this.gbDeputyList.Controls.Add(this.pbGlavaMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfMCU);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfMCUMarker);
+            this.gbDeputyList.Controls.Add(this.pbMCU);
+            this.gbDeputyList.Controls.Add(this.pbMCUMarker);
             this.gbDeputyList.Controls.Add(this.pbDeputyOfAPK);
             this.gbDeputyList.Controls.Add(this.pbDeputyOfFinancePolicy);
             this.gbDeputyList.Controls.Add(this.pbDeputyOfEconomicDevelopment);
@@ -360,9 +369,27 @@ namespace FridayPresentationManager
             this.gbDeputyList.Controls.Add(this.pbDeputyOfCityDistrictMarker);
             this.gbDeputyList.Location = new System.Drawing.Point(243, 27);
             this.gbDeputyList.Name = "gbDeputyList";
-            this.gbDeputyList.Size = new System.Drawing.Size(557, 628);
+            this.gbDeputyList.Size = new System.Drawing.Size(557, 539);
             this.gbDeputyList.TabIndex = 3;
             this.gbDeputyList.TabStop = false;
+            // 
+            // pbEDDS
+            // 
+            this.pbEDDS.AllowDrop = true;
+            this.pbEDDS.Location = new System.Drawing.Point(102, 238);
+            this.pbEDDS.Name = "pbEDDS";
+            this.pbEDDS.Size = new System.Drawing.Size(80, 80);
+            this.pbEDDS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEDDS.TabIndex = 34;
+            this.pbEDDS.TabStop = false;
+            // 
+            // pbEDDSMarker
+            // 
+            this.pbEDDSMarker.Location = new System.Drawing.Point(97, 233);
+            this.pbEDDSMarker.Name = "pbEDDSMarker";
+            this.pbEDDSMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbEDDSMarker.TabIndex = 33;
+            this.pbEDDSMarker.TabStop = false;
             // 
             // pbGlava
             // 
@@ -383,44 +410,91 @@ namespace FridayPresentationManager
             this.pbGlavaMarker.TabIndex = 31;
             this.pbGlavaMarker.TabStop = false;
             // 
-            // pbDeputyOfMCU
+            // pbMCU
             // 
-            this.pbDeputyOfMCU.AllowDrop = true;
-            this.pbDeputyOfMCU.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfMCU.Image")));
-            this.pbDeputyOfMCU.Location = new System.Drawing.Point(6, 542);
-            this.pbDeputyOfMCU.Name = "pbDeputyOfMCU";
-            this.pbDeputyOfMCU.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfMCU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfMCU.TabIndex = 30;
-            this.pbDeputyOfMCU.TabStop = false;
-            this.pbDeputyOfMCU.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
+            this.pbMCU.AllowDrop = true;
+            this.pbMCU.Location = new System.Drawing.Point(6, 448);
+            this.pbMCU.Name = "pbMCU";
+            this.pbMCU.Size = new System.Drawing.Size(80, 80);
+            this.pbMCU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMCU.TabIndex = 30;
+            this.pbMCU.TabStop = false;
             // 
-            // pbDeputyOfMCUMarker
+            // pbMCUMarker
             // 
-            this.pbDeputyOfMCUMarker.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfMCUMarker.Image")));
-            this.pbDeputyOfMCUMarker.Location = new System.Drawing.Point(1, 537);
-            this.pbDeputyOfMCUMarker.Name = "pbDeputyOfMCUMarker";
-            this.pbDeputyOfMCUMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfMCUMarker.TabIndex = 29;
-            this.pbDeputyOfMCUMarker.TabStop = false;
+            this.pbMCUMarker.Location = new System.Drawing.Point(1, 443);
+            this.pbMCUMarker.Name = "pbMCUMarker";
+            this.pbMCUMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbMCUMarker.TabIndex = 29;
+            this.pbMCUMarker.TabStop = false;
             // 
             // pbDeputyOfAPK
             // 
             this.pbDeputyOfAPK.AllowDrop = true;
-            this.pbDeputyOfAPK.Image = ((System.Drawing.Image)(resources.GetObject("pbDeputyOfAPK.Image")));
+            this.pbDeputyOfAPK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbDeputyOfAPK.Location = new System.Drawing.Point(471, 420);
             this.pbDeputyOfAPK.Name = "pbDeputyOfAPK";
             this.pbDeputyOfAPK.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfAPK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfAPK.TabIndex = 28;
             this.pbDeputyOfAPK.TabStop = false;
-            this.pbDeputyOfAPK.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(240, 578);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Корневая папка с презентациями";
+            // 
+            // tbPresentationsFolderPath
+            // 
+            this.tbPresentationsFolderPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPresentationsFolderPath.Enabled = false;
+            this.tbPresentationsFolderPath.Location = new System.Drawing.Point(429, 575);
+            this.tbPresentationsFolderPath.Name = "tbPresentationsFolderPath";
+            this.tbPresentationsFolderPath.Size = new System.Drawing.Size(303, 20);
+            this.tbPresentationsFolderPath.TabIndex = 5;
+            // 
+            // bExploreFolder
+            // 
+            this.bExploreFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bExploreFolder.Location = new System.Drawing.Point(769, 572);
+            this.bExploreFolder.Name = "bExploreFolder";
+            this.bExploreFolder.Size = new System.Drawing.Size(25, 25);
+            this.bExploreFolder.TabIndex = 6;
+            this.bExploreFolder.Text = "...";
+            this.bExploreFolder.UseVisualStyleBackColor = true;
+            // 
+            // bBrowseFolder
+            // 
+            this.bBrowseFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bBrowseFolder.Image = ((System.Drawing.Image)(resources.GetObject("bBrowseFolder.Image")));
+            this.bBrowseFolder.Location = new System.Drawing.Point(738, 572);
+            this.bBrowseFolder.Name = "bBrowseFolder";
+            this.bBrowseFolder.Size = new System.Drawing.Size(25, 25);
+            this.bBrowseFolder.TabIndex = 7;
+            this.bBrowseFolder.Text = "...";
+            this.bBrowseFolder.UseVisualStyleBackColor = true;
+            // 
+            // presentationsNamesToolStripMenuItem
+            // 
+            this.presentationsNamesToolStripMenuItem.Name = "presentationsNamesToolStripMenuItem";
+            this.presentationsNamesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.presentationsNamesToolStripMenuItem.Text = "Названия презентаций";
+            this.presentationsNamesToolStripMenuItem.Click += new System.EventHandler(this.presentationsNamesToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 678);
+            this.ClientSize = new System.Drawing.Size(800, 627);
+            this.Controls.Add(this.bBrowseFolder);
+            this.Controls.Add(this.bExploreFolder);
+            this.Controls.Add(this.tbPresentationsFolderPath);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gbDeputyList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.progressBar1);
@@ -450,10 +524,12 @@ namespace FridayPresentationManager
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfEconomicDevelopment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfFinancePolicy)).EndInit();
             this.gbDeputyList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbEDDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEDDSMarker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlava)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlavaMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfMCU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfMCUMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMCU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMCUMarker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAPK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -468,8 +544,6 @@ namespace FridayPresentationManager
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView lvDeputyList;
-        private System.Windows.Forms.ComboBox cbDeputyFilter;
         internal PictureBox pbDeputyOfCityDistrictMarker;
         internal PictureBox pbDeputyOfCityDistrict;
         internal PictureBox pbDeputyOfPropertyRelationsMarker;
@@ -490,9 +564,20 @@ namespace FridayPresentationManager
         private GroupBox gbDeputyList;
         internal PictureBox pbGlava;
         internal PictureBox pbGlavaMarker;
-        internal PictureBox pbDeputyOfMCU;
-        internal PictureBox pbDeputyOfMCUMarker;
+        internal PictureBox pbMCU;
+        internal PictureBox pbMCUMarker;
         internal PictureBox pbDeputyOfAPK;
+        private Label label1;
+        private TextBox tbPresentationsFolderPath;
+        private Button bExploreFolder;
+        private Button bBrowseFolder;
+        private FolderBrowserDialog folderPresentationsDialog;
+        internal ListBox lbPresentationsDatesList;
+        internal PictureBox pbEDDS;
+        internal PictureBox pbEDDSMarker;
+        internal ComboBox cbPresentationByYearsFilter;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem presentationsNamesToolStripMenuItem;
     }
 }
 

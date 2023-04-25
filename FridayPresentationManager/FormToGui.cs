@@ -20,7 +20,7 @@ namespace FridayPresentationManager
             if(!order) i=items.Count()-1;
             for(int z = 0; z < items.Count(); z++)
             {
-                MainWindowFolderFilter_Add(items[i]);
+                if (items[i].Length > 0) { MainWindowFolderFilter_Add(items[i]); }
                 if (order) { i++; }
                 else { i--; }
             }

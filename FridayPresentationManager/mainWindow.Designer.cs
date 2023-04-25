@@ -30,10 +30,12 @@ namespace FridayPresentationManager
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deputyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presentationsNamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,7 +71,7 @@ namespace FridayPresentationManager
             this.bExploreFolder = new System.Windows.Forms.Button();
             this.bBrowseFolder = new System.Windows.Forms.Button();
             this.folderPresentationsDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.presentationsNamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsPB = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrictMarker)).BeginInit();
@@ -125,6 +127,13 @@ namespace FridayPresentationManager
             this.deputyToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.deputyToolStripMenuItem.Text = "Заместители";
             this.deputyToolStripMenuItem.Click += new System.EventHandler(this.deputyToolStripMenuItem_Click);
+            // 
+            // presentationsNamesToolStripMenuItem
+            // 
+            this.presentationsNamesToolStripMenuItem.Name = "presentationsNamesToolStripMenuItem";
+            this.presentationsNamesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.presentationsNamesToolStripMenuItem.Text = "Названия презентаций";
+            this.presentationsNamesToolStripMenuItem.Click += new System.EventHandler(this.presentationsNamesToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -337,7 +346,6 @@ namespace FridayPresentationManager
             this.pbDeputyOfFinancePolicy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDeputyOfFinancePolicy.TabIndex = 27;
             this.pbDeputyOfFinancePolicy.TabStop = false;
-            this.pbDeputyOfFinancePolicy.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbDeputy_MouseClick);
             // 
             // gbDeputyList
             // 
@@ -479,12 +487,10 @@ namespace FridayPresentationManager
             this.bBrowseFolder.Text = "...";
             this.bBrowseFolder.UseVisualStyleBackColor = true;
             // 
-            // presentationsNamesToolStripMenuItem
+            // cmsPB
             // 
-            this.presentationsNamesToolStripMenuItem.Name = "presentationsNamesToolStripMenuItem";
-            this.presentationsNamesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.presentationsNamesToolStripMenuItem.Text = "Названия презентаций";
-            this.presentationsNamesToolStripMenuItem.Click += new System.EventHandler(this.presentationsNamesToolStripMenuItem_Click);
+            this.cmsPB.Name = "cmsPB";
+            this.cmsPB.Size = new System.Drawing.Size(61, 4);
             // 
             // MainWindow
             // 
@@ -578,6 +584,7 @@ namespace FridayPresentationManager
         internal ComboBox cbPresentationByYearsFilter;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem presentationsNamesToolStripMenuItem;
+        internal ContextMenuStrip cmsPB;
     }
 }
 

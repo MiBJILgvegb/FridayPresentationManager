@@ -108,20 +108,17 @@ namespace FridayPresentationManager
 
                 //получаем список предустановленных имен для презентаций
                 varDeputyPresentationsNames[departmentName] = "";
-                if (varDepartmentsNamesToDeputyNames[departmentName].Length > 0) { varDeputyPresentationsNames[departmentName] = varDepartmentsNamesToDeputyNames[departmentName]; }
-                else if (varFirstDeputyDeputyNames[departmentName].Length > 0) { varDeputyPresentationsNames[departmentName] = varDepartmentsNamesToDeputyNames[departmentName]; }
-                else if (varDeputyDeputyNames[departmentName].Length > 0) { varDeputyPresentationsNames[departmentName] = varDeputyDeputyNames[departmentName]; }
                 if(INI.KeyExists(Consts.configSectionsName_presentationsNames, departmentName))
                 {
                     varDeputyPresentationsNames[departmentName] = INI.ReadINI(Consts.configSectionsName_presentationsNames, departmentName);
                 }
 
-                //получаем предустановленные расширения для презентаций
-                varDeputyPresentationsExts[departmentName] = Consts.presentationEXT[0];
+                /*//получаем предустановленные расширения для презентаций
+                varDeputyPresentationsExts[departmentName] = Consts.presentationEXTs[0];
                 if (INI.KeyExists(Consts.configSectionsName_presentationsExts, departmentName))
                 {
                     varDeputyPresentationsExts[departmentName] = INI.ReadINI(Consts.configSectionsName_presentationsExts, departmentName);
-                }
+                }*/
             }
 
             //получаем путь к корневой папке с презентациями
@@ -215,10 +212,19 @@ namespace FridayPresentationManager
             foreach(var deputyPresentationName in varDeputyPresentationsNames)
             {
                 varPresentations[deputyPresentationName.Key] = "";
-                if (Directory.GetFiles(path, deputyPresentationName.Value + varDeputyPresentationsExts[deputyPresentationName.Key]+'?').Count() > 0)
+
+                for(int i = 0; i < Consts.presentationEXTs.Count(); i++)
+                {
+                    if (Directory.GetFiles(path, deputyPresentationName.Value + Consts.presentationEXTs[i]).Count() > 0)
+                    {
+                        varPresentations[deputyPresentationName.Key] = deputyPresentationName.Value + Consts.presentationEXTs[i];
+                    }
+                }
+
+                /*if (Directory.GetFiles(path, deputyPresentationName.Value + varDeputyPresentationsExts[deputyPresentationName.Key]+'?').Count() > 0)
                 {
                     varPresentations[deputyPresentationName.Key] = deputyPresentationName.Value + varDeputyPresentationsExts[deputyPresentationName.Key];
-                }
+                }*/
             }
             return true;
         }
@@ -302,7 +308,7 @@ namespace FridayPresentationManager
         private void DeputyPictureClick(PictureBox sender)
         {
             SetCurrentPresentationMarker(sender.Name);
-            //OpenPresentation(varNamesToPresentations[GetDeputyNameFromPictureBox(sender)]);
+            OpenPresentation(Path.Combine(GetPresentationsFolderFromListBox(),varPresentations[GetDeputyNameFromPictureBox(sender)]));
         }
         //==================================================================================================
         public MainWindow()
@@ -400,7 +406,8 @@ namespace FridayPresentationManager
 
         private void presentationsNamesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PresentationsNames presentationsNames = new PresentationsNames();
+            presentationsNames.Show();
         }
     }
 }

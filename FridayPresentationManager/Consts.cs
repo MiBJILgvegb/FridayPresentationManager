@@ -8,7 +8,7 @@ namespace FridayPresentationManager
 {
     internal class Consts
     {
-        internal readonly static string[] presentationEXT = { ".ppt",".pdf" };
+        internal readonly static string[] presentationEXTs = { ".pptx",".ppt" };
         internal readonly static string imagesEXT = ".png";
 
         internal readonly static string imagesDefaultPhoto = "_default" /*+ imagesEXT*/;

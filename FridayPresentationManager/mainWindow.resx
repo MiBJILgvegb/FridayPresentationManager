@@ -2318,7 +2318,7 @@
   <data name="bBrowseFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAfhJREFUOE+1lE8va1EUxU97XTFBMWJixsTLS8xMJMTAzKQk3uiN+BIi4hO8z2Dw
+        DAAACwwBP0AiyAAAAfhJREFUOE+1lE8va1EUxU97XTFBMWJixsTLS8xMJMTAzKQk3uiN+BIi4hO8z2Dw
         IoigrT9xm5QPQDCQNHdQfzpCg0eiXnVb63RHNXGbK+Ekv3R377XWPTm9PeZb1qNnIsAJIKqycAuGiJaB
         i6HU1UOllYXGAEiBRbCksE6AWZWFXzD9AhLAAXBBB2j7gBhoB40aZwPjgOYiKL3jBTyBQh2uAHVjGmcD
         xwEDGfJ+d59hQuNCBZbr8AyoiWtcbeC9F5V7zwlJ1HrUO65xtYGCT0mHRD3qrQY+eBEb+ITh3Pa0/N6c
@@ -2334,6 +2334,9 @@
   </metadata>
   <metadata name="cmsPB.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>341, 18</value>
+  </metadata>
+  <metadata name="ttPB.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>428, 18</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>53</value>

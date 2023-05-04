@@ -72,6 +72,7 @@ namespace FridayPresentationManager
             this.bBrowseFolder = new System.Windows.Forms.Button();
             this.folderPresentationsDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.cmsPB = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ttPB = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrictMarker)).BeginInit();
@@ -159,7 +160,7 @@ namespace FridayPresentationManager
             this.groupBox1.Controls.Add(this.cbPresentationByYearsFilter);
             this.groupBox1.Location = new System.Drawing.Point(0, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 577);
+            this.groupBox1.Size = new System.Drawing.Size(133, 577);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -171,7 +172,7 @@ namespace FridayPresentationManager
             this.lbPresentationsDatesList.FormattingEnabled = true;
             this.lbPresentationsDatesList.Location = new System.Drawing.Point(6, 37);
             this.lbPresentationsDatesList.Name = "lbPresentationsDatesList";
-            this.lbPresentationsDatesList.Size = new System.Drawing.Size(225, 537);
+            this.lbPresentationsDatesList.Size = new System.Drawing.Size(121, 537);
             this.lbPresentationsDatesList.TabIndex = 1;
             this.lbPresentationsDatesList.SelectedIndexChanged += new System.EventHandler(this.lbPresentationsDatesList_SelectedIndexChanged);
             // 
@@ -182,7 +183,7 @@ namespace FridayPresentationManager
             this.cbPresentationByYearsFilter.FormattingEnabled = true;
             this.cbPresentationByYearsFilter.Location = new System.Drawing.Point(6, 10);
             this.cbPresentationByYearsFilter.Name = "cbPresentationByYearsFilter";
-            this.cbPresentationByYearsFilter.Size = new System.Drawing.Size(225, 21);
+            this.cbPresentationByYearsFilter.Size = new System.Drawing.Size(121, 21);
             this.cbPresentationByYearsFilter.TabIndex = 0;
             this.cbPresentationByYearsFilter.SelectedIndexChanged += new System.EventHandler(this.cbPresentationByYearsFilter_SelectedIndexChanged);
             // 
@@ -261,7 +262,7 @@ namespace FridayPresentationManager
             // pbDeputyOfAKRMarker
             // 
             this.pbDeputyOfAKRMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAKRMarker.Location = new System.Drawing.Point(466, 51);
+            this.pbDeputyOfAKRMarker.Location = new System.Drawing.Point(570, 51);
             this.pbDeputyOfAKRMarker.Name = "pbDeputyOfAKRMarker";
             this.pbDeputyOfAKRMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfAKRMarker.TabIndex = 19;
@@ -270,7 +271,7 @@ namespace FridayPresentationManager
             // pbDeputyOfSocialDevelopmentMarker
             // 
             this.pbDeputyOfSocialDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfSocialDevelopmentMarker.Location = new System.Drawing.Point(466, 142);
+            this.pbDeputyOfSocialDevelopmentMarker.Location = new System.Drawing.Point(570, 142);
             this.pbDeputyOfSocialDevelopmentMarker.Name = "pbDeputyOfSocialDevelopmentMarker";
             this.pbDeputyOfSocialDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfSocialDevelopmentMarker.TabIndex = 20;
@@ -279,7 +280,7 @@ namespace FridayPresentationManager
             // pbDeputyOfEconomicDevelopmentMarker
             // 
             this.pbDeputyOfEconomicDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfEconomicDevelopmentMarker.Location = new System.Drawing.Point(466, 233);
+            this.pbDeputyOfEconomicDevelopmentMarker.Location = new System.Drawing.Point(570, 233);
             this.pbDeputyOfEconomicDevelopmentMarker.Name = "pbDeputyOfEconomicDevelopmentMarker";
             this.pbDeputyOfEconomicDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfEconomicDevelopmentMarker.TabIndex = 21;
@@ -288,7 +289,7 @@ namespace FridayPresentationManager
             // pbDeputyOfFinancePolicyMarker
             // 
             this.pbDeputyOfFinancePolicyMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfFinancePolicyMarker.Location = new System.Drawing.Point(466, 324);
+            this.pbDeputyOfFinancePolicyMarker.Location = new System.Drawing.Point(570, 324);
             this.pbDeputyOfFinancePolicyMarker.Name = "pbDeputyOfFinancePolicyMarker";
             this.pbDeputyOfFinancePolicyMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfFinancePolicyMarker.TabIndex = 22;
@@ -297,7 +298,7 @@ namespace FridayPresentationManager
             // pbDeputyOfAPKMarker
             // 
             this.pbDeputyOfAPKMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAPKMarker.Location = new System.Drawing.Point(466, 415);
+            this.pbDeputyOfAPKMarker.Location = new System.Drawing.Point(570, 415);
             this.pbDeputyOfAPKMarker.Name = "pbDeputyOfAPKMarker";
             this.pbDeputyOfAPKMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfAPKMarker.TabIndex = 23;
@@ -307,7 +308,7 @@ namespace FridayPresentationManager
             // 
             this.pbDeputyOfAKR.AllowDrop = true;
             this.pbDeputyOfAKR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAKR.Location = new System.Drawing.Point(471, 56);
+            this.pbDeputyOfAKR.Location = new System.Drawing.Point(575, 56);
             this.pbDeputyOfAKR.Name = "pbDeputyOfAKR";
             this.pbDeputyOfAKR.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfAKR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,7 +319,7 @@ namespace FridayPresentationManager
             // 
             this.pbDeputyOfSocialDevelopment.AllowDrop = true;
             this.pbDeputyOfSocialDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfSocialDevelopment.Location = new System.Drawing.Point(471, 147);
+            this.pbDeputyOfSocialDevelopment.Location = new System.Drawing.Point(575, 147);
             this.pbDeputyOfSocialDevelopment.Name = "pbDeputyOfSocialDevelopment";
             this.pbDeputyOfSocialDevelopment.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfSocialDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -329,7 +330,7 @@ namespace FridayPresentationManager
             // 
             this.pbDeputyOfEconomicDevelopment.AllowDrop = true;
             this.pbDeputyOfEconomicDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfEconomicDevelopment.Location = new System.Drawing.Point(471, 238);
+            this.pbDeputyOfEconomicDevelopment.Location = new System.Drawing.Point(575, 238);
             this.pbDeputyOfEconomicDevelopment.Name = "pbDeputyOfEconomicDevelopment";
             this.pbDeputyOfEconomicDevelopment.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfEconomicDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,7 +341,7 @@ namespace FridayPresentationManager
             // 
             this.pbDeputyOfFinancePolicy.AllowDrop = true;
             this.pbDeputyOfFinancePolicy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfFinancePolicy.Location = new System.Drawing.Point(471, 329);
+            this.pbDeputyOfFinancePolicy.Location = new System.Drawing.Point(575, 329);
             this.pbDeputyOfFinancePolicy.Name = "pbDeputyOfFinancePolicy";
             this.pbDeputyOfFinancePolicy.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfFinancePolicy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,9 +376,9 @@ namespace FridayPresentationManager
             this.gbDeputyList.Controls.Add(this.pbDeputyOfPropertyRelationsMarker);
             this.gbDeputyList.Controls.Add(this.pbDeputyOfCityDistrict);
             this.gbDeputyList.Controls.Add(this.pbDeputyOfCityDistrictMarker);
-            this.gbDeputyList.Location = new System.Drawing.Point(243, 27);
+            this.gbDeputyList.Location = new System.Drawing.Point(139, 27);
             this.gbDeputyList.Name = "gbDeputyList";
-            this.gbDeputyList.Size = new System.Drawing.Size(557, 539);
+            this.gbDeputyList.Size = new System.Drawing.Size(661, 539);
             this.gbDeputyList.TabIndex = 3;
             this.gbDeputyList.TabStop = false;
             // 
@@ -403,7 +404,7 @@ namespace FridayPresentationManager
             // 
             this.pbGlava.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbGlava.Image = ((System.Drawing.Image)(resources.GetObject("pbGlava.Image")));
-            this.pbGlava.Location = new System.Drawing.Point(228, 19);
+            this.pbGlava.Location = new System.Drawing.Point(280, 19);
             this.pbGlava.Name = "pbGlava";
             this.pbGlava.Size = new System.Drawing.Size(80, 80);
             this.pbGlava.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -440,7 +441,7 @@ namespace FridayPresentationManager
             // 
             this.pbDeputyOfAPK.AllowDrop = true;
             this.pbDeputyOfAPK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAPK.Location = new System.Drawing.Point(471, 420);
+            this.pbDeputyOfAPK.Location = new System.Drawing.Point(575, 420);
             this.pbDeputyOfAPK.Name = "pbDeputyOfAPK";
             this.pbDeputyOfAPK.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfAPK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -585,6 +586,7 @@ namespace FridayPresentationManager
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem presentationsNamesToolStripMenuItem;
         internal ContextMenuStrip cmsPB;
+        private ToolTip ttPB;
     }
 }
 

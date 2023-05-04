@@ -23,7 +23,7 @@ namespace FridayPresentationManager
     public partial class MainWindow : Form
     {
         public static MainWindow mainWindow;
-        private PictureBox currentPresentationPB=null;
+        private PictureBox currentPresentationPB = null;
         public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
         public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
 
@@ -132,6 +132,14 @@ namespace FridayPresentationManager
             if (INI.KeyExists(Consts.configSectionsName_path, Consts.configKeysName_imagesFolder))
             {
                 mainImagesDirectory = INI.ReadINI(Consts.configSectionsName_path, Consts.configKeysName_imagesFolder);
+            }
+        }
+        private void PrepareToolTips()
+        {
+            foreach (string departmentName in Consts.departmentsNames)
+            {
+                ToolTip t = new ToolTip();
+                t.SetToolTip((this.Controls["gbDeputyList"].Controls["pb" + departmentName] as PictureBox), varDepartmentsNamesToDeputyNames[departmentName]);
             }
         }
         internal ToolStripMenuItem CreateToolStripItem(string name,string text/*, EventHandler eventHandler*/)
@@ -256,9 +264,11 @@ namespace FridayPresentationManager
                 
             }
         }
-        private void CheckPresentation(string deputyName)
+        private bool CheckPresentation(string presentation)
         {
-            //varNamesToPresentations[deputyName] = presentation;
+            if (!File.Exists(presentation)) return false;
+
+            return true;
         }
         private void PreparePBEvents()
         {//привязываем обработчик клика мышкой к PictureBox
@@ -307,8 +317,10 @@ namespace FridayPresentationManager
         //==================================================================================================
         private void DeputyPictureClick(PictureBox sender)
         {
+            string presentationPath = Path.Combine(GetPresentationsFolderFromListBox(), varPresentations[GetDeputyNameFromPictureBox(sender)]);
+            if (!CheckPresentation(presentationPath)) return;
             SetCurrentPresentationMarker(sender.Name);
-            OpenPresentation(Path.Combine(GetPresentationsFolderFromListBox(),varPresentations[GetDeputyNameFromPictureBox(sender)]));
+            OpenPresentation(presentationPath);
         }
         //==================================================================================================
         public MainWindow()
@@ -319,6 +331,7 @@ namespace FridayPresentationManager
             InitializeDeputyPhotos();
 
             PrepareContextMenuStrip();
+            PrepareToolTips();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -395,6 +408,7 @@ namespace FridayPresentationManager
         private void lbPresentationsDatesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreparePresentataions();
+            PreparePBEvents();
         }
 
         private void cbPresentationByYearsFilter_SelectedIndexChanged(object sender, EventArgs e)

@@ -73,7 +73,7 @@ namespace FridayPresentationManager
             this.name = name;
             this.fullName=this.GetFullDepartmenName();
             this.imagesDirectory = GetImagesPath();
-
+            this.presentation = new Presentation(this.GetPresentationName());
 
             if (MainWindow.mainWindow.Controls["gbDeputyList"].Controls["pb" + this.name] != null)
             {

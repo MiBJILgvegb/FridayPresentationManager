@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
 
 namespace FridayPresentationManager
 {
@@ -12,19 +14,44 @@ namespace FridayPresentationManager
         string path;
         string name;
 
-        //PictureBox marker;
+        bool exist=false;
+
+        PictureBox marker;
         //=========================================================================
-        //configKeysName_presentationFolder
-        private void GetPresentationPath()
+        private void SetPresentationMarker(string imageName)
         {
-            //return Path.Combine(this.path, this.name, Consts.presentationEXTs[0]);
+            Gui.SetPicture((this.marker), (Image)Properties.Resources.ResourceManager.GetObject(imageName));
         }
         //=========================================================================
         public string Path() { return this.path; }
-        public void Path(string path) { this.path = path; }
+        public void Path(string name) 
+        {
+            this.path = System.IO.Path.Combine(Consts.configKeysName_presentationFolder, name, Consts.presentationEXTs[0]);
+            if (File.Exists(this.path)) { this.exist = true; }
+        }
+        public string Name() { return this.name; }
+        public void Name(string name) { this.name = name; }
+        public void SetMarker(string mode) 
+        { 
+            switch(mode)
+            {
+                case "ok":break;
+                case "err":break;
+                case "cur":break;
+            }
+        }
         //public void Marker(PictureBox pictureBox) { this.marker = pictureBox; }
         //=========================================================================
-        public Presentation(string path) { this.Path(path); }
+        public Presentation(string name, PictureBox marker) 
+        {
+            this.Name(name);
+            this.Path(name);
+
+            this.marker = marker;
+
+            this.SetPresentationMarker(Consts.imagesErrorPhoto);
+        }
+
         /*public Presentation(string path, PictureBox marker) : this(path)
         {
             this.marker = marker;

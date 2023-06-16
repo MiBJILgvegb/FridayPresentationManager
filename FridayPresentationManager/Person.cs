@@ -12,6 +12,8 @@ namespace FridayPresentationManager
     {
         string fio;
         string photoPath;
+
+        bool defaultPhoto = false;
         //=========================================================================
         public Person(string fio, string photoPath)
         {
@@ -23,11 +25,16 @@ namespace FridayPresentationManager
         public void FIO(string fio) { this.fio = fio; }
 
         public string PhotoPath() { return this.photoPath; }
-        public void PhotoPath(string photoPath) { this.photoPath = this.GetPhotoPath(photoPath); }
-        //=========================================================================
-        private string GetPhotoPath(string photoPath)
-        {
-            return Path.Combine(photoPath, this.fio,Consts.imagesEXT);
+        public void PhotoPath(string photoPath) 
+        { 
+            this.photoPath = photoPath;
+            if (!File.Exists(this.photoPath))
+            {
+                this.defaultPhoto = true;
+                this.photoPath = Consts.imagesDefaultPhoto;
+            }
         }
+        //=========================================================================
+        private string GetPhotoPath(string photoPath) { return Path.Combine(photoPath, this.fio, Consts.imagesEXT); }
     }
 }

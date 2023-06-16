@@ -17,6 +17,7 @@ namespace FridayPresentationManager
         internal readonly static string imagesOKPhoto = "ok" /*+ imagesEXT*/;
 
         internal readonly static string iniConfigFileName = "config.ini";
+        internal readonly static string configSectionsName_departmenfullname = "departmenfullname";
         internal readonly static string configSectionsName_deputyfio = "deputyfio";
         internal readonly static string configSectionsName_firstdeputyfio = "firstdeputyfio";
         internal readonly static string configSectionsName_deputydeputyfio = "deputydeputyfio";
@@ -26,6 +27,12 @@ namespace FridayPresentationManager
         internal readonly static string configSectionsName_path = "path";
         internal readonly static string configKeysName_presentationFolder = "presentationFolder";
         internal readonly static string configKeysName_imagesFolder = "imagesFolder";
+        
+        internal readonly static string configKeysName_departmentfullname = "fullname";
+        internal readonly static string configKeysName_departmentheadfio = "headfio";
+        internal readonly static string configKeysName_departmentfirstdeputyfio = "firstdeputyfio";
+        internal readonly static string configKeysName_departmentdeputyfio = "deputyfio";
+        internal readonly static string configKeysName_departmentpresentationname = "presentationname";
 
         internal readonly static string _errorNoPresentationsFound = "Презентаций не найдено";
 

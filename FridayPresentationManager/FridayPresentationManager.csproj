@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consts.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="DeputyFIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,8 @@
     <Compile Include="mainWindow.Designer.cs">
       <DependentUpon>mainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Presentation.cs" />
     <Compile Include="PresentationsNames.cs">
       <SubType>Form</SubType>
     </Compile>

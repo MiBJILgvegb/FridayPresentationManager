@@ -58,12 +58,26 @@ namespace FridayPresentationManager
 
             return null;
         }
+        internal ToolStripMenuItem CreateToolStripItem(string name, string text/*, EventHandler eventHandler*/)
+        {
+            ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            //toolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemCut.Image")));
+            toolStripMenuItem.Name = "tsmi" + name;
+            toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
+            toolStripMenuItem.Text = text;
+            //toolStripMenuItem.Click += eventHandler;
+
+            return toolStripMenuItem;
+        }
         //==================================================================================================
         private void InitializeDeputyPhotos()
         {//инициализируем фотографии
             foreach (var departmentName in varDepartmentsNamesToDeputyNames)
             {
-                string imagePath = Path.Combine(mainImagesDirectory, departmentName.Value+ Consts.imagesEXT);
+                string deputyName = departmentName.Value;
+                if (deputyName.Length == 0) deputyName = GetDeputyName(departmentName.Key);
+                string imagePath = Path.Combine(mainImagesDirectory, deputyName + Consts.imagesEXT);
                 Image image = (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesDefaultPhoto);
 
                 if (File.Exists(imagePath))
@@ -138,30 +152,23 @@ namespace FridayPresentationManager
         {
             foreach (string departmentName in Consts.departmentsNames)
             {
+                string deputyName = varDepartmentsNamesToDeputyNames[departmentName];
+                if (deputyName.Length == 0) deputyName = GetDeputyName(departmentName);
                 ToolTip t = new ToolTip();
-                t.SetToolTip((this.Controls["gbDeputyList"].Controls["pb" + departmentName] as PictureBox), varDepartmentsNamesToDeputyNames[departmentName]);
+                t.SetToolTip((this.Controls["gbDeputyList"].Controls["pb" + departmentName] as PictureBox), deputyName);
             }
         }
-        internal ToolStripMenuItem CreateToolStripItem(string name,string text/*, EventHandler eventHandler*/)
-        {
-            ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            //toolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemCut.Image")));
-            toolStripMenuItem.Name = "tsmi"+ name;
-            toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
-            toolStripMenuItem.Text = text;
-            //toolStripMenuItem.Click += eventHandler;
-
-            return toolStripMenuItem;
-        }
+        
         internal void PrepareContextMenuStrip()
-        {
+        {//подготовка всплывающих подсказок для изображений
             foreach (string departmentName in Consts.departmentsNames)
             {
                 ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
                 contextMenuStrip.Name = "cmsPB"+ departmentName;
                 contextMenuStrip.Size = new System.Drawing.Size(60, 4);
 
+                ToolStripMenuItem tsmiDeputyNameMenuItem = CreateToolStripItem("tsmi" + departmentName + "DeputyNameMenuItem", departmentName);
+                contextMenuStrip.Items.AddRange(new[] { tsmiDeputyNameMenuItem });
                 if (varFirstDeputyDeputyNames[departmentName].Length > 0)
                 {
                     ToolStripMenuItem tsmiFirstDeputyMenuItem = CreateToolStripItem("tsmi" + departmentName + "FirstDeputyMenuItem", varFirstDeputyDeputyNames[departmentName]);
@@ -181,7 +188,13 @@ namespace FridayPresentationManager
         {
 
         }
-        
+        internal string GetDeputyName(string departmentName)
+        {
+            string result = varFirstDeputyDeputyNames[departmentName];
+            if(result.Length==0) result= varDeputyDeputyNames[departmentName];
+
+            return result;
+        }
         internal void SaveINIConfig(string section,string key,string value)
         {//сохраняем настройки в файле конфигурации
             IniFiles INI = new IniFiles(Consts.iniConfigFileName);
@@ -387,6 +400,7 @@ namespace FridayPresentationManager
             }*/
         }
 
+        /*
         private void bBrowseFolder_Click(object sender, EventArgs e)
         {
             if (folderPresentationsDialog.ShowDialog() == DialogResult.OK)
@@ -399,6 +413,7 @@ namespace FridayPresentationManager
                 MainWindowLoad();
             }
         }
+        */
 
         private void bExploreFolder_Click(object sender, EventArgs e)
         {
@@ -408,7 +423,7 @@ namespace FridayPresentationManager
         private void lbPresentationsDatesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreparePresentataions();
-            PreparePBEvents();
+            //PreparePBEvents();
         }
 
         private void cbPresentationByYearsFilter_SelectedIndexChanged(object sender, EventArgs e)

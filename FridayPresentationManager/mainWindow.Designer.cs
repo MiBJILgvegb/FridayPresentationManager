@@ -189,7 +189,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfCityDistrictMarker
             // 
-            this.pbDeputyOfCityDistrictMarker.Location = new System.Drawing.Point(1, 51);
+            this.pbDeputyOfCityDistrictMarker.Location = new System.Drawing.Point(1, 142);
             this.pbDeputyOfCityDistrictMarker.Name = "pbDeputyOfCityDistrictMarker";
             this.pbDeputyOfCityDistrictMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfCityDistrictMarker.TabIndex = 0;
@@ -198,7 +198,7 @@ namespace FridayPresentationManager
             // pbDeputyOfCityDistrict
             // 
             this.pbDeputyOfCityDistrict.AllowDrop = true;
-            this.pbDeputyOfCityDistrict.Location = new System.Drawing.Point(6, 56);
+            this.pbDeputyOfCityDistrict.Location = new System.Drawing.Point(6, 147);
             this.pbDeputyOfCityDistrict.Name = "pbDeputyOfCityDistrict";
             this.pbDeputyOfCityDistrict.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfCityDistrict.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +207,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfPropertyRelationsMarker
             // 
-            this.pbDeputyOfPropertyRelationsMarker.Location = new System.Drawing.Point(1, 142);
+            this.pbDeputyOfPropertyRelationsMarker.Location = new System.Drawing.Point(1, 233);
             this.pbDeputyOfPropertyRelationsMarker.Name = "pbDeputyOfPropertyRelationsMarker";
             this.pbDeputyOfPropertyRelationsMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfPropertyRelationsMarker.TabIndex = 13;
@@ -215,7 +215,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfSecurityCouncilMarker
             // 
-            this.pbDeputyOfSecurityCouncilMarker.Location = new System.Drawing.Point(1, 233);
+            this.pbDeputyOfSecurityCouncilMarker.Location = new System.Drawing.Point(1, 324);
             this.pbDeputyOfSecurityCouncilMarker.Name = "pbDeputyOfSecurityCouncilMarker";
             this.pbDeputyOfSecurityCouncilMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfSecurityCouncilMarker.TabIndex = 14;
@@ -223,7 +223,7 @@ namespace FridayPresentationManager
             // 
             // pbDeputyOfJKHMarker
             // 
-            this.pbDeputyOfJKHMarker.Location = new System.Drawing.Point(1, 324);
+            this.pbDeputyOfJKHMarker.Location = new System.Drawing.Point(1, 51);
             this.pbDeputyOfJKHMarker.Name = "pbDeputyOfJKHMarker";
             this.pbDeputyOfJKHMarker.Size = new System.Drawing.Size(90, 90);
             this.pbDeputyOfJKHMarker.TabIndex = 15;
@@ -232,7 +232,7 @@ namespace FridayPresentationManager
             // pbDeputyOfPropertyRelations
             // 
             this.pbDeputyOfPropertyRelations.AllowDrop = true;
-            this.pbDeputyOfPropertyRelations.Location = new System.Drawing.Point(6, 147);
+            this.pbDeputyOfPropertyRelations.Location = new System.Drawing.Point(6, 238);
             this.pbDeputyOfPropertyRelations.Name = "pbDeputyOfPropertyRelations";
             this.pbDeputyOfPropertyRelations.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfPropertyRelations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -242,7 +242,7 @@ namespace FridayPresentationManager
             // pbDeputyOfSecurityCouncil
             // 
             this.pbDeputyOfSecurityCouncil.AllowDrop = true;
-            this.pbDeputyOfSecurityCouncil.Location = new System.Drawing.Point(6, 238);
+            this.pbDeputyOfSecurityCouncil.Location = new System.Drawing.Point(6, 329);
             this.pbDeputyOfSecurityCouncil.Name = "pbDeputyOfSecurityCouncil";
             this.pbDeputyOfSecurityCouncil.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfSecurityCouncil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +252,7 @@ namespace FridayPresentationManager
             // pbDeputyOfJKH
             // 
             this.pbDeputyOfJKH.AllowDrop = true;
-            this.pbDeputyOfJKH.Location = new System.Drawing.Point(6, 329);
+            this.pbDeputyOfJKH.Location = new System.Drawing.Point(6, 56);
             this.pbDeputyOfJKH.Name = "pbDeputyOfJKH";
             this.pbDeputyOfJKH.Size = new System.Drawing.Size(80, 80);
             this.pbDeputyOfJKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,7 +385,7 @@ namespace FridayPresentationManager
             // pbEDDS
             // 
             this.pbEDDS.AllowDrop = true;
-            this.pbEDDS.Location = new System.Drawing.Point(102, 238);
+            this.pbEDDS.Location = new System.Drawing.Point(102, 329);
             this.pbEDDS.Name = "pbEDDS";
             this.pbEDDS.Size = new System.Drawing.Size(80, 80);
             this.pbEDDS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,7 +394,7 @@ namespace FridayPresentationManager
             // 
             // pbEDDSMarker
             // 
-            this.pbEDDSMarker.Location = new System.Drawing.Point(97, 233);
+            this.pbEDDSMarker.Location = new System.Drawing.Point(97, 324);
             this.pbEDDSMarker.Name = "pbEDDSMarker";
             this.pbEDDSMarker.Size = new System.Drawing.Size(90, 90);
             this.pbEDDSMarker.TabIndex = 33;
@@ -404,7 +404,7 @@ namespace FridayPresentationManager
             // 
             this.pbGlava.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbGlava.Image = ((System.Drawing.Image)(resources.GetObject("pbGlava.Image")));
-            this.pbGlava.Location = new System.Drawing.Point(280, 19);
+            this.pbGlava.Location = new System.Drawing.Point(264, 14);
             this.pbGlava.Name = "pbGlava";
             this.pbGlava.Size = new System.Drawing.Size(80, 80);
             this.pbGlava.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,7 +413,7 @@ namespace FridayPresentationManager
             // 
             // pbGlavaMarker
             // 
-            this.pbGlavaMarker.Location = new System.Drawing.Point(223, 14);
+            this.pbGlavaMarker.Location = new System.Drawing.Point(259, 9);
             this.pbGlavaMarker.Name = "pbGlavaMarker";
             this.pbGlavaMarker.Size = new System.Drawing.Size(90, 90);
             this.pbGlavaMarker.TabIndex = 31;
@@ -422,7 +422,7 @@ namespace FridayPresentationManager
             // pbMCU
             // 
             this.pbMCU.AllowDrop = true;
-            this.pbMCU.Location = new System.Drawing.Point(6, 448);
+            this.pbMCU.Location = new System.Drawing.Point(6, 420);
             this.pbMCU.Name = "pbMCU";
             this.pbMCU.Size = new System.Drawing.Size(80, 80);
             this.pbMCU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -431,7 +431,7 @@ namespace FridayPresentationManager
             // 
             // pbMCUMarker
             // 
-            this.pbMCUMarker.Location = new System.Drawing.Point(1, 443);
+            this.pbMCUMarker.Location = new System.Drawing.Point(1, 415);
             this.pbMCUMarker.Name = "pbMCUMarker";
             this.pbMCUMarker.Size = new System.Drawing.Size(90, 90);
             this.pbMCUMarker.TabIndex = 29;

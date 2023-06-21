@@ -113,13 +113,12 @@ namespace FridayPresentationManager
             contextMenuStrip.Name = "cmsPB" + this.name;
             contextMenuStrip.Size = new System.Drawing.Size(60, 4);
 
-            ToolStripMenuItem[] items=new[] { new ToolStripMenuItem(),new ToolStripMenuItem()};
             ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
-            if (item != null) { this.contextMenuStrip.;  }
+            if (item != null) { this.contextMenuStrip.Items.Add(item); }
 
             item = CreateDeputyToolStripMenuItem();
-            
-            this.contextMenuStrip.Items.AddRange(new[] { CreateFirstDeputyToolStripMenuItem(), CreateDeputyToolStripMenuItem() });
+            if (item != null) { this.contextMenuStrip.Items.Add(item); }
+
             this.avatarPB.ContextMenuStrip = contextMenuStrip;
         }
         //=========================================================================

@@ -115,7 +115,9 @@ namespace FridayPresentationManager
 
             ToolStripMenuItem[] items=new[] { new ToolStripMenuItem(),new ToolStripMenuItem()};
             ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
-            if (item != null) { items[0] = item; }
+            if (item != null) { this.contextMenuStrip.;  }
+
+            item = CreateDeputyToolStripMenuItem();
             
             this.contextMenuStrip.Items.AddRange(new[] { CreateFirstDeputyToolStripMenuItem(), CreateDeputyToolStripMenuItem() });
             this.avatarPB.ContextMenuStrip = contextMenuStrip;

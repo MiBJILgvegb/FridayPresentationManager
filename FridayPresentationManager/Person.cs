@@ -13,7 +13,7 @@ namespace FridayPresentationManager
 {
     public class Person
     {
-        private string fio { get; set; }
+        internal string fio { get; set; }
         private string photoPath;
 
         bool _defaultPhoto { get; set; } = false;
@@ -37,7 +37,7 @@ namespace FridayPresentationManager
         public Person(string fio, string photoPath)
         {
             this.fio = fio;
-            this.photoPath = photoPath;
+            this.PhotoPath = photoPath;
         }
         
         public void DrawPhoto(PictureBox pictureBox)

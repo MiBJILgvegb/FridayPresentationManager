@@ -41,31 +41,31 @@ namespace FridayPresentationManager
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbPresentationsDatesList = new System.Windows.Forms.ListBox();
             this.cbPresentationByYearsFilter = new System.Windows.Forms.ComboBox();
-            this.pbDeputyOfCityDistrictMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfCityDistrict = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfPropertyRelationsMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfSecurityCouncilMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfJKHMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfPropertyRelations = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfSecurityCouncil = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfJKH = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfAKRMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfSocialDevelopmentMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfEconomicDevelopmentMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfFinancePolicyMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfAPKMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfAKR = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfSocialDevelopment = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfEconomicDevelopment = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfFinancePolicy = new System.Windows.Forms.PictureBox();
-            this.gbDeputyList = new System.Windows.Forms.GroupBox();
+            this.pbDepartmentOfCityDistrictMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfCityDistrict = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfPropertyRelationsMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfSecurityCouncilMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfJKHMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfPropertyRelations = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfSecurityCouncil = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfJKH = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfAKRMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfSocialDevelopmentMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfEconomicDevelopmentMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfFinancePolicyMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfAPKMarker = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfAKR = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfSocialDevelopment = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfEconomicDevelopment = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfFinancePolicy = new System.Windows.Forms.PictureBox();
+            this.gbDepartmentList = new System.Windows.Forms.GroupBox();
             this.pbEDDS = new System.Windows.Forms.PictureBox();
             this.pbEDDSMarker = new System.Windows.Forms.PictureBox();
             this.pbGlava = new System.Windows.Forms.PictureBox();
             this.pbGlavaMarker = new System.Windows.Forms.PictureBox();
             this.pbMCU = new System.Windows.Forms.PictureBox();
             this.pbMCUMarker = new System.Windows.Forms.PictureBox();
-            this.pbDeputyOfAPK = new System.Windows.Forms.PictureBox();
+            this.pbDepartmentOfAPK = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPresentationsFolderPath = new System.Windows.Forms.TextBox();
             this.bExploreFolder = new System.Windows.Forms.Button();
@@ -75,31 +75,31 @@ namespace FridayPresentationManager
             this.ttPB = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrictMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrict)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfPropertyRelationsMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSecurityCouncilMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfJKHMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfPropertyRelations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSecurityCouncil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfJKH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAKRMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSocialDevelopmentMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfEconomicDevelopmentMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfFinancePolicyMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAPKMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAKR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSocialDevelopment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfEconomicDevelopment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfFinancePolicy)).BeginInit();
-            this.gbDeputyList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfCityDistrictMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfCityDistrict)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfPropertyRelationsMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSecurityCouncilMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfJKHMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfPropertyRelations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSecurityCouncil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfJKH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAKRMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSocialDevelopmentMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfEconomicDevelopmentMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfFinancePolicyMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAPKMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAKR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSocialDevelopment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfEconomicDevelopment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfFinancePolicy)).BeginInit();
+            this.gbDepartmentList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEDDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEDDSMarker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlava)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlavaMarker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMCU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMCUMarker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAPK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAPK)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -187,205 +187,205 @@ namespace FridayPresentationManager
             this.cbPresentationByYearsFilter.TabIndex = 0;
             this.cbPresentationByYearsFilter.SelectedIndexChanged += new System.EventHandler(this.cbPresentationByYearsFilter_SelectedIndexChanged);
             // 
-            // pbDeputyOfCityDistrictMarker
+            // pbDepartmentOfCityDistrictMarker
             // 
-            this.pbDeputyOfCityDistrictMarker.Location = new System.Drawing.Point(1, 142);
-            this.pbDeputyOfCityDistrictMarker.Name = "pbDeputyOfCityDistrictMarker";
-            this.pbDeputyOfCityDistrictMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfCityDistrictMarker.TabIndex = 0;
-            this.pbDeputyOfCityDistrictMarker.TabStop = false;
+            this.pbDepartmentOfCityDistrictMarker.Location = new System.Drawing.Point(1, 142);
+            this.pbDepartmentOfCityDistrictMarker.Name = "pbDepartmentOfCityDistrictMarker";
+            this.pbDepartmentOfCityDistrictMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfCityDistrictMarker.TabIndex = 0;
+            this.pbDepartmentOfCityDistrictMarker.TabStop = false;
             // 
-            // pbDeputyOfCityDistrict
+            // pbDepartmentOfCityDistrict
             // 
-            this.pbDeputyOfCityDistrict.AllowDrop = true;
-            this.pbDeputyOfCityDistrict.Location = new System.Drawing.Point(6, 147);
-            this.pbDeputyOfCityDistrict.Name = "pbDeputyOfCityDistrict";
-            this.pbDeputyOfCityDistrict.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfCityDistrict.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfCityDistrict.TabIndex = 12;
-            this.pbDeputyOfCityDistrict.TabStop = false;
+            this.pbDepartmentOfCityDistrict.AllowDrop = true;
+            this.pbDepartmentOfCityDistrict.Location = new System.Drawing.Point(6, 147);
+            this.pbDepartmentOfCityDistrict.Name = "pbDepartmentOfCityDistrict";
+            this.pbDepartmentOfCityDistrict.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfCityDistrict.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfCityDistrict.TabIndex = 12;
+            this.pbDepartmentOfCityDistrict.TabStop = false;
             // 
-            // pbDeputyOfPropertyRelationsMarker
+            // pbDepartmentOfPropertyRelationsMarker
             // 
-            this.pbDeputyOfPropertyRelationsMarker.Location = new System.Drawing.Point(1, 233);
-            this.pbDeputyOfPropertyRelationsMarker.Name = "pbDeputyOfPropertyRelationsMarker";
-            this.pbDeputyOfPropertyRelationsMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfPropertyRelationsMarker.TabIndex = 13;
-            this.pbDeputyOfPropertyRelationsMarker.TabStop = false;
+            this.pbDepartmentOfPropertyRelationsMarker.Location = new System.Drawing.Point(1, 233);
+            this.pbDepartmentOfPropertyRelationsMarker.Name = "pbDepartmentOfPropertyRelationsMarker";
+            this.pbDepartmentOfPropertyRelationsMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfPropertyRelationsMarker.TabIndex = 13;
+            this.pbDepartmentOfPropertyRelationsMarker.TabStop = false;
             // 
-            // pbDeputyOfSecurityCouncilMarker
+            // pbDepartmentOfSecurityCouncilMarker
             // 
-            this.pbDeputyOfSecurityCouncilMarker.Location = new System.Drawing.Point(1, 324);
-            this.pbDeputyOfSecurityCouncilMarker.Name = "pbDeputyOfSecurityCouncilMarker";
-            this.pbDeputyOfSecurityCouncilMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfSecurityCouncilMarker.TabIndex = 14;
-            this.pbDeputyOfSecurityCouncilMarker.TabStop = false;
+            this.pbDepartmentOfSecurityCouncilMarker.Location = new System.Drawing.Point(1, 324);
+            this.pbDepartmentOfSecurityCouncilMarker.Name = "pbDepartmentOfSecurityCouncilMarker";
+            this.pbDepartmentOfSecurityCouncilMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfSecurityCouncilMarker.TabIndex = 14;
+            this.pbDepartmentOfSecurityCouncilMarker.TabStop = false;
             // 
-            // pbDeputyOfJKHMarker
+            // pbDepartmentOfJKHMarker
             // 
-            this.pbDeputyOfJKHMarker.Location = new System.Drawing.Point(1, 51);
-            this.pbDeputyOfJKHMarker.Name = "pbDeputyOfJKHMarker";
-            this.pbDeputyOfJKHMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfJKHMarker.TabIndex = 15;
-            this.pbDeputyOfJKHMarker.TabStop = false;
+            this.pbDepartmentOfJKHMarker.Location = new System.Drawing.Point(1, 51);
+            this.pbDepartmentOfJKHMarker.Name = "pbDepartmentOfJKHMarker";
+            this.pbDepartmentOfJKHMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfJKHMarker.TabIndex = 15;
+            this.pbDepartmentOfJKHMarker.TabStop = false;
             // 
-            // pbDeputyOfPropertyRelations
+            // pbDepartmentOfPropertyRelations
             // 
-            this.pbDeputyOfPropertyRelations.AllowDrop = true;
-            this.pbDeputyOfPropertyRelations.Location = new System.Drawing.Point(6, 238);
-            this.pbDeputyOfPropertyRelations.Name = "pbDeputyOfPropertyRelations";
-            this.pbDeputyOfPropertyRelations.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfPropertyRelations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfPropertyRelations.TabIndex = 16;
-            this.pbDeputyOfPropertyRelations.TabStop = false;
+            this.pbDepartmentOfPropertyRelations.AllowDrop = true;
+            this.pbDepartmentOfPropertyRelations.Location = new System.Drawing.Point(6, 238);
+            this.pbDepartmentOfPropertyRelations.Name = "pbDepartmentOfPropertyRelations";
+            this.pbDepartmentOfPropertyRelations.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfPropertyRelations.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfPropertyRelations.TabIndex = 16;
+            this.pbDepartmentOfPropertyRelations.TabStop = false;
             // 
-            // pbDeputyOfSecurityCouncil
+            // pbDepartmentOfSecurityCouncil
             // 
-            this.pbDeputyOfSecurityCouncil.AllowDrop = true;
-            this.pbDeputyOfSecurityCouncil.Location = new System.Drawing.Point(6, 329);
-            this.pbDeputyOfSecurityCouncil.Name = "pbDeputyOfSecurityCouncil";
-            this.pbDeputyOfSecurityCouncil.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfSecurityCouncil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfSecurityCouncil.TabIndex = 17;
-            this.pbDeputyOfSecurityCouncil.TabStop = false;
+            this.pbDepartmentOfSecurityCouncil.AllowDrop = true;
+            this.pbDepartmentOfSecurityCouncil.Location = new System.Drawing.Point(6, 329);
+            this.pbDepartmentOfSecurityCouncil.Name = "pbDepartmentOfSecurityCouncil";
+            this.pbDepartmentOfSecurityCouncil.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfSecurityCouncil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfSecurityCouncil.TabIndex = 17;
+            this.pbDepartmentOfSecurityCouncil.TabStop = false;
             // 
-            // pbDeputyOfJKH
+            // pbDepartmentOfJKH
             // 
-            this.pbDeputyOfJKH.AllowDrop = true;
-            this.pbDeputyOfJKH.Location = new System.Drawing.Point(6, 56);
-            this.pbDeputyOfJKH.Name = "pbDeputyOfJKH";
-            this.pbDeputyOfJKH.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfJKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfJKH.TabIndex = 18;
-            this.pbDeputyOfJKH.TabStop = false;
+            this.pbDepartmentOfJKH.AllowDrop = true;
+            this.pbDepartmentOfJKH.Location = new System.Drawing.Point(6, 56);
+            this.pbDepartmentOfJKH.Name = "pbDepartmentOfJKH";
+            this.pbDepartmentOfJKH.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfJKH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfJKH.TabIndex = 18;
+            this.pbDepartmentOfJKH.TabStop = false;
             // 
-            // pbDeputyOfAKRMarker
+            // pbDepartmentOfAKRMarker
             // 
-            this.pbDeputyOfAKRMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAKRMarker.Location = new System.Drawing.Point(570, 51);
-            this.pbDeputyOfAKRMarker.Name = "pbDeputyOfAKRMarker";
-            this.pbDeputyOfAKRMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfAKRMarker.TabIndex = 19;
-            this.pbDeputyOfAKRMarker.TabStop = false;
+            this.pbDepartmentOfAKRMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfAKRMarker.Location = new System.Drawing.Point(570, 51);
+            this.pbDepartmentOfAKRMarker.Name = "pbDepartmentOfAKRMarker";
+            this.pbDepartmentOfAKRMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfAKRMarker.TabIndex = 19;
+            this.pbDepartmentOfAKRMarker.TabStop = false;
             // 
-            // pbDeputyOfSocialDevelopmentMarker
+            // pbDepartmentOfSocialDevelopmentMarker
             // 
-            this.pbDeputyOfSocialDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfSocialDevelopmentMarker.Location = new System.Drawing.Point(570, 142);
-            this.pbDeputyOfSocialDevelopmentMarker.Name = "pbDeputyOfSocialDevelopmentMarker";
-            this.pbDeputyOfSocialDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfSocialDevelopmentMarker.TabIndex = 20;
-            this.pbDeputyOfSocialDevelopmentMarker.TabStop = false;
+            this.pbDepartmentOfSocialDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfSocialDevelopmentMarker.Location = new System.Drawing.Point(570, 142);
+            this.pbDepartmentOfSocialDevelopmentMarker.Name = "pbDepartmentOfSocialDevelopmentMarker";
+            this.pbDepartmentOfSocialDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfSocialDevelopmentMarker.TabIndex = 20;
+            this.pbDepartmentOfSocialDevelopmentMarker.TabStop = false;
             // 
-            // pbDeputyOfEconomicDevelopmentMarker
+            // pbDepartmentOfEconomicDevelopmentMarker
             // 
-            this.pbDeputyOfEconomicDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfEconomicDevelopmentMarker.Location = new System.Drawing.Point(570, 233);
-            this.pbDeputyOfEconomicDevelopmentMarker.Name = "pbDeputyOfEconomicDevelopmentMarker";
-            this.pbDeputyOfEconomicDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfEconomicDevelopmentMarker.TabIndex = 21;
-            this.pbDeputyOfEconomicDevelopmentMarker.TabStop = false;
+            this.pbDepartmentOfEconomicDevelopmentMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfEconomicDevelopmentMarker.Location = new System.Drawing.Point(570, 233);
+            this.pbDepartmentOfEconomicDevelopmentMarker.Name = "pbDepartmentOfEconomicDevelopmentMarker";
+            this.pbDepartmentOfEconomicDevelopmentMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfEconomicDevelopmentMarker.TabIndex = 21;
+            this.pbDepartmentOfEconomicDevelopmentMarker.TabStop = false;
             // 
-            // pbDeputyOfFinancePolicyMarker
+            // pbDepartmentOfFinancePolicyMarker
             // 
-            this.pbDeputyOfFinancePolicyMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfFinancePolicyMarker.Location = new System.Drawing.Point(570, 324);
-            this.pbDeputyOfFinancePolicyMarker.Name = "pbDeputyOfFinancePolicyMarker";
-            this.pbDeputyOfFinancePolicyMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfFinancePolicyMarker.TabIndex = 22;
-            this.pbDeputyOfFinancePolicyMarker.TabStop = false;
+            this.pbDepartmentOfFinancePolicyMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfFinancePolicyMarker.Location = new System.Drawing.Point(570, 324);
+            this.pbDepartmentOfFinancePolicyMarker.Name = "pbDepartmentOfFinancePolicyMarker";
+            this.pbDepartmentOfFinancePolicyMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfFinancePolicyMarker.TabIndex = 22;
+            this.pbDepartmentOfFinancePolicyMarker.TabStop = false;
             // 
-            // pbDeputyOfAPKMarker
+            // pbDepartmentOfAPKMarker
             // 
-            this.pbDeputyOfAPKMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAPKMarker.Location = new System.Drawing.Point(570, 415);
-            this.pbDeputyOfAPKMarker.Name = "pbDeputyOfAPKMarker";
-            this.pbDeputyOfAPKMarker.Size = new System.Drawing.Size(90, 90);
-            this.pbDeputyOfAPKMarker.TabIndex = 23;
-            this.pbDeputyOfAPKMarker.TabStop = false;
+            this.pbDepartmentOfAPKMarker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfAPKMarker.Location = new System.Drawing.Point(570, 415);
+            this.pbDepartmentOfAPKMarker.Name = "pbDepartmentOfAPKMarker";
+            this.pbDepartmentOfAPKMarker.Size = new System.Drawing.Size(90, 90);
+            this.pbDepartmentOfAPKMarker.TabIndex = 23;
+            this.pbDepartmentOfAPKMarker.TabStop = false;
             // 
-            // pbDeputyOfAKR
+            // pbDepartmentOfAKR
             // 
-            this.pbDeputyOfAKR.AllowDrop = true;
-            this.pbDeputyOfAKR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAKR.Location = new System.Drawing.Point(575, 56);
-            this.pbDeputyOfAKR.Name = "pbDeputyOfAKR";
-            this.pbDeputyOfAKR.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfAKR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfAKR.TabIndex = 24;
-            this.pbDeputyOfAKR.TabStop = false;
+            this.pbDepartmentOfAKR.AllowDrop = true;
+            this.pbDepartmentOfAKR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfAKR.Location = new System.Drawing.Point(575, 56);
+            this.pbDepartmentOfAKR.Name = "pbDepartmentOfAKR";
+            this.pbDepartmentOfAKR.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfAKR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfAKR.TabIndex = 24;
+            this.pbDepartmentOfAKR.TabStop = false;
             // 
-            // pbDeputyOfSocialDevelopment
+            // pbDepartmentOfSocialDevelopment
             // 
-            this.pbDeputyOfSocialDevelopment.AllowDrop = true;
-            this.pbDeputyOfSocialDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfSocialDevelopment.Location = new System.Drawing.Point(575, 147);
-            this.pbDeputyOfSocialDevelopment.Name = "pbDeputyOfSocialDevelopment";
-            this.pbDeputyOfSocialDevelopment.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfSocialDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfSocialDevelopment.TabIndex = 25;
-            this.pbDeputyOfSocialDevelopment.TabStop = false;
+            this.pbDepartmentOfSocialDevelopment.AllowDrop = true;
+            this.pbDepartmentOfSocialDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfSocialDevelopment.Location = new System.Drawing.Point(575, 147);
+            this.pbDepartmentOfSocialDevelopment.Name = "pbDepartmentOfSocialDevelopment";
+            this.pbDepartmentOfSocialDevelopment.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfSocialDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfSocialDevelopment.TabIndex = 25;
+            this.pbDepartmentOfSocialDevelopment.TabStop = false;
             // 
-            // pbDeputyOfEconomicDevelopment
+            // pbDepartmentOfEconomicDevelopment
             // 
-            this.pbDeputyOfEconomicDevelopment.AllowDrop = true;
-            this.pbDeputyOfEconomicDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfEconomicDevelopment.Location = new System.Drawing.Point(575, 238);
-            this.pbDeputyOfEconomicDevelopment.Name = "pbDeputyOfEconomicDevelopment";
-            this.pbDeputyOfEconomicDevelopment.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfEconomicDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfEconomicDevelopment.TabIndex = 26;
-            this.pbDeputyOfEconomicDevelopment.TabStop = false;
+            this.pbDepartmentOfEconomicDevelopment.AllowDrop = true;
+            this.pbDepartmentOfEconomicDevelopment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfEconomicDevelopment.Location = new System.Drawing.Point(575, 238);
+            this.pbDepartmentOfEconomicDevelopment.Name = "pbDepartmentOfEconomicDevelopment";
+            this.pbDepartmentOfEconomicDevelopment.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfEconomicDevelopment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfEconomicDevelopment.TabIndex = 26;
+            this.pbDepartmentOfEconomicDevelopment.TabStop = false;
             // 
-            // pbDeputyOfFinancePolicy
+            // pbDepartmentOfFinancePolicy
             // 
-            this.pbDeputyOfFinancePolicy.AllowDrop = true;
-            this.pbDeputyOfFinancePolicy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfFinancePolicy.Location = new System.Drawing.Point(575, 329);
-            this.pbDeputyOfFinancePolicy.Name = "pbDeputyOfFinancePolicy";
-            this.pbDeputyOfFinancePolicy.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfFinancePolicy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfFinancePolicy.TabIndex = 27;
-            this.pbDeputyOfFinancePolicy.TabStop = false;
+            this.pbDepartmentOfFinancePolicy.AllowDrop = true;
+            this.pbDepartmentOfFinancePolicy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfFinancePolicy.Location = new System.Drawing.Point(575, 329);
+            this.pbDepartmentOfFinancePolicy.Name = "pbDepartmentOfFinancePolicy";
+            this.pbDepartmentOfFinancePolicy.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfFinancePolicy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfFinancePolicy.TabIndex = 27;
+            this.pbDepartmentOfFinancePolicy.TabStop = false;
             // 
-            // gbDeputyList
+            // gbDepartmentList
             // 
-            this.gbDeputyList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbDepartmentList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDeputyList.Controls.Add(this.pbEDDS);
-            this.gbDeputyList.Controls.Add(this.pbEDDSMarker);
-            this.gbDeputyList.Controls.Add(this.pbGlava);
-            this.gbDeputyList.Controls.Add(this.pbGlavaMarker);
-            this.gbDeputyList.Controls.Add(this.pbMCU);
-            this.gbDeputyList.Controls.Add(this.pbMCUMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfAPK);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfFinancePolicy);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfEconomicDevelopment);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfSocialDevelopment);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfAKR);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfAPKMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfFinancePolicyMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfEconomicDevelopmentMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfSocialDevelopmentMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfAKRMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfJKH);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfSecurityCouncil);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfPropertyRelations);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfJKHMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfSecurityCouncilMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfPropertyRelationsMarker);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfCityDistrict);
-            this.gbDeputyList.Controls.Add(this.pbDeputyOfCityDistrictMarker);
-            this.gbDeputyList.Location = new System.Drawing.Point(139, 27);
-            this.gbDeputyList.Name = "gbDeputyList";
-            this.gbDeputyList.Size = new System.Drawing.Size(661, 539);
-            this.gbDeputyList.TabIndex = 3;
-            this.gbDeputyList.TabStop = false;
+            this.gbDepartmentList.Controls.Add(this.pbEDDS);
+            this.gbDepartmentList.Controls.Add(this.pbEDDSMarker);
+            this.gbDepartmentList.Controls.Add(this.pbGlava);
+            this.gbDepartmentList.Controls.Add(this.pbGlavaMarker);
+            this.gbDepartmentList.Controls.Add(this.pbMCU);
+            this.gbDepartmentList.Controls.Add(this.pbMCUMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfAPK);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfFinancePolicy);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfEconomicDevelopment);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfSocialDevelopment);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfAKR);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfAPKMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfFinancePolicyMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfEconomicDevelopmentMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfSocialDevelopmentMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfAKRMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfJKH);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfSecurityCouncil);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfPropertyRelations);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfJKHMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfSecurityCouncilMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfPropertyRelationsMarker);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfCityDistrict);
+            this.gbDepartmentList.Controls.Add(this.pbDepartmentOfCityDistrictMarker);
+            this.gbDepartmentList.Location = new System.Drawing.Point(139, 27);
+            this.gbDepartmentList.Name = "gbDepartmentList";
+            this.gbDepartmentList.Size = new System.Drawing.Size(661, 513);
+            this.gbDepartmentList.TabIndex = 3;
+            this.gbDepartmentList.TabStop = false;
             // 
             // pbEDDS
             // 
             this.pbEDDS.AllowDrop = true;
-            this.pbEDDS.Location = new System.Drawing.Point(102, 329);
+            this.pbEDDS.Location = new System.Drawing.Point(97, 329);
             this.pbEDDS.Name = "pbEDDS";
             this.pbEDDS.Size = new System.Drawing.Size(80, 80);
             this.pbEDDS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,7 +394,7 @@ namespace FridayPresentationManager
             // 
             // pbEDDSMarker
             // 
-            this.pbEDDSMarker.Location = new System.Drawing.Point(97, 324);
+            this.pbEDDSMarker.Location = new System.Drawing.Point(92, 324);
             this.pbEDDSMarker.Name = "pbEDDSMarker";
             this.pbEDDSMarker.Size = new System.Drawing.Size(90, 90);
             this.pbEDDSMarker.TabIndex = 33;
@@ -437,16 +437,16 @@ namespace FridayPresentationManager
             this.pbMCUMarker.TabIndex = 29;
             this.pbMCUMarker.TabStop = false;
             // 
-            // pbDeputyOfAPK
+            // pbDepartmentOfAPK
             // 
-            this.pbDeputyOfAPK.AllowDrop = true;
-            this.pbDeputyOfAPK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDeputyOfAPK.Location = new System.Drawing.Point(575, 420);
-            this.pbDeputyOfAPK.Name = "pbDeputyOfAPK";
-            this.pbDeputyOfAPK.Size = new System.Drawing.Size(80, 80);
-            this.pbDeputyOfAPK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDeputyOfAPK.TabIndex = 28;
-            this.pbDeputyOfAPK.TabStop = false;
+            this.pbDepartmentOfAPK.AllowDrop = true;
+            this.pbDepartmentOfAPK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbDepartmentOfAPK.Location = new System.Drawing.Point(575, 420);
+            this.pbDepartmentOfAPK.Name = "pbDepartmentOfAPK";
+            this.pbDepartmentOfAPK.Size = new System.Drawing.Size(80, 80);
+            this.pbDepartmentOfAPK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDepartmentOfAPK.TabIndex = 28;
+            this.pbDepartmentOfAPK.TabStop = false;
             // 
             // label1
             // 
@@ -502,7 +502,7 @@ namespace FridayPresentationManager
             this.Controls.Add(this.bExploreFolder);
             this.Controls.Add(this.tbPresentationsFolderPath);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gbDeputyList);
+            this.Controls.Add(this.gbDepartmentList);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.menuStrip1);
@@ -513,31 +513,31 @@ namespace FridayPresentationManager
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrictMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfCityDistrict)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfPropertyRelationsMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSecurityCouncilMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfJKHMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfPropertyRelations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSecurityCouncil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfJKH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAKRMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSocialDevelopmentMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfEconomicDevelopmentMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfFinancePolicyMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAPKMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAKR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfSocialDevelopment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfEconomicDevelopment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfFinancePolicy)).EndInit();
-            this.gbDeputyList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfCityDistrictMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfCityDistrict)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfPropertyRelationsMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSecurityCouncilMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfJKHMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfPropertyRelations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSecurityCouncil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfJKH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAKRMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSocialDevelopmentMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfEconomicDevelopmentMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfFinancePolicyMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAPKMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAKR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfSocialDevelopment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfEconomicDevelopment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfFinancePolicy)).EndInit();
+            this.gbDepartmentList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbEDDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEDDSMarker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlava)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGlavaMarker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMCU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMCUMarker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDeputyOfAPK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfAPK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,29 +551,29 @@ namespace FridayPresentationManager
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox1;
-        internal PictureBox pbDeputyOfCityDistrictMarker;
-        internal PictureBox pbDeputyOfCityDistrict;
-        internal PictureBox pbDeputyOfPropertyRelationsMarker;
-        internal PictureBox pbDeputyOfSecurityCouncilMarker;
-        internal PictureBox pbDeputyOfJKHMarker;
-        internal PictureBox pbDeputyOfPropertyRelations;
-        internal PictureBox pbDeputyOfSecurityCouncil;
-        internal PictureBox pbDeputyOfJKH;
-        internal PictureBox pbDeputyOfAKRMarker;
-        internal PictureBox pbDeputyOfSocialDevelopmentMarker;
-        internal PictureBox pbDeputyOfEconomicDevelopmentMarker;
-        internal PictureBox pbDeputyOfFinancePolicyMarker;
-        internal PictureBox pbDeputyOfAPKMarker;
-        internal PictureBox pbDeputyOfAKR;
-        internal PictureBox pbDeputyOfSocialDevelopment;
-        internal PictureBox pbDeputyOfEconomicDevelopment;
-        internal PictureBox pbDeputyOfFinancePolicy;
-        private GroupBox gbDeputyList;
+        internal PictureBox pbDepartmentOfCityDistrictMarker;
+        internal PictureBox pbDepartmentOfCityDistrict;
+        internal PictureBox pbDepartmentOfPropertyRelationsMarker;
+        internal PictureBox pbDepartmentOfSecurityCouncilMarker;
+        internal PictureBox pbDepartmentOfJKHMarker;
+        internal PictureBox pbDepartmentOfPropertyRelations;
+        internal PictureBox pbDepartmentOfSecurityCouncil;
+        internal PictureBox pbDepartmentOfJKH;
+        internal PictureBox pbDepartmentOfAKRMarker;
+        internal PictureBox pbDepartmentOfSocialDevelopmentMarker;
+        internal PictureBox pbDepartmentOfEconomicDevelopmentMarker;
+        internal PictureBox pbDepartmentOfFinancePolicyMarker;
+        internal PictureBox pbDepartmentOfAPKMarker;
+        internal PictureBox pbDepartmentOfAKR;
+        internal PictureBox pbDepartmentOfSocialDevelopment;
+        internal PictureBox pbDepartmentOfEconomicDevelopment;
+        internal PictureBox pbDepartmentOfFinancePolicy;
+        private GroupBox gbDepartmentList;
         internal PictureBox pbGlava;
         internal PictureBox pbGlavaMarker;
         internal PictureBox pbMCU;
         internal PictureBox pbMCUMarker;
-        internal PictureBox pbDeputyOfAPK;
+        internal PictureBox pbDepartmentOfAPK;
         private Label label1;
         private TextBox tbPresentationsFolderPath;
         private Button bExploreFolder;

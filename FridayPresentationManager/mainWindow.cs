@@ -24,6 +24,9 @@ namespace FridayPresentationManager
     {
         public static MainWindow mainWindow;
         private PictureBox currentPresentationPB = null;
+        internal string currentPresentationsPath = "";
+        public Department[] departments = null;
+
         public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
         public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
 
@@ -35,7 +38,6 @@ namespace FridayPresentationManager
         public Dictionary<string, string> varFirstDeputyDeputyNames = new Dictionary<string, string>();
         public Dictionary<string, string> varDeputyDeputyNames = new Dictionary<string, string>();
         public Dictionary<string, string> varPresentations = new Dictionary<string, string>();
-
         //==================================================================================================
         private string DictionaryGetKeyByIndex(Dictionary<string,string> dict,int ind)
         {
@@ -89,14 +91,14 @@ namespace FridayPresentationManager
                     Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + departmentName.Key] as PictureBox), image);
                 }
 
-                Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + departmentName.Key + "Marker"] as PictureBox), (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesErrorPhoto));
+                Gui.SetPicture((this.Controls["gbDeputyList"].Controls["pb" + departmentName.Key + "Marker"] as PictureBox), (Image)Resources.ResourceManager.GetObject(Consts.imagesErrorPhoto));
             }
         }
         private void InitializeINIParameters()
         {//считываем параметры
             IniFiles INI = new IniFiles(Consts.iniConfigFileName);
 
-            
+            /*
             foreach(string departmentName in Consts.departmentsNames)
             {
                 //получаем имена заместителей
@@ -127,14 +129,8 @@ namespace FridayPresentationManager
                     varDeputyPresentationsNames[departmentName] = INI.ReadINI(Consts.configSectionsName_presentationsNames, departmentName);
                 }
 
-                /*//получаем предустановленные расширения для презентаций
-                varDeputyPresentationsExts[departmentName] = Consts.presentationEXTs[0];
-                if (INI.KeyExists(Consts.configSectionsName_presentationsExts, departmentName))
-                {
-                    varDeputyPresentationsExts[departmentName] = INI.ReadINI(Consts.configSectionsName_presentationsExts, departmentName);
-                }*/
             }
-
+            */
             //получаем путь к корневой папке с презентациями
             if (INI.KeyExists(Consts.configSectionsName_path, Consts.configKeysName_presentationFolder))
             {
@@ -183,10 +179,6 @@ namespace FridayPresentationManager
                 //contextMenuStrip.Items.AddRange(new[] { tsmiFirstDeputyMenuItem, tsmiDeputyDeputyMenuItem });
                 (this.Controls["gbDeputyList"].Controls["pb" + departmentName] as PictureBox).ContextMenuStrip = contextMenuStrip;
             }
-        }
-        internal void SelectPresentation(object sender, EventArgs e)
-        {
-
         }
         internal string GetDeputyName(string departmentName)
         {
@@ -305,6 +297,7 @@ namespace FridayPresentationManager
         }
         private void PreparePresentataions()
         {
+            /*
             SetMarkersDefault();
 
             if (!PreparePresentationList(GetPresentationsFolderFromListBox())) 
@@ -313,7 +306,20 @@ namespace FridayPresentationManager
                 return;
             }
             PreparePBMarkers_OK(varPresentations);
-            
+            */
+            currentPresentationsPath = GetPresentationsFolderFromListBox();
+            IniFiles INI = new IniFiles(Consts.iniConfigFileName);
+
+            string[] departmensNames;
+            INI.GetPrivateProfileSection(Consts.configSectionsName_departmentslist,out departmensNames);
+
+            for(int i = 0; i < departmensNames.Count(); i++) { departmensNames[i] = departmensNames[i].Split('=')[1]; }
+
+            departments = new Department[departmensNames.Count()];
+            for(int i=0;i<departmensNames.Count();i++)
+            {
+                departments[i] = new Department(departmensNames[i],this.gbDepartmentList);
+            }
         }
         private void OpenPresentation(string presentationPath)
         {
@@ -341,10 +347,12 @@ namespace FridayPresentationManager
             mainWindow = this;
             InitializeComponent();
             InitializeINIParameters();
-            InitializeDeputyPhotos();
+            //InitializeDeputyPhotos();
 
-            PrepareContextMenuStrip();
-            PrepareToolTips();
+            //PrepareContextMenuStrip();
+            //PrepareToolTips();
+
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -417,7 +425,7 @@ namespace FridayPresentationManager
 
         private void bExploreFolder_Click(object sender, EventArgs e)
         {
-            if (tbPresentationsFolderPath.Text.Length > 0) Process.Start(tbPresentationsFolderPath.Text);
+            if (tbPresentationsFolderPath.Text.Length > 0) { Process.Start(tbPresentationsFolderPath.Text); }
         }
 
         private void lbPresentationsDatesList_SelectedIndexChanged(object sender, EventArgs e)

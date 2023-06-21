@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace FridayPresentationManager
 {
@@ -42,11 +43,11 @@ namespace FridayPresentationManager
             if (INI.KeyExists(section, key)) { return INI.ReadINI(section, key); }
             else { return ""; }
         }
-        private ToolStripMenuItem CreateToolStripItem(string name, string text/*, EventHandler eventHandler*/)
+        private ToolStripMenuItem CreateToolStripItem(string name, string text,Image photo/*, EventHandler eventHandler*/)
         {
             ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            //toolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItemCut.Image")));
+            toolStripMenuItem.Image = photo;
             toolStripMenuItem.Name = "tsmi" + name;
             toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
             toolStripMenuItem.Text = text;
@@ -89,7 +90,7 @@ namespace FridayPresentationManager
         {
             if (this.firstDeputy.fio.Length > 0)
             {
-                return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio);
+                return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo);
             }
             else return null;
         }
@@ -97,7 +98,7 @@ namespace FridayPresentationManager
         {
             if (this.deputy.fio.Length > 0)
             {
-                return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio);
+                return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo);
             }
             else return null;
         }

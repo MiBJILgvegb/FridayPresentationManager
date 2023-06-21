@@ -13,10 +13,18 @@ namespace FridayPresentationManager
 {
     public class Person
     {
-        internal string fio { get; set; }
+        public string fio { get; set; }
         private string photoPath;
 
         bool _defaultPhoto { get; set; } = false;
+        public Image photo;
+        //=========================================================================
+        private string GetPhotoPath(string photoPath) { return Path.Combine(photoPath, this.fio + Consts.imagesEXT); }
+        private Image CreatePhoto()
+        {
+            if(this._defaultPhoto){ return (Image)Resources.ResourceManager.GetObject(this.photoPath); }
+            else { return Image.FromFile(this.photoPath); }
+        }
         //=========================================================================
         public string PhotoPath
         {
@@ -31,19 +39,22 @@ namespace FridayPresentationManager
                 }
             }
         }
-        //=========================================================================
-        private string GetPhotoPath(string photoPath) { return Path.Combine(photoPath, this.fio + Consts.imagesEXT); }
+        public Image Photo
+        {
+            get { return photo; }
+            private set { photo = value; }
+        }
         //=========================================================================
         public Person(string fio, string photoPath)
         {
             this.fio = fio;
             this.PhotoPath = photoPath;
+            this.Photo = CreatePhoto();
         }
         
         public void DrawPhoto(PictureBox pictureBox)
         {
-            if (this._defaultPhoto) { Gui.SetPicture(pictureBox, (Image)Resources.ResourceManager.GetObject(this.photoPath)); }
-            else { Gui.SetPicture(pictureBox, Image.FromFile(this.photoPath)); }
+            Gui.SetPicture(pictureBox, this.Photo);
         }
     }
 }

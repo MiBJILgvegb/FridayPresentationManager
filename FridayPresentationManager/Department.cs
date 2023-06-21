@@ -51,7 +51,7 @@ namespace FridayPresentationManager
             toolStripMenuItem.Name = "tsmi" + name;
             toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
             toolStripMenuItem.Text = text;
-            //toolStripMenuItem.Click += eventHandler;
+            toolStripMenuItem.Click += eventHandler;
 
             return toolStripMenuItem;
         }
@@ -88,12 +88,12 @@ namespace FridayPresentationManager
         }
         private ToolStripMenuItem CreateFirstDeputyToolStripMenuItem()
         {
-            if (this.firstDeputy.fio.Length > 0) { return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo, TSMIFirstDeputyEventHamdler); }
+            if (this.firstDeputy.fio.Length > 0) { return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo, new System.EventHandler(this.TSMIFirstDeputyEventHandler)); }
             else return null;
         }
         private ToolStripMenuItem CreateDeputyToolStripMenuItem()
         {
-            if (this.deputy.fio.Length > 0) { return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo, TSMIDeputyEventHamdler); }
+            if (this.deputy.fio.Length > 0) { return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo, new System.EventHandler(TSMIDeputyEventHandler)); }
             else return null;
         }
         //=========================================================================
@@ -116,12 +116,12 @@ namespace FridayPresentationManager
 
             this.avatarPB.ContextMenuStrip = contextMenuStrip;
         }
-        private void TSMIFirstDeputyEventHamdler()
+        private void TSMIFirstDeputyEventHandler(object sender, EventArgs e)
         {
             this.firstDeputy.DrawPhoto(this.avatarPB);
             this.PrepareToolTip(this.fullName + "\r\n" + this.firstDeputy.fio);
         }
-        private void TSMIDeputyEventHamdler()
+        private void TSMIDeputyEventHandler(object sender, EventArgs e)
         {
             this.deputy.DrawPhoto(this.avatarPB);
             this.PrepareToolTip(this.fullName + "\r\n" + this.deputy.fio);

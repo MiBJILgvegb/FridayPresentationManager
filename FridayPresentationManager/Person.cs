@@ -13,11 +13,16 @@ namespace FridayPresentationManager
 {
     public class Person
     {
-        public string fio { get; set; }
-        public string photoPath 
-        { 
+        private string fio { get; set; }
+        private string photoPath;
+
+        bool _defaultPhoto { get; set; } = false;
+        //=========================================================================
+        public string PhotoPath
+        {
             get { return photoPath; }
-            set {
+            set
+            {
                 this.photoPath = GetPhotoPath(value);
                 if (!File.Exists(this.photoPath))
                 {
@@ -26,8 +31,6 @@ namespace FridayPresentationManager
                 }
             }
         }
-
-        bool _defaultPhoto { get; set; } = false;
         //=========================================================================
         private string GetPhotoPath(string photoPath) { return Path.Combine(photoPath, this.fio + Consts.imagesEXT); }
         //=========================================================================

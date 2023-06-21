@@ -48,6 +48,7 @@ namespace FridayPresentationManager
             ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             toolStripMenuItem.Image = photo;
+            toolStripMenuItem.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             toolStripMenuItem.Name = "tsmi" + name;
             toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
             toolStripMenuItem.Text = text;

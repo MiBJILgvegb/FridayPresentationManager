@@ -48,7 +48,6 @@ namespace FridayPresentationManager
             ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
             toolStripMenuItem.Image = photo;
-            toolStripMenuItem.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             toolStripMenuItem.Name = "tsmi" + name;
             toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
             toolStripMenuItem.Text = text;
@@ -89,18 +88,12 @@ namespace FridayPresentationManager
         }
         private ToolStripMenuItem CreateFirstDeputyToolStripMenuItem()
         {
-            if (this.firstDeputy.fio.Length > 0)
-            {
-                return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo);
-            }
+            if (this.firstDeputy.fio.Length > 0) { return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo); }
             else return null;
         }
         private ToolStripMenuItem CreateDeputyToolStripMenuItem()
         {
-            if (this.deputy.fio.Length > 0)
-            {
-                return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo);
-            }
+            if (this.deputy.fio.Length > 0) { return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo); }
             else return null;
         }
         //=========================================================================
@@ -114,7 +107,6 @@ namespace FridayPresentationManager
             this.contextMenuStrip = new ContextMenuStrip();
             contextMenuStrip.Name = "cmsPB" + this.name;
             contextMenuStrip.Size = new System.Drawing.Size(60, 4);
-            contextMenuStrip.AutoSize = true;
 
             ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
             if (item != null) { this.contextMenuStrip.Items.Add(item); }
@@ -123,6 +115,11 @@ namespace FridayPresentationManager
             if (item != null) { this.contextMenuStrip.Items.Add(item); }
 
             this.avatarPB.ContextMenuStrip = contextMenuStrip;
+        }
+        private void TSMIFirstDeputyEventHamdler()
+        {
+            this.firstDeputy.DrawPhoto(this.avatarPB);
+            this.PrepareToolTip(this.fullName + "\r\n" + this.firstDeputy.fio);
         }
         //=========================================================================
         public void ChangeAvatar()

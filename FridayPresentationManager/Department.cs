@@ -43,7 +43,7 @@ namespace FridayPresentationManager
             if (INI.KeyExists(section, key)) { return INI.ReadINI(section, key); }
             else { return ""; }
         }
-        private ToolStripMenuItem CreateToolStripItem(string name, string text,Image photo/*, EventHandler eventHandler*/)
+        private ToolStripMenuItem CreateToolStripItem(string name, string text,Image photo, EventHandler eventHandler)
         {
             ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -88,12 +88,12 @@ namespace FridayPresentationManager
         }
         private ToolStripMenuItem CreateFirstDeputyToolStripMenuItem()
         {
-            if (this.firstDeputy.fio.Length > 0) { return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo); }
+            if (this.firstDeputy.fio.Length > 0) { return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo, TSMIFirstDeputyEventHamdler); }
             else return null;
         }
         private ToolStripMenuItem CreateDeputyToolStripMenuItem()
         {
-            if (this.deputy.fio.Length > 0) { return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo); }
+            if (this.deputy.fio.Length > 0) { return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo, TSMIDeputyEventHamdler); }
             else return null;
         }
         //=========================================================================
@@ -120,6 +120,11 @@ namespace FridayPresentationManager
         {
             this.firstDeputy.DrawPhoto(this.avatarPB);
             this.PrepareToolTip(this.fullName + "\r\n" + this.firstDeputy.fio);
+        }
+        private void TSMIDeputyEventHamdler()
+        {
+            this.deputy.DrawPhoto(this.avatarPB);
+            this.PrepareToolTip(this.fullName + "\r\n" + this.deputy.fio);
         }
         //=========================================================================
         public void ChangeAvatar()

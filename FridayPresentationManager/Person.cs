@@ -13,36 +13,33 @@ namespace FridayPresentationManager
 {
     public class Person
     {
-        string fio;
-        string photoPath;
+        public string fio { get; set; }
+        public string photoPath 
+        { 
+            get { return photoPath; }
+            set {
+                this.photoPath = GetPhotoPath(value);
+                if (!File.Exists(this.photoPath))
+                {
+                    this._defaultPhoto = true;
+                    this.photoPath = Consts.imagesDefaultPhoto;
+                }
+            }
+        }
 
-        bool defaultPhoto = false;
+        bool _defaultPhoto { get; set; } = false;
         //=========================================================================
         private string GetPhotoPath(string photoPath) { return Path.Combine(photoPath, this.fio + Consts.imagesEXT); }
         //=========================================================================
-        public string FIO() { return this.fio; }
-        public void FIO(string fio) { this.fio = fio; }
-
-        public string PhotoPath() { return this.photoPath; }
-        public void PhotoPath(string photoPath)
-        {
-            this.photoPath = photoPath;
-            if (!File.Exists(this.photoPath))
-            {
-                this.defaultPhoto = true;
-                this.photoPath = Consts.imagesDefaultPhoto;
-            }
-        }
-        //=========================================================================
         public Person(string fio, string photoPath)
         {
-            this.FIO(fio);
-            this.PhotoPath(GetPhotoPath(photoPath));
+            this.fio = fio;
+            this.photoPath = photoPath;
         }
         
         public void DrawPhoto(PictureBox pictureBox)
         {
-            if (this.defaultPhoto) { Gui.SetPicture(pictureBox, (Image)Resources.ResourceManager.GetObject(this.photoPath)); }
+            if (this._defaultPhoto) { Gui.SetPicture(pictureBox, (Image)Resources.ResourceManager.GetObject(this.photoPath)); }
             else { Gui.SetPicture(pictureBox, Image.FromFile(this.photoPath)); }
         }
     }

@@ -114,6 +114,7 @@ namespace FridayPresentationManager
             this.contextMenuStrip = new ContextMenuStrip();
             contextMenuStrip.Name = "cmsPB" + this.name;
             contextMenuStrip.Size = new System.Drawing.Size(60, 4);
+            contextMenuStrip.AutoSize = true;
 
             ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
             if (item != null) { this.contextMenuStrip.Items.Add(item); }

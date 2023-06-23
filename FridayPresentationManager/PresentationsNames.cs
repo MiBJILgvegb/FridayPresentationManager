@@ -44,7 +44,7 @@ namespace FridayPresentationManager
 
             foreach (Department department in MainWindow.mainWindow.departments)
             {
-                INI.Write(department.name, Consts.configSectionsName_presentationsNames, this.Controls["tb" + department.name + "_" + Consts.configKeysName_departmentpresentationname].Text);
+                INI.Write(department.name, Consts.configKeysName_departmentpresentationname, this.Controls["tb" + department.name + "_" + Consts.configKeysName_departmentpresentationname].Text);
                 //this.Controls["tb" + department.name + "_" + Consts.configKeysName_departmentpresentationname].Text = department.presentation.name;
                 department.PreparePresentation();
             }

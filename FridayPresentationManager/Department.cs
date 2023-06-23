@@ -17,7 +17,7 @@ namespace FridayPresentationManager
         string imagesDirectory { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "images");
         string presentationsPath { get; set; } = MainWindow.mainWindow.currentPresentationsPath;
 
-        Presentation presentation;
+        internal Presentation presentation { get; set; }
 
         internal Person departmentHead;
         internal Person firstDeputy;
@@ -135,6 +135,11 @@ namespace FridayPresentationManager
             else return null;
         }
         //=========================================================================
+        public void PreparePresentation()
+        {
+            this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
+        }
+        //=========================================================================
         private void PrepareToolTip(string tooltipText)
         {
             ToolTip t = new ToolTip();
@@ -174,7 +179,8 @@ namespace FridayPresentationManager
             this.PrepareToolTip(this.fullName+"\r\n"+this.departmentHead.fio);
             this.PrepareContextMenuStrip(this.firstDeputy, this.deputy);
 
-            this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
+            this.PreparePresentation();
+            //this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
             this.avatarPB.Click += new System.EventHandler(this.presentation.Open);
         }
         ~Department()

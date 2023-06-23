@@ -34,15 +34,15 @@
             this.bExit = new System.Windows.Forms.Button();
             this.tbMCU_presentationName = new System.Windows.Forms.TextBox();
             this.lMCU_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfAPK_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfFinancePolicy_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfEconomicDevelopment_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfSocialDevelopment_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfAKR_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfJKH_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfSecurityCouncil_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfPropertyRelations_presentationName = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfCityDistrict_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfAPK_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfFinancePolicy_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfEconomicDevelopment_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfSocialDevelopment_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfAKR_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfJKH_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfSecurityCouncil_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfPropertyRelations_presentationName = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfCityDistrict_presentationName = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -121,77 +121,77 @@
             this.lMCU_FIO.TabIndex = 42;
             this.lMCU_FIO.Text = "МЦУ";
             // 
-            // tbDeputyOfAPK_presentationName
+            // tbDepartmentOfAPK_presentationName
             // 
-            this.tbDeputyOfAPK_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfAPK_presentationName.Location = new System.Drawing.Point(366, 214);
-            this.tbDeputyOfAPK_presentationName.Name = "tbDeputyOfAPK_presentationName";
-            this.tbDeputyOfAPK_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfAPK_presentationName.TabIndex = 41;
+            this.tbDepartmentOfAPK_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfAPK_presentationName.Location = new System.Drawing.Point(366, 214);
+            this.tbDepartmentOfAPK_presentationName.Name = "tbDepartmentOfAPK_presentationName";
+            this.tbDepartmentOfAPK_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfAPK_presentationName.TabIndex = 41;
             // 
-            // tbDeputyOfFinancePolicy_presentationName
+            // tbDepartmentOfFinancePolicy_presentationName
             // 
-            this.tbDeputyOfFinancePolicy_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfFinancePolicy_presentationName.Location = new System.Drawing.Point(366, 188);
-            this.tbDeputyOfFinancePolicy_presentationName.Name = "tbDeputyOfFinancePolicy_presentationName";
-            this.tbDeputyOfFinancePolicy_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfFinancePolicy_presentationName.TabIndex = 39;
+            this.tbDepartmentOfFinancePolicy_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfFinancePolicy_presentationName.Location = new System.Drawing.Point(366, 188);
+            this.tbDepartmentOfFinancePolicy_presentationName.Name = "tbDepartmentOfFinancePolicy_presentationName";
+            this.tbDepartmentOfFinancePolicy_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfFinancePolicy_presentationName.TabIndex = 39;
             // 
-            // tbDeputyOfEconomicDevelopment_presentationName
+            // tbDepartmentOfEconomicDevelopment_presentationName
             // 
-            this.tbDeputyOfEconomicDevelopment_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfEconomicDevelopment_presentationName.Location = new System.Drawing.Point(366, 162);
-            this.tbDeputyOfEconomicDevelopment_presentationName.Name = "tbDeputyOfEconomicDevelopment_presentationName";
-            this.tbDeputyOfEconomicDevelopment_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfEconomicDevelopment_presentationName.TabIndex = 37;
+            this.tbDepartmentOfEconomicDevelopment_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfEconomicDevelopment_presentationName.Location = new System.Drawing.Point(366, 162);
+            this.tbDepartmentOfEconomicDevelopment_presentationName.Name = "tbDepartmentOfEconomicDevelopment_presentationName";
+            this.tbDepartmentOfEconomicDevelopment_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfEconomicDevelopment_presentationName.TabIndex = 37;
             // 
-            // tbDeputyOfSocialDevelopment_presentationName
+            // tbDepartmentOfSocialDevelopment_presentationName
             // 
-            this.tbDeputyOfSocialDevelopment_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfSocialDevelopment_presentationName.Location = new System.Drawing.Point(366, 136);
-            this.tbDeputyOfSocialDevelopment_presentationName.Name = "tbDeputyOfSocialDevelopment_presentationName";
-            this.tbDeputyOfSocialDevelopment_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfSocialDevelopment_presentationName.TabIndex = 35;
+            this.tbDepartmentOfSocialDevelopment_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfSocialDevelopment_presentationName.Location = new System.Drawing.Point(366, 136);
+            this.tbDepartmentOfSocialDevelopment_presentationName.Name = "tbDepartmentOfSocialDevelopment_presentationName";
+            this.tbDepartmentOfSocialDevelopment_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfSocialDevelopment_presentationName.TabIndex = 35;
             // 
-            // tbDeputyOfAKR_presentationName
+            // tbDepartmentOfAKR_presentationName
             // 
-            this.tbDeputyOfAKR_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfAKR_presentationName.Location = new System.Drawing.Point(366, 110);
-            this.tbDeputyOfAKR_presentationName.Name = "tbDeputyOfAKR_presentationName";
-            this.tbDeputyOfAKR_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfAKR_presentationName.TabIndex = 33;
+            this.tbDepartmentOfAKR_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfAKR_presentationName.Location = new System.Drawing.Point(366, 110);
+            this.tbDepartmentOfAKR_presentationName.Name = "tbDepartmentOfAKR_presentationName";
+            this.tbDepartmentOfAKR_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfAKR_presentationName.TabIndex = 33;
             // 
-            // tbDeputyOfJKH_presentationName
+            // tbDepartmentOfJKH_presentationName
             // 
-            this.tbDeputyOfJKH_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfJKH_presentationName.Location = new System.Drawing.Point(366, 84);
-            this.tbDeputyOfJKH_presentationName.Name = "tbDeputyOfJKH_presentationName";
-            this.tbDeputyOfJKH_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfJKH_presentationName.TabIndex = 31;
+            this.tbDepartmentOfJKH_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfJKH_presentationName.Location = new System.Drawing.Point(366, 84);
+            this.tbDepartmentOfJKH_presentationName.Name = "tbDepartmentOfJKH_presentationName";
+            this.tbDepartmentOfJKH_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfJKH_presentationName.TabIndex = 31;
             // 
-            // tbDeputyOfSecurityCouncil_presentationName
+            // tbDepartmentOfSecurityCouncil_presentationName
             // 
-            this.tbDeputyOfSecurityCouncil_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfSecurityCouncil_presentationName.Location = new System.Drawing.Point(366, 58);
-            this.tbDeputyOfSecurityCouncil_presentationName.Name = "tbDeputyOfSecurityCouncil_presentationName";
-            this.tbDeputyOfSecurityCouncil_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfSecurityCouncil_presentationName.TabIndex = 29;
+            this.tbDepartmentOfSecurityCouncil_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfSecurityCouncil_presentationName.Location = new System.Drawing.Point(366, 58);
+            this.tbDepartmentOfSecurityCouncil_presentationName.Name = "tbDepartmentOfSecurityCouncil_presentationName";
+            this.tbDepartmentOfSecurityCouncil_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfSecurityCouncil_presentationName.TabIndex = 29;
             // 
-            // tbDeputyOfPropertyRelations_presentationName
+            // tbDepartmentOfPropertyRelations_presentationName
             // 
-            this.tbDeputyOfPropertyRelations_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfPropertyRelations_presentationName.Location = new System.Drawing.Point(366, 32);
-            this.tbDeputyOfPropertyRelations_presentationName.Name = "tbDeputyOfPropertyRelations_presentationName";
-            this.tbDeputyOfPropertyRelations_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfPropertyRelations_presentationName.TabIndex = 27;
+            this.tbDepartmentOfPropertyRelations_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfPropertyRelations_presentationName.Location = new System.Drawing.Point(366, 32);
+            this.tbDepartmentOfPropertyRelations_presentationName.Name = "tbDepartmentOfPropertyRelations_presentationName";
+            this.tbDepartmentOfPropertyRelations_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfPropertyRelations_presentationName.TabIndex = 27;
             // 
-            // tbDeputyOfCityDistrict_presentationName
+            // tbDepartmentOfCityDistrict_presentationName
             // 
-            this.tbDeputyOfCityDistrict_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDeputyOfCityDistrict_presentationName.Location = new System.Drawing.Point(366, 6);
-            this.tbDeputyOfCityDistrict_presentationName.Name = "tbDeputyOfCityDistrict_presentationName";
-            this.tbDeputyOfCityDistrict_presentationName.Size = new System.Drawing.Size(170, 20);
-            this.tbDeputyOfCityDistrict_presentationName.TabIndex = 25;
+            this.tbDepartmentOfCityDistrict_presentationName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepartmentOfCityDistrict_presentationName.Location = new System.Drawing.Point(366, 6);
+            this.tbDepartmentOfCityDistrict_presentationName.Name = "tbDepartmentOfCityDistrict_presentationName";
+            this.tbDepartmentOfCityDistrict_presentationName.Size = new System.Drawing.Size(170, 20);
+            this.tbDepartmentOfCityDistrict_presentationName.TabIndex = 25;
             // 
             // comboBox1
             // 
@@ -404,15 +404,15 @@
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.tbMCU_presentationName);
             this.Controls.Add(this.lMCU_FIO);
-            this.Controls.Add(this.tbDeputyOfAPK_presentationName);
-            this.Controls.Add(this.tbDeputyOfFinancePolicy_presentationName);
-            this.Controls.Add(this.tbDeputyOfEconomicDevelopment_presentationName);
-            this.Controls.Add(this.tbDeputyOfSocialDevelopment_presentationName);
-            this.Controls.Add(this.tbDeputyOfAKR_presentationName);
-            this.Controls.Add(this.tbDeputyOfJKH_presentationName);
-            this.Controls.Add(this.tbDeputyOfSecurityCouncil_presentationName);
-            this.Controls.Add(this.tbDeputyOfPropertyRelations_presentationName);
-            this.Controls.Add(this.tbDeputyOfCityDistrict_presentationName);
+            this.Controls.Add(this.tbDepartmentOfAPK_presentationName);
+            this.Controls.Add(this.tbDepartmentOfFinancePolicy_presentationName);
+            this.Controls.Add(this.tbDepartmentOfEconomicDevelopment_presentationName);
+            this.Controls.Add(this.tbDepartmentOfSocialDevelopment_presentationName);
+            this.Controls.Add(this.tbDepartmentOfAKR_presentationName);
+            this.Controls.Add(this.tbDepartmentOfJKH_presentationName);
+            this.Controls.Add(this.tbDepartmentOfSecurityCouncil_presentationName);
+            this.Controls.Add(this.tbDepartmentOfPropertyRelations_presentationName);
+            this.Controls.Add(this.tbDepartmentOfCityDistrict_presentationName);
             this.Name = "PresentationsNames";
             this.Text = "Имена файлов презентаций";
             this.ResumeLayout(false);
@@ -436,15 +436,15 @@
         private System.Windows.Forms.Label lDeputyOfCityDistrict_FIO;
         internal System.Windows.Forms.TextBox tbEDDS_presentationName;
         internal System.Windows.Forms.TextBox tbMCU_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfAPK_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfFinancePolicy_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfEconomicDevelopment_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfSocialDevelopment_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfAKR_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfJKH_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfSecurityCouncil_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfPropertyRelations_presentationName;
-        internal System.Windows.Forms.TextBox tbDeputyOfCityDistrict_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfAPK_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfFinancePolicy_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfEconomicDevelopment_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfSocialDevelopment_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfAKR_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfJKH_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfSecurityCouncil_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfPropertyRelations_presentationName;
+        internal System.Windows.Forms.TextBox tbDepartmentOfCityDistrict_presentationName;
         internal System.Windows.Forms.ComboBox comboBox1;
         internal System.Windows.Forms.ComboBox comboBox2;
         internal System.Windows.Forms.ComboBox comboBox3;

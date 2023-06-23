@@ -14,7 +14,7 @@ namespace FridayPresentationManager
     public class Presentation
     {
         string presentationPath;
-        string name { get; set; }
+        internal string name { get; set; }
         string currentStatus;
 
         bool exist { get; set; } = false;

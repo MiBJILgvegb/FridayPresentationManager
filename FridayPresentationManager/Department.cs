@@ -12,16 +12,16 @@ namespace FridayPresentationManager
 {
     public class Department
     {
-        string name { get; set; }
+        internal string name { get; set; }
         string fullName { get; set; }
         string imagesDirectory { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "images");
         string presentationsPath { get; set; } = MainWindow.mainWindow.currentPresentationsPath;
 
         Presentation presentation;
 
-        Person departmentHead;
-        Person firstDeputy;
-        Person deputy;
+        internal Person departmentHead;
+        internal Person firstDeputy;
+        internal Person deputy;
 
         Control departmentControl;
         PictureBox avatarPB;
@@ -55,7 +55,7 @@ namespace FridayPresentationManager
 
             return toolStripMenuItem;
         }
-        private void TSMIEventHandler(object sender, EventArgs e)
+        private void TSMIMouseEventHandler(ToolStripMenuItem sender)
         {
             Person person= this.departmentHead;
             Person tsmiPerson1= this.firstDeputy;
@@ -91,6 +91,13 @@ namespace FridayPresentationManager
 
             this.avatarPB.ContextMenuStrip = contextMenuStrip;
         }
+        private void TSMI_MouseClick(object sender, EventArgs e)
+        {
+            if ((e as MouseEventArgs).Button == MouseButtons.Left)
+            {
+                TSMIMouseEventHandler(sender as ToolStripMenuItem);
+            }
+        }
         //=========================================================================
         private string GetFullDepartmenName()
         {
@@ -124,7 +131,7 @@ namespace FridayPresentationManager
         }
         private ToolStripMenuItem CreateToolStripMenuItem(Person person)
         {
-            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, new System.EventHandler(this.TSMIEventHandler)); }
+            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, new System.EventHandler(this.TSMI_MouseClick)); }
             else return null;
         }
         //=========================================================================

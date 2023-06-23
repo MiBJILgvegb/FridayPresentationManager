@@ -294,7 +294,7 @@ namespace FridayPresentationManager
                 }
             }
         }
-        private void PreparePresentataions()
+        internal void PreparePresentataions()
         {
             /*
             SetMarkersDefault();
@@ -319,6 +319,7 @@ namespace FridayPresentationManager
             for(int i=0;i<departmensNames.Count();i++)
             {
                 departments[i] = new Department(departmensNames[i],this.gbDepartmentList);
+
             }
         }
         private void OpenPresentation(string presentationPath)
@@ -348,11 +349,6 @@ namespace FridayPresentationManager
             InitializeComponent();
             InitializeINIParameters();
             //InitializeDeputyPhotos();
-
-            //PrepareContextMenuStrip();
-            //PrepareToolTips();
-
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -380,7 +376,7 @@ namespace FridayPresentationManager
                 FillDatesList();
             }
 
-            PreparePBEvents();
+            //PreparePBEvents();
         }
         private void mainWindow_Load(object sender, EventArgs e)
         {

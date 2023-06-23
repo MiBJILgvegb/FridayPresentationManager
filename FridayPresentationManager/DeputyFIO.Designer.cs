@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             this.lDeputyOfCityDistrict_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfCityDistrict_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfPropertyRelations_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfCityDistrict_HeadFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfPropertyRelations_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfPropertyRelations_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfJKH_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfJKH_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfJKH_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfSecurityCouncil_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfSecurityCouncil_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfSecurityCouncil_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfFinancePolicy_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfFinancePolicy_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfFinancePolicy_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfEconomicDevelopment_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfEconomicDevelopment_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfEconomicDevelopment_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfSocialDevelopment_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfSocialDevelopment_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfSocialDevelopment_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfAKR_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfAKR_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfAKR_FIO = new System.Windows.Forms.Label();
-            this.tbMCU_FIO = new System.Windows.Forms.TextBox();
+            this.tbMCU_HeadFIO = new System.Windows.Forms.TextBox();
             this.lMCU_FIO = new System.Windows.Forms.Label();
-            this.tbDeputyOfAPK_FIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfAPK_HeadFIO = new System.Windows.Forms.TextBox();
             this.lDeputyOfAPK_FIO = new System.Windows.Forms.Label();
             this.bExit = new System.Windows.Forms.Button();
             this.bSave = new System.Windows.Forms.Button();
-            this.tbEDDS_FIO = new System.Windows.Forms.TextBox();
+            this.tbEDDS_HeadFIO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbFirstDeputyOfEDDS_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfMCU_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfAPK_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfFinancePolicy_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfSocialDevelopment_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfAKR_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfJKH_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfSecurityCouncil_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfPropertyRelations_FIO = new System.Windows.Forms.TextBox();
-            this.tbFirstDeputyOfDeputyOfCityDistrict_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfEDDS_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfMCU_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfAPK_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfFinancePolicy_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfEconomicDevelopment_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfSocialDevelopment_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfAKR_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfJKH_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfSecurityCouncil_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfPropertyRelations_FIO = new System.Windows.Forms.TextBox();
-            this.tbDeputyOfDeputyOfCityDistrict_FIO = new System.Windows.Forms.TextBox();
+            this.tbEDDS_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbMCU_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfAPK_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfAKR_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfJKH_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbEDDS_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbMCU_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfAPK_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfFinancePolicy_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfEconomicDevelopment_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfSocialDevelopment_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfAKR_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfJKH_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfSecurityCouncil_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfPropertyRelations_DeputyFIO = new System.Windows.Forms.TextBox();
+            this.tbDepartmentOfCityDistrict_DeputyFIO = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -88,21 +88,21 @@
             this.lDeputyOfCityDistrict_FIO.TabIndex = 0;
             this.lDeputyOfCityDistrict_FIO.Text = "Заместитель по строительству";
             // 
-            // tbDeputyOfCityDistrict_FIO
+            // tbDepartmentOfCityDistrict_HeadFIO
             // 
-            this.tbDeputyOfCityDistrict_FIO.Location = new System.Drawing.Point(351, 27);
-            this.tbDeputyOfCityDistrict_FIO.Name = "tbDeputyOfCityDistrict_FIO";
-            this.tbDeputyOfCityDistrict_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfCityDistrict_FIO.TabIndex = 1;
-            this.tbDeputyOfCityDistrict_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfCityDistrict_HeadFIO.Location = new System.Drawing.Point(351, 27);
+            this.tbDepartmentOfCityDistrict_HeadFIO.Name = "tbDepartmentOfCityDistrict_HeadFIO";
+            this.tbDepartmentOfCityDistrict_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfCityDistrict_HeadFIO.TabIndex = 1;
+            this.tbDepartmentOfCityDistrict_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
-            // tbDeputyOfPropertyRelations_FIO
+            // tbDepartmentOfPropertyRelations_HeadFIO
             // 
-            this.tbDeputyOfPropertyRelations_FIO.Location = new System.Drawing.Point(351, 53);
-            this.tbDeputyOfPropertyRelations_FIO.Name = "tbDeputyOfPropertyRelations_FIO";
-            this.tbDeputyOfPropertyRelations_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfPropertyRelations_FIO.TabIndex = 3;
-            this.tbDeputyOfPropertyRelations_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfPropertyRelations_HeadFIO.Location = new System.Drawing.Point(351, 53);
+            this.tbDepartmentOfPropertyRelations_HeadFIO.Name = "tbDepartmentOfPropertyRelations_HeadFIO";
+            this.tbDepartmentOfPropertyRelations_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfPropertyRelations_HeadFIO.TabIndex = 3;
+            this.tbDepartmentOfPropertyRelations_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfPropertyRelations_FIO
             // 
@@ -113,13 +113,13 @@
             this.lDeputyOfPropertyRelations_FIO.TabIndex = 2;
             this.lDeputyOfPropertyRelations_FIO.Text = "Начальник департамента имущественных и земельных отношений";
             // 
-            // tbDeputyOfJKH_FIO
+            // tbDepartmentOfJKH_HeadFIO
             // 
-            this.tbDeputyOfJKH_FIO.Location = new System.Drawing.Point(351, 105);
-            this.tbDeputyOfJKH_FIO.Name = "tbDeputyOfJKH_FIO";
-            this.tbDeputyOfJKH_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfJKH_FIO.TabIndex = 7;
-            this.tbDeputyOfJKH_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfJKH_HeadFIO.Location = new System.Drawing.Point(351, 105);
+            this.tbDepartmentOfJKH_HeadFIO.Name = "tbDepartmentOfJKH_HeadFIO";
+            this.tbDepartmentOfJKH_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfJKH_HeadFIO.TabIndex = 7;
+            this.tbDepartmentOfJKH_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfJKH_FIO
             // 
@@ -130,13 +130,13 @@
             this.lDeputyOfJKH_FIO.TabIndex = 6;
             this.lDeputyOfJKH_FIO.Text = "Заместитель по ЖКХ";
             // 
-            // tbDeputyOfSecurityCouncil_FIO
+            // tbDepartmentOfSecurityCouncil_HeadFIO
             // 
-            this.tbDeputyOfSecurityCouncil_FIO.Location = new System.Drawing.Point(351, 79);
-            this.tbDeputyOfSecurityCouncil_FIO.Name = "tbDeputyOfSecurityCouncil_FIO";
-            this.tbDeputyOfSecurityCouncil_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfSecurityCouncil_FIO.TabIndex = 5;
-            this.tbDeputyOfSecurityCouncil_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfSecurityCouncil_HeadFIO.Location = new System.Drawing.Point(351, 79);
+            this.tbDepartmentOfSecurityCouncil_HeadFIO.Name = "tbDepartmentOfSecurityCouncil_HeadFIO";
+            this.tbDepartmentOfSecurityCouncil_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfSecurityCouncil_HeadFIO.TabIndex = 5;
+            this.tbDepartmentOfSecurityCouncil_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfSecurityCouncil_FIO
             // 
@@ -147,13 +147,13 @@
             this.lDeputyOfSecurityCouncil_FIO.TabIndex = 4;
             this.lDeputyOfSecurityCouncil_FIO.Text = "Секретарь Совета безопасности";
             // 
-            // tbDeputyOfFinancePolicy_FIO
+            // tbDepartmentOfFinancePolicy_HeadFIO
             // 
-            this.tbDeputyOfFinancePolicy_FIO.Location = new System.Drawing.Point(351, 209);
-            this.tbDeputyOfFinancePolicy_FIO.Name = "tbDeputyOfFinancePolicy_FIO";
-            this.tbDeputyOfFinancePolicy_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfFinancePolicy_FIO.TabIndex = 15;
-            this.tbDeputyOfFinancePolicy_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfFinancePolicy_HeadFIO.Location = new System.Drawing.Point(351, 209);
+            this.tbDepartmentOfFinancePolicy_HeadFIO.Name = "tbDepartmentOfFinancePolicy_HeadFIO";
+            this.tbDepartmentOfFinancePolicy_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfFinancePolicy_HeadFIO.TabIndex = 15;
+            this.tbDepartmentOfFinancePolicy_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfFinancePolicy_FIO
             // 
@@ -164,13 +164,13 @@
             this.lDeputyOfFinancePolicy_FIO.TabIndex = 14;
             this.lDeputyOfFinancePolicy_FIO.Text = "Начальник департамента финансов и бюджетной политики";
             // 
-            // tbDeputyOfEconomicDevelopment_FIO
+            // tbDepartmentOfEconomicDevelopment_HeadFIO
             // 
-            this.tbDeputyOfEconomicDevelopment_FIO.Location = new System.Drawing.Point(351, 183);
-            this.tbDeputyOfEconomicDevelopment_FIO.Name = "tbDeputyOfEconomicDevelopment_FIO";
-            this.tbDeputyOfEconomicDevelopment_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfEconomicDevelopment_FIO.TabIndex = 13;
-            this.tbDeputyOfEconomicDevelopment_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfEconomicDevelopment_HeadFIO.Location = new System.Drawing.Point(351, 183);
+            this.tbDepartmentOfEconomicDevelopment_HeadFIO.Name = "tbDepartmentOfEconomicDevelopment_HeadFIO";
+            this.tbDepartmentOfEconomicDevelopment_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfEconomicDevelopment_HeadFIO.TabIndex = 13;
+            this.tbDepartmentOfEconomicDevelopment_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfEconomicDevelopment_FIO
             // 
@@ -181,13 +181,13 @@
             this.lDeputyOfEconomicDevelopment_FIO.TabIndex = 12;
             this.lDeputyOfEconomicDevelopment_FIO.Text = "Заместитель по экономразвитию";
             // 
-            // tbDeputyOfSocialDevelopment_FIO
+            // tbDepartmentOfSocialDevelopment_HeadFIO
             // 
-            this.tbDeputyOfSocialDevelopment_FIO.Location = new System.Drawing.Point(351, 157);
-            this.tbDeputyOfSocialDevelopment_FIO.Name = "tbDeputyOfSocialDevelopment_FIO";
-            this.tbDeputyOfSocialDevelopment_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfSocialDevelopment_FIO.TabIndex = 11;
-            this.tbDeputyOfSocialDevelopment_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfSocialDevelopment_HeadFIO.Location = new System.Drawing.Point(351, 157);
+            this.tbDepartmentOfSocialDevelopment_HeadFIO.Name = "tbDepartmentOfSocialDevelopment_HeadFIO";
+            this.tbDepartmentOfSocialDevelopment_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfSocialDevelopment_HeadFIO.TabIndex = 11;
+            this.tbDepartmentOfSocialDevelopment_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfSocialDevelopment_FIO
             // 
@@ -198,13 +198,13 @@
             this.lDeputyOfSocialDevelopment_FIO.TabIndex = 10;
             this.lDeputyOfSocialDevelopment_FIO.Text = "Заместитель по соцразвитию";
             // 
-            // tbDeputyOfAKR_FIO
+            // tbDepartmentOfAKR_HeadFIO
             // 
-            this.tbDeputyOfAKR_FIO.Location = new System.Drawing.Point(351, 131);
-            this.tbDeputyOfAKR_FIO.Name = "tbDeputyOfAKR_FIO";
-            this.tbDeputyOfAKR_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfAKR_FIO.TabIndex = 9;
-            this.tbDeputyOfAKR_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfAKR_HeadFIO.Location = new System.Drawing.Point(351, 131);
+            this.tbDepartmentOfAKR_HeadFIO.Name = "tbDepartmentOfAKR_HeadFIO";
+            this.tbDepartmentOfAKR_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfAKR_HeadFIO.TabIndex = 9;
+            this.tbDepartmentOfAKR_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfAKR_FIO
             // 
@@ -215,13 +215,13 @@
             this.lDeputyOfAKR_FIO.TabIndex = 8;
             this.lDeputyOfAKR_FIO.Text = "Начальник департамента по ОАКР";
             // 
-            // tbMCU_FIO
+            // tbMCU_HeadFIO
             // 
-            this.tbMCU_FIO.Location = new System.Drawing.Point(351, 287);
-            this.tbMCU_FIO.Name = "tbMCU_FIO";
-            this.tbMCU_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbMCU_FIO.TabIndex = 19;
-            this.tbMCU_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbMCU_HeadFIO.Location = new System.Drawing.Point(351, 287);
+            this.tbMCU_HeadFIO.Name = "tbMCU_HeadFIO";
+            this.tbMCU_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbMCU_HeadFIO.TabIndex = 19;
+            this.tbMCU_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lMCU_FIO
             // 
@@ -232,13 +232,13 @@
             this.lMCU_FIO.TabIndex = 18;
             this.lMCU_FIO.Text = "МЦУ";
             // 
-            // tbDeputyOfAPK_FIO
+            // tbDepartmentOfAPK_HeadFIO
             // 
-            this.tbDeputyOfAPK_FIO.Location = new System.Drawing.Point(351, 235);
-            this.tbDeputyOfAPK_FIO.Name = "tbDeputyOfAPK_FIO";
-            this.tbDeputyOfAPK_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfAPK_FIO.TabIndex = 17;
-            this.tbDeputyOfAPK_FIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
+            this.tbDepartmentOfAPK_HeadFIO.Location = new System.Drawing.Point(351, 235);
+            this.tbDepartmentOfAPK_HeadFIO.Name = "tbDepartmentOfAPK_HeadFIO";
+            this.tbDepartmentOfAPK_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfAPK_HeadFIO.TabIndex = 17;
+            this.tbDepartmentOfAPK_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfAPK_FIO
             // 
@@ -271,12 +271,12 @@
             this.bSave.UseVisualStyleBackColor = true;
             this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
-            // tbEDDS_FIO
+            // tbEDDS_HeadFIO
             // 
-            this.tbEDDS_FIO.Location = new System.Drawing.Point(351, 261);
-            this.tbEDDS_FIO.Name = "tbEDDS_FIO";
-            this.tbEDDS_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbEDDS_FIO.TabIndex = 23;
+            this.tbEDDS_HeadFIO.Location = new System.Drawing.Point(351, 261);
+            this.tbEDDS_HeadFIO.Name = "tbEDDS_HeadFIO";
+            this.tbEDDS_HeadFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbEDDS_HeadFIO.TabIndex = 23;
             // 
             // label1
             // 
@@ -296,159 +296,159 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "ФИО заместителя главы";
             // 
-            // tbFirstDeputyOfEDDS_FIO
+            // tbEDDS_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfEDDS_FIO.Location = new System.Drawing.Point(569, 261);
-            this.tbFirstDeputyOfEDDS_FIO.Name = "tbFirstDeputyOfEDDS_FIO";
-            this.tbFirstDeputyOfEDDS_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfEDDS_FIO.TabIndex = 35;
+            this.tbEDDS_FirstDeputyFIO.Location = new System.Drawing.Point(569, 261);
+            this.tbEDDS_FirstDeputyFIO.Name = "tbEDDS_FirstDeputyFIO";
+            this.tbEDDS_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbEDDS_FirstDeputyFIO.TabIndex = 35;
             // 
-            // tbFirstDeputyOfMCU_FIO
+            // tbMCU_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfMCU_FIO.Location = new System.Drawing.Point(569, 287);
-            this.tbFirstDeputyOfMCU_FIO.Name = "tbFirstDeputyOfMCU_FIO";
-            this.tbFirstDeputyOfMCU_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfMCU_FIO.TabIndex = 34;
+            this.tbMCU_FirstDeputyFIO.Location = new System.Drawing.Point(569, 287);
+            this.tbMCU_FirstDeputyFIO.Name = "tbMCU_FirstDeputyFIO";
+            this.tbMCU_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbMCU_FirstDeputyFIO.TabIndex = 34;
             // 
-            // tbFirstDeputyOfDeputyOfAPK_FIO
+            // tbDepartmentOfDeputyOfAPK_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfAPK_FIO.Location = new System.Drawing.Point(569, 235);
-            this.tbFirstDeputyOfDeputyOfAPK_FIO.Name = "tbFirstDeputyOfDeputyOfAPK_FIO";
-            this.tbFirstDeputyOfDeputyOfAPK_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfAPK_FIO.TabIndex = 33;
+            this.tbDepartmentOfDeputyOfAPK_FirstDeputyFIO.Location = new System.Drawing.Point(569, 235);
+            this.tbDepartmentOfDeputyOfAPK_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfAPK_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfAPK_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfAPK_FirstDeputyFIO.TabIndex = 33;
             // 
-            // tbFirstDeputyOfDeputyOfFinancePolicy_FIO
+            // tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfFinancePolicy_FIO.Location = new System.Drawing.Point(569, 209);
-            this.tbFirstDeputyOfDeputyOfFinancePolicy_FIO.Name = "tbFirstDeputyOfDeputyOfFinancePolicy_FIO";
-            this.tbFirstDeputyOfDeputyOfFinancePolicy_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfFinancePolicy_FIO.TabIndex = 32;
+            this.tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO.Location = new System.Drawing.Point(569, 209);
+            this.tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO.TabIndex = 32;
             // 
-            // tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO
+            // tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO.Location = new System.Drawing.Point(569, 183);
-            this.tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO.Name = "tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO";
-            this.tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO.TabIndex = 31;
+            this.tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO.Location = new System.Drawing.Point(569, 183);
+            this.tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO.TabIndex = 31;
             // 
-            // tbFirstDeputyOfDeputyOfSocialDevelopment_FIO
+            // tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfSocialDevelopment_FIO.Location = new System.Drawing.Point(569, 157);
-            this.tbFirstDeputyOfDeputyOfSocialDevelopment_FIO.Name = "tbFirstDeputyOfDeputyOfSocialDevelopment_FIO";
-            this.tbFirstDeputyOfDeputyOfSocialDevelopment_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfSocialDevelopment_FIO.TabIndex = 30;
+            this.tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO.Location = new System.Drawing.Point(569, 157);
+            this.tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO.TabIndex = 30;
             // 
-            // tbFirstDeputyOfDeputyOfAKR_FIO
+            // tbDepartmentOfDeputyOfAKR_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfAKR_FIO.Location = new System.Drawing.Point(569, 131);
-            this.tbFirstDeputyOfDeputyOfAKR_FIO.Name = "tbFirstDeputyOfDeputyOfAKR_FIO";
-            this.tbFirstDeputyOfDeputyOfAKR_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfAKR_FIO.TabIndex = 29;
+            this.tbDepartmentOfDeputyOfAKR_FirstDeputyFIO.Location = new System.Drawing.Point(569, 131);
+            this.tbDepartmentOfDeputyOfAKR_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfAKR_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfAKR_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfAKR_FirstDeputyFIO.TabIndex = 29;
             // 
-            // tbFirstDeputyOfDeputyOfJKH_FIO
+            // tbDepartmentOfDeputyOfJKH_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfJKH_FIO.Location = new System.Drawing.Point(569, 105);
-            this.tbFirstDeputyOfDeputyOfJKH_FIO.Name = "tbFirstDeputyOfDeputyOfJKH_FIO";
-            this.tbFirstDeputyOfDeputyOfJKH_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfJKH_FIO.TabIndex = 28;
+            this.tbDepartmentOfDeputyOfJKH_FirstDeputyFIO.Location = new System.Drawing.Point(569, 105);
+            this.tbDepartmentOfDeputyOfJKH_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfJKH_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfJKH_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfJKH_FirstDeputyFIO.TabIndex = 28;
             // 
-            // tbFirstDeputyOfDeputyOfSecurityCouncil_FIO
+            // tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfSecurityCouncil_FIO.Location = new System.Drawing.Point(569, 79);
-            this.tbFirstDeputyOfDeputyOfSecurityCouncil_FIO.Name = "tbFirstDeputyOfDeputyOfSecurityCouncil_FIO";
-            this.tbFirstDeputyOfDeputyOfSecurityCouncil_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfSecurityCouncil_FIO.TabIndex = 27;
+            this.tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO.Location = new System.Drawing.Point(569, 79);
+            this.tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO.TabIndex = 27;
             // 
-            // tbFirstDeputyOfDeputyOfPropertyRelations_FIO
+            // tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfPropertyRelations_FIO.Location = new System.Drawing.Point(569, 53);
-            this.tbFirstDeputyOfDeputyOfPropertyRelations_FIO.Name = "tbFirstDeputyOfDeputyOfPropertyRelations_FIO";
-            this.tbFirstDeputyOfDeputyOfPropertyRelations_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfPropertyRelations_FIO.TabIndex = 26;
+            this.tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO.Location = new System.Drawing.Point(569, 53);
+            this.tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO.TabIndex = 26;
             // 
-            // tbFirstDeputyOfDeputyOfCityDistrict_FIO
+            // tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO
             // 
-            this.tbFirstDeputyOfDeputyOfCityDistrict_FIO.Location = new System.Drawing.Point(569, 27);
-            this.tbFirstDeputyOfDeputyOfCityDistrict_FIO.Name = "tbFirstDeputyOfDeputyOfCityDistrict_FIO";
-            this.tbFirstDeputyOfDeputyOfCityDistrict_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbFirstDeputyOfDeputyOfCityDistrict_FIO.TabIndex = 25;
+            this.tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO.Location = new System.Drawing.Point(569, 27);
+            this.tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO.Name = "tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO";
+            this.tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO.TabIndex = 25;
             // 
-            // tbDeputyOfEDDS_FIO
+            // tbEDDS_DeputyFIO
             // 
-            this.tbDeputyOfEDDS_FIO.Location = new System.Drawing.Point(787, 261);
-            this.tbDeputyOfEDDS_FIO.Name = "tbDeputyOfEDDS_FIO";
-            this.tbDeputyOfEDDS_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfEDDS_FIO.TabIndex = 46;
+            this.tbEDDS_DeputyFIO.Location = new System.Drawing.Point(787, 261);
+            this.tbEDDS_DeputyFIO.Name = "tbEDDS_DeputyFIO";
+            this.tbEDDS_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbEDDS_DeputyFIO.TabIndex = 46;
             // 
-            // tbDeputyOfMCU_FIO
+            // tbMCU_DeputyFIO
             // 
-            this.tbDeputyOfMCU_FIO.Location = new System.Drawing.Point(787, 287);
-            this.tbDeputyOfMCU_FIO.Name = "tbDeputyOfMCU_FIO";
-            this.tbDeputyOfMCU_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfMCU_FIO.TabIndex = 45;
+            this.tbMCU_DeputyFIO.Location = new System.Drawing.Point(787, 287);
+            this.tbMCU_DeputyFIO.Name = "tbMCU_DeputyFIO";
+            this.tbMCU_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbMCU_DeputyFIO.TabIndex = 45;
             // 
-            // tbDeputyOfDeputyOfAPK_FIO
+            // tbDepartmentOfAPK_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfAPK_FIO.Location = new System.Drawing.Point(787, 235);
-            this.tbDeputyOfDeputyOfAPK_FIO.Name = "tbDeputyOfDeputyOfAPK_FIO";
-            this.tbDeputyOfDeputyOfAPK_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfAPK_FIO.TabIndex = 44;
+            this.tbDepartmentOfAPK_DeputyFIO.Location = new System.Drawing.Point(787, 235);
+            this.tbDepartmentOfAPK_DeputyFIO.Name = "tbDepartmentOfAPK_DeputyFIO";
+            this.tbDepartmentOfAPK_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfAPK_DeputyFIO.TabIndex = 44;
             // 
-            // tbDeputyOfDeputyOfFinancePolicy_FIO
+            // tbDepartmentOfFinancePolicy_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfFinancePolicy_FIO.Location = new System.Drawing.Point(787, 209);
-            this.tbDeputyOfDeputyOfFinancePolicy_FIO.Name = "tbDeputyOfDeputyOfFinancePolicy_FIO";
-            this.tbDeputyOfDeputyOfFinancePolicy_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfFinancePolicy_FIO.TabIndex = 43;
+            this.tbDepartmentOfFinancePolicy_DeputyFIO.Location = new System.Drawing.Point(787, 209);
+            this.tbDepartmentOfFinancePolicy_DeputyFIO.Name = "tbDepartmentOfFinancePolicy_DeputyFIO";
+            this.tbDepartmentOfFinancePolicy_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfFinancePolicy_DeputyFIO.TabIndex = 43;
             // 
-            // tbDeputyOfDeputyOfEconomicDevelopment_FIO
+            // tbDepartmentOfEconomicDevelopment_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfEconomicDevelopment_FIO.Location = new System.Drawing.Point(787, 183);
-            this.tbDeputyOfDeputyOfEconomicDevelopment_FIO.Name = "tbDeputyOfDeputyOfEconomicDevelopment_FIO";
-            this.tbDeputyOfDeputyOfEconomicDevelopment_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfEconomicDevelopment_FIO.TabIndex = 42;
+            this.tbDepartmentOfEconomicDevelopment_DeputyFIO.Location = new System.Drawing.Point(787, 183);
+            this.tbDepartmentOfEconomicDevelopment_DeputyFIO.Name = "tbDepartmentOfEconomicDevelopment_DeputyFIO";
+            this.tbDepartmentOfEconomicDevelopment_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfEconomicDevelopment_DeputyFIO.TabIndex = 42;
             // 
-            // tbDeputyOfDeputyOfSocialDevelopment_FIO
+            // tbDepartmentOfSocialDevelopment_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfSocialDevelopment_FIO.Location = new System.Drawing.Point(787, 157);
-            this.tbDeputyOfDeputyOfSocialDevelopment_FIO.Name = "tbDeputyOfDeputyOfSocialDevelopment_FIO";
-            this.tbDeputyOfDeputyOfSocialDevelopment_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfSocialDevelopment_FIO.TabIndex = 41;
+            this.tbDepartmentOfSocialDevelopment_DeputyFIO.Location = new System.Drawing.Point(787, 157);
+            this.tbDepartmentOfSocialDevelopment_DeputyFIO.Name = "tbDepartmentOfSocialDevelopment_DeputyFIO";
+            this.tbDepartmentOfSocialDevelopment_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfSocialDevelopment_DeputyFIO.TabIndex = 41;
             // 
-            // tbDeputyOfDeputyOfAKR_FIO
+            // tbDepartmentOfAKR_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfAKR_FIO.Location = new System.Drawing.Point(787, 131);
-            this.tbDeputyOfDeputyOfAKR_FIO.Name = "tbDeputyOfDeputyOfAKR_FIO";
-            this.tbDeputyOfDeputyOfAKR_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfAKR_FIO.TabIndex = 40;
+            this.tbDepartmentOfAKR_DeputyFIO.Location = new System.Drawing.Point(787, 131);
+            this.tbDepartmentOfAKR_DeputyFIO.Name = "tbDepartmentOfAKR_DeputyFIO";
+            this.tbDepartmentOfAKR_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfAKR_DeputyFIO.TabIndex = 40;
             // 
-            // tbDeputyOfDeputyOfJKH_FIO
+            // tbDepartmentOfJKH_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfJKH_FIO.Location = new System.Drawing.Point(787, 105);
-            this.tbDeputyOfDeputyOfJKH_FIO.Name = "tbDeputyOfDeputyOfJKH_FIO";
-            this.tbDeputyOfDeputyOfJKH_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfJKH_FIO.TabIndex = 39;
+            this.tbDepartmentOfJKH_DeputyFIO.Location = new System.Drawing.Point(787, 105);
+            this.tbDepartmentOfJKH_DeputyFIO.Name = "tbDepartmentOfJKH_DeputyFIO";
+            this.tbDepartmentOfJKH_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfJKH_DeputyFIO.TabIndex = 39;
             // 
-            // tbDeputyOfDeputyOfSecurityCouncil_FIO
+            // tbDepartmentOfSecurityCouncil_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfSecurityCouncil_FIO.Location = new System.Drawing.Point(787, 79);
-            this.tbDeputyOfDeputyOfSecurityCouncil_FIO.Name = "tbDeputyOfDeputyOfSecurityCouncil_FIO";
-            this.tbDeputyOfDeputyOfSecurityCouncil_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfSecurityCouncil_FIO.TabIndex = 38;
+            this.tbDepartmentOfSecurityCouncil_DeputyFIO.Location = new System.Drawing.Point(787, 79);
+            this.tbDepartmentOfSecurityCouncil_DeputyFIO.Name = "tbDepartmentOfSecurityCouncil_DeputyFIO";
+            this.tbDepartmentOfSecurityCouncil_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfSecurityCouncil_DeputyFIO.TabIndex = 38;
             // 
-            // tbDeputyOfDeputyOfPropertyRelations_FIO
+            // tbDepartmentOfPropertyRelations_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfPropertyRelations_FIO.Location = new System.Drawing.Point(787, 53);
-            this.tbDeputyOfDeputyOfPropertyRelations_FIO.Name = "tbDeputyOfDeputyOfPropertyRelations_FIO";
-            this.tbDeputyOfDeputyOfPropertyRelations_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfPropertyRelations_FIO.TabIndex = 37;
+            this.tbDepartmentOfPropertyRelations_DeputyFIO.Location = new System.Drawing.Point(787, 53);
+            this.tbDepartmentOfPropertyRelations_DeputyFIO.Name = "tbDepartmentOfPropertyRelations_DeputyFIO";
+            this.tbDepartmentOfPropertyRelations_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfPropertyRelations_DeputyFIO.TabIndex = 37;
             // 
-            // tbDeputyOfDeputyOfCityDistrict_FIO
+            // tbDepartmentOfCityDistrict_DeputyFIO
             // 
-            this.tbDeputyOfDeputyOfCityDistrict_FIO.Location = new System.Drawing.Point(787, 27);
-            this.tbDeputyOfDeputyOfCityDistrict_FIO.Name = "tbDeputyOfDeputyOfCityDistrict_FIO";
-            this.tbDeputyOfDeputyOfCityDistrict_FIO.Size = new System.Drawing.Size(212, 20);
-            this.tbDeputyOfDeputyOfCityDistrict_FIO.TabIndex = 36;
+            this.tbDepartmentOfCityDistrict_DeputyFIO.Location = new System.Drawing.Point(787, 27);
+            this.tbDepartmentOfCityDistrict_DeputyFIO.Name = "tbDepartmentOfCityDistrict_DeputyFIO";
+            this.tbDepartmentOfCityDistrict_DeputyFIO.Size = new System.Drawing.Size(212, 20);
+            this.tbDepartmentOfCityDistrict_DeputyFIO.TabIndex = 36;
             // 
             // label3
             // 
@@ -475,52 +475,52 @@
             this.ClientSize = new System.Drawing.Size(1004, 346);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbDeputyOfEDDS_FIO);
-            this.Controls.Add(this.tbDeputyOfMCU_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfAPK_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfFinancePolicy_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfEconomicDevelopment_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfSocialDevelopment_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfAKR_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfJKH_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfSecurityCouncil_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfPropertyRelations_FIO);
-            this.Controls.Add(this.tbDeputyOfDeputyOfCityDistrict_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfEDDS_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfMCU_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfAPK_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfFinancePolicy_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfSocialDevelopment_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfAKR_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfJKH_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfSecurityCouncil_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfPropertyRelations_FIO);
-            this.Controls.Add(this.tbFirstDeputyOfDeputyOfCityDistrict_FIO);
+            this.Controls.Add(this.tbEDDS_DeputyFIO);
+            this.Controls.Add(this.tbMCU_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfAPK_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfFinancePolicy_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfEconomicDevelopment_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfSocialDevelopment_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfAKR_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfJKH_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfSecurityCouncil_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfPropertyRelations_DeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfCityDistrict_DeputyFIO);
+            this.Controls.Add(this.tbEDDS_FirstDeputyFIO);
+            this.Controls.Add(this.tbMCU_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfAPK_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfAKR_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfJKH_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO);
+            this.Controls.Add(this.tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbEDDS_FIO);
+            this.Controls.Add(this.tbEDDS_HeadFIO);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bSave);
             this.Controls.Add(this.bExit);
-            this.Controls.Add(this.tbMCU_FIO);
+            this.Controls.Add(this.tbMCU_HeadFIO);
             this.Controls.Add(this.lMCU_FIO);
-            this.Controls.Add(this.tbDeputyOfAPK_FIO);
+            this.Controls.Add(this.tbDepartmentOfAPK_HeadFIO);
             this.Controls.Add(this.lDeputyOfAPK_FIO);
-            this.Controls.Add(this.tbDeputyOfFinancePolicy_FIO);
+            this.Controls.Add(this.tbDepartmentOfFinancePolicy_HeadFIO);
             this.Controls.Add(this.lDeputyOfFinancePolicy_FIO);
-            this.Controls.Add(this.tbDeputyOfEconomicDevelopment_FIO);
+            this.Controls.Add(this.tbDepartmentOfEconomicDevelopment_HeadFIO);
             this.Controls.Add(this.lDeputyOfEconomicDevelopment_FIO);
-            this.Controls.Add(this.tbDeputyOfSocialDevelopment_FIO);
+            this.Controls.Add(this.tbDepartmentOfSocialDevelopment_HeadFIO);
             this.Controls.Add(this.lDeputyOfSocialDevelopment_FIO);
-            this.Controls.Add(this.tbDeputyOfAKR_FIO);
+            this.Controls.Add(this.tbDepartmentOfAKR_HeadFIO);
             this.Controls.Add(this.lDeputyOfAKR_FIO);
-            this.Controls.Add(this.tbDeputyOfJKH_FIO);
+            this.Controls.Add(this.tbDepartmentOfJKH_HeadFIO);
             this.Controls.Add(this.lDeputyOfJKH_FIO);
-            this.Controls.Add(this.tbDeputyOfSecurityCouncil_FIO);
+            this.Controls.Add(this.tbDepartmentOfSecurityCouncil_HeadFIO);
             this.Controls.Add(this.lDeputyOfSecurityCouncil_FIO);
-            this.Controls.Add(this.tbDeputyOfPropertyRelations_FIO);
+            this.Controls.Add(this.tbDepartmentOfPropertyRelations_HeadFIO);
             this.Controls.Add(this.lDeputyOfPropertyRelations_FIO);
-            this.Controls.Add(this.tbDeputyOfCityDistrict_FIO);
+            this.Controls.Add(this.tbDepartmentOfCityDistrict_HeadFIO);
             this.Controls.Add(this.lDeputyOfCityDistrict_FIO);
             this.Name = "DeputyFIO";
             this.Text = "Имена заместителей";
@@ -532,52 +532,52 @@
         #endregion
 
         private System.Windows.Forms.Label lDeputyOfCityDistrict_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfCityDistrict_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfPropertyRelations_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfCityDistrict_HeadFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfPropertyRelations_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfPropertyRelations_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfJKH_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfJKH_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfJKH_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfSecurityCouncil_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfSecurityCouncil_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfSecurityCouncil_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfFinancePolicy_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfFinancePolicy_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfFinancePolicy_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfEconomicDevelopment_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfEconomicDevelopment_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfEconomicDevelopment_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfSocialDevelopment_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfSocialDevelopment_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfSocialDevelopment_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfAKR_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfAKR_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfAKR_FIO;
-        private System.Windows.Forms.TextBox tbMCU_FIO;
+        private System.Windows.Forms.TextBox tbMCU_HeadFIO;
         private System.Windows.Forms.Label lMCU_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfAPK_FIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfAPK_HeadFIO;
         private System.Windows.Forms.Label lDeputyOfAPK_FIO;
         private System.Windows.Forms.Button bExit;
         private System.Windows.Forms.Button bSave;
-        private System.Windows.Forms.TextBox tbEDDS_FIO;
+        private System.Windows.Forms.TextBox tbEDDS_HeadFIO;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfEDDS_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfMCU_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfAPK_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfFinancePolicy_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfEconomicDevelopment_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfSocialDevelopment_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfAKR_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfJKH_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfSecurityCouncil_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfPropertyRelations_FIO;
-        private System.Windows.Forms.TextBox tbFirstDeputyOfDeputyOfCityDistrict_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfEDDS_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfMCU_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfAPK_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfFinancePolicy_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfEconomicDevelopment_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfSocialDevelopment_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfAKR_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfJKH_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfSecurityCouncil_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfPropertyRelations_FIO;
-        private System.Windows.Forms.TextBox tbDeputyOfDeputyOfCityDistrict_FIO;
+        private System.Windows.Forms.TextBox tbEDDS_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbMCU_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfAPK_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfFinancePolicy_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfEconomicDevelopment_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfSocialDevelopment_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfAKR_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfJKH_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfSecurityCouncil_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfPropertyRelations_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfDeputyOfCityDistrict_FirstDeputyFIO;
+        private System.Windows.Forms.TextBox tbEDDS_DeputyFIO;
+        private System.Windows.Forms.TextBox tbMCU_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfAPK_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfFinancePolicy_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfEconomicDevelopment_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfSocialDevelopment_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfAKR_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfJKH_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfSecurityCouncil_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfPropertyRelations_DeputyFIO;
+        private System.Windows.Forms.TextBox tbDepartmentOfCityDistrict_DeputyFIO;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }

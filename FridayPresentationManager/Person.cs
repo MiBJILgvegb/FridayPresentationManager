@@ -15,6 +15,7 @@ namespace FridayPresentationManager
     {
         public string fio { get; set; }
         private string photoPath;
+        public string title { get; set; }
 
         bool _defaultPhoto { get; set; } = false;
         public Image photo;
@@ -45,13 +46,21 @@ namespace FridayPresentationManager
             private set { photo = value; }
         }
         //=========================================================================
-        public Person(string fio, string photoPath)
+        public Person(string fio,string title, string photoPath)
         {
             this.fio = fio;
+            this.title = title;
             this.PhotoPath = photoPath;
             this.Photo = CreatePhoto();
         }
-        
+        ~Person()
+        {
+            this.photoPath = null;
+            this._defaultPhoto = false;
+            this.title=null;
+            this.Photo = null;
+            this.fio=null;
+        }
         public void DrawPhoto(PictureBox pictureBox)
         {
             Gui.SetPicture(pictureBox, this.Photo);

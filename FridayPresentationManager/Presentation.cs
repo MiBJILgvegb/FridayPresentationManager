@@ -7,60 +7,97 @@ using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
 using FridayPresentationManager.Properties;
+using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 
 namespace FridayPresentationManager
 {
     public class Presentation
     {
         string presentationPath;
-        string name;
+        string name { get; set; }
         string currentStatus;
 
-        bool exist=false;
-        bool defaultMarkers = true;
+        bool exist { get; set; } = false;
+        bool defaultMarkers { get; set; } = true;
 
-        PictureBox marker;
+        PictureBox marker { get; set; }
+        PowerPoint.Presentation presentation { get; set; }
         //=========================================================================
+        private void StatusDraw()
+        {
+            string marker = "";
+            if (this.CurrentStatus.Equals(Consts._presentationStatusERR)) { marker = Consts.imagesErrorPhoto; }
+            else if (this.CurrentStatus.Equals(Consts._presentationStatusOK)) { marker = Consts.imagesOKPhoto; }
+            else if (this.CurrentStatus.Equals(Consts._presentationStatusCUR)) { marker = Consts.imagesCurrentPhoto; }
+
+            if (File.Exists(GetMarkerPath(Consts.imagesDefaultPath, marker))) { this.defaultMarkers = false; }
+
+            this.SetPresentationMarkerImage(marker);
+        }
         private void SetPresentationMarkerImage(string imageName)
         {
-            if (this.defaultMarkers) { Gui.SetPicture(this.marker, (Image)Resources.ResourceManager.GetObject(imageName)); }
-            else { Gui.SetPicture(this.marker, Image.FromFile(GetMarkerPath(Consts.imagesDefaultPath, imageName) )); }
+            Image image;
+            if (this.defaultMarkers) { image= (Image)Resources.ResourceManager.GetObject(imageName); }
+            else { image= Image.FromFile(GetMarkerPath(Consts.imagesDefaultPath, imageName)); }
+
+            Gui.SetPicture(this.marker, image);
         }
         private string GetMarkerPath(string markerPath,string markerName) { return Path.Combine(markerPath, markerName, Consts.imagesEXT); }
         private string GetPresentationPath(string folder,string name) { return Path.Combine(folder, name + Consts.presentationEXTs[0]); }
+        private void OpenPresentation()
+        {
+            PowerPoint.Application objApp = new PowerPoint.Application();
+            PowerPoint.Presentations objPresSet = objApp.Presentations;
+            this.presentation = objPresSet.Open(this.PresentationPath);
+        }
         //=========================================================================
-        public string PresentationPath() { return this.presentationPath; }
-        public void PresentationPath(string path) 
+        public string CurrentStatus
         {
-            this.presentationPath = path;
-            if (File.Exists(this.presentationPath)) { this.exist = true; }
+            get { return this.currentStatus; }
+            set
+            {
+                this.currentStatus = value;
+                this.StatusDraw();
+            }
         }
-        public string Name() { return this.name; }
-        public void Name(string name) { this.name = name; }
-        public void StatusDraw() 
+        public string PresentationPath
         {
-            string marker = "";
-            if (this.Status().Equals(Consts._presentationStatusERR)) { marker = Consts.imagesErrorPhoto; }
-            else if (this.Status().Equals(Consts._presentationStatusOK)) { marker = Consts.imagesOKPhoto; }
-            else if (this.Status().Equals(Consts._presentationStatusCUR)) { marker = Consts.imagesCurrentPhoto; }
+            get { return this.presentationPath; }
+            set 
+            {
+                this.presentationPath = value;
+                if (File.Exists(this.PresentationPath)) { this.exist = true; }
+            }
+        }
+        
+        public void Open(object sender, EventArgs e)
+        {
+            this.CurrentStatus = Consts._presentationStatusCUR;
 
-            if (File.Exists(GetMarkerPath(Consts.imagesDefaultPath, marker))) { this.defaultMarkers = false; }
-            
-            this.SetPresentationMarkerImage(marker);
+            this.OpenPresentation();
+
+            this.presentation.SlideShowSettings.Run();
         }
-        public void Status(string status) { this.currentStatus = status; }
-        public string Status() { return this.currentStatus; }
-        public void Marker(PictureBox marker) { this.marker = marker; }
         //=========================================================================
         public Presentation(string folder, string name, PictureBox marker) 
         {
-            this.Name(name);
-            this.PresentationPath(this.GetPresentationPath(folder,name));
-            this.Marker(marker);
+            this.name=name;
+            this.PresentationPath=this.GetPresentationPath(folder,name);
+            this.marker=marker;
 
-            if (this.exist) { this.Status(Consts._presentationStatusOK); }
-            else { this.Status(Consts._presentationStatusERR); }
-            this.StatusDraw();
+            if (this.exist) { this.CurrentStatus = Consts._presentationStatusOK; }
+            else { this.CurrentStatus = Consts._presentationStatusERR; }
+            
+        }
+        ~Presentation()
+        {
+            this.presentation=null;
+            this.presentationPath=null;
+            this.marker = null;
+            this.exist = false;
+            this.defaultMarkers = false;
+            this.name = null;
+            this.currentStatus = null;
         }
     }
 }

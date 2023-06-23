@@ -14,9 +14,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FridayPresentationManager.Properties;
 using iniFiles;
-using Microsoft.Office.Core;
-using Microsoft.Office.Interop.PowerPoint;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
+
 
 namespace FridayPresentationManager
 {
@@ -25,7 +24,7 @@ namespace FridayPresentationManager
         public static MainWindow mainWindow;
         private PictureBox currentPresentationPB = null;
         internal string currentPresentationsPath = "";
-        public Department[] departments = null;
+        public Department[] departments;
 
         public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
         public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
@@ -315,6 +314,7 @@ namespace FridayPresentationManager
 
             for(int i = 0; i < departmensNames.Count(); i++) { departmensNames[i] = departmensNames[i].Split('=')[1]; }
 
+            departments = null;
             departments = new Department[departmensNames.Count()];
             for(int i=0;i<departmensNames.Count();i++)
             {
@@ -400,12 +400,6 @@ namespace FridayPresentationManager
             {
                 DeputyPictureClick(sender as PictureBox);
             }
-            /*else if((e as MouseEventArgs).Button == MouseButtons.Right)
-            {
-                
-                cmsPB.Items[0].Text=varDeputyDeputyNames[GetDeputyNameFromPictureBox(sender as PictureBox)];
-                (sender as PictureBox).ContextMenuStrip = cmsPB;
-            }*/
         }
 
         /*
@@ -431,7 +425,6 @@ namespace FridayPresentationManager
         private void lbPresentationsDatesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreparePresentataions();
-            //PreparePBEvents();
         }
 
         private void cbPresentationByYearsFilter_SelectedIndexChanged(object sender, EventArgs e)

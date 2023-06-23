@@ -55,6 +55,42 @@ namespace FridayPresentationManager
 
             return toolStripMenuItem;
         }
+        private void TSMIEventHandler(object sender, EventArgs e)
+        {
+            Person person= this.departmentHead;
+            Person tsmiPerson1= this.firstDeputy;
+            Person tsmiPerson2= this.deputy;
+            if((sender as ToolStripMenuItem).Name.Contains(Consts.departmentPersonTitle_firstDeputy))
+            { 
+                person = this.firstDeputy;
+                tsmiPerson1 = this.departmentHead;
+            }
+            else if((sender as ToolStripMenuItem).Name.Contains(Consts.departmentPersonTitle_deputy)) 
+            { 
+                person = this.deputy;
+                tsmiPerson2 = this.departmentHead;
+            }
+            /*else 
+            { 
+                person = this.departmentHead;
+                tsmiPerson1 = this.firstDeputy;
+                tsmiPerson2 = this.deputy;
+            }*/
+            person.DrawPhoto(this.avatarPB);
+            this.PrepareToolTip(this.fullName + "\r\n" + person.fio);
+
+            this.contextMenuStrip.Items.Clear();
+
+            ToolStripMenuItem item = CreateToolStripMenuItem(tsmiPerson1);
+
+            //ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
+            if (item != null) { this.contextMenuStrip.Items.Add(item); }
+
+            item = CreateToolStripMenuItem(tsmiPerson2);
+            if (item != null) { this.contextMenuStrip.Items.Add(item); }
+
+            this.avatarPB.ContextMenuStrip = contextMenuStrip;
+        }
         //=========================================================================
         private string GetFullDepartmenName()
         {
@@ -74,7 +110,7 @@ namespace FridayPresentationManager
         }
         private string GetImagesPath()
         {
-            string imagePath = this.GetINIInfo( Consts.configSectionsName_path, Consts.configKeysName_imagesFolder);
+            string imagePath = this.GetINIInfo(Consts.configSectionsName_path, Consts.configKeysName_imagesFolder);
             if (imagePath.Length == 0) { return Path.Combine(Directory.GetCurrentDirectory(), "images"); }
             else { return imagePath; }
         }
@@ -86,14 +122,9 @@ namespace FridayPresentationManager
         {
             return this.GetINIInfo(this.name, Consts.configKeysName_departmentpresentationname);
         }
-        private ToolStripMenuItem CreateFirstDeputyToolStripMenuItem()
+        private ToolStripMenuItem CreateToolStripMenuItem(Person person)
         {
-            if (this.firstDeputy.fio.Length > 0) { return CreateToolStripItem(this.name + "FirstDeputyMenuItem", this.firstDeputy.fio,this.firstDeputy.photo, new System.EventHandler(this.TSMIFirstDeputyEventHandler)); }
-            else return null;
-        }
-        private ToolStripMenuItem CreateDeputyToolStripMenuItem()
-        {
-            if (this.deputy.fio.Length > 0) { return CreateToolStripItem(this.name + "DeputyMenuItem", this.deputy.fio,this.deputy.photo, new System.EventHandler(TSMIDeputyEventHandler)); }
+            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, new System.EventHandler(this.TSMIEventHandler)); }
             else return null;
         }
         //=========================================================================
@@ -102,34 +133,21 @@ namespace FridayPresentationManager
             ToolTip t = new ToolTip();
             t.SetToolTip(this.avatarPB, tooltipText);
         }
-        private void PrepareContextMenuStrip()
+        private void PrepareContextMenuStrip(Person first,Person second)
         {
             this.contextMenuStrip = new ContextMenuStrip();
             contextMenuStrip.Name = "cmsPB" + this.name;
             contextMenuStrip.Size = new System.Drawing.Size(60, 4);
 
-            ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
+            ToolStripMenuItem item = CreateToolStripMenuItem(first);
+
+            //ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
             if (item != null) { this.contextMenuStrip.Items.Add(item); }
 
-            item = CreateDeputyToolStripMenuItem();
+            item = CreateToolStripMenuItem(second);
             if (item != null) { this.contextMenuStrip.Items.Add(item); }
 
             this.avatarPB.ContextMenuStrip = contextMenuStrip;
-        }
-        private void TSMIFirstDeputyEventHandler(object sender, EventArgs e)
-        {
-            this.firstDeputy.DrawPhoto(this.avatarPB);
-            this.PrepareToolTip(this.fullName + "\r\n" + this.firstDeputy.fio);
-        }
-        private void TSMIDeputyEventHandler(object sender, EventArgs e)
-        {
-            this.deputy.DrawPhoto(this.avatarPB);
-            this.PrepareToolTip(this.fullName + "\r\n" + this.deputy.fio);
-        }
-        //=========================================================================
-        public void ChangeAvatar()
-        {
-
         }
         //=========================================================================
         public Department(string name,Control control) 
@@ -138,17 +156,32 @@ namespace FridayPresentationManager
             this.departmentControl= control;
             this.fullName=this.GetFullDepartmenName();
             this.imagesDirectory = GetImagesPath();
-            this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
 
             this.avatarPB = this.departmentControl.Controls["pb" + this.name] as PictureBox;
 
-            this.departmentHead = new Person(GetHeadFIO(),this.imagesDirectory);
+            this.departmentHead = new Person(GetHeadFIO(),Consts.departmentPersonTitle_head,this.imagesDirectory);
             this.departmentHead.DrawPhoto(this.avatarPB);
-            this.firstDeputy = new Person(GetFirstDeputyFIO(),this.imagesDirectory);
-            this.deputy = new Person(GetDeputyFIO(),this.imagesDirectory);
+            this.firstDeputy = new Person(GetFirstDeputyFIO(),Consts.departmentPersonTitle_firstDeputy,this.imagesDirectory);
+            this.deputy = new Person(GetDeputyFIO(),Consts.departmentPersonTitle_deputy,this.imagesDirectory);
 
             this.PrepareToolTip(this.fullName+"\r\n"+this.departmentHead.fio);
-            this.PrepareContextMenuStrip();
+            this.PrepareContextMenuStrip(this.firstDeputy, this.deputy);
+
+            this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
+            this.avatarPB.Click += new System.EventHandler(this.presentation.Open);
+        }
+        ~Department()
+        {
+            this.departmentHead = null;
+            this.firstDeputy = null;
+            this.deputy = null;
+            this.avatarPB.Click -= new System.EventHandler(this.presentation.Open);
+            this.presentation = null;
+            this.avatarPB = null;
+            this.imagesDirectory = null;
+            this.fullName = null;
+            this.departmentControl = null;
+            this.name = null;
         }
     }
 }

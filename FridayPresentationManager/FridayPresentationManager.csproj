@@ -51,6 +51,9 @@
   <PropertyGroup>
     <StartupObject>FridayPresentationManager.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.PowerPoint.15.0.4420.1018\lib\net20\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
@@ -137,19 +140,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cur.png" />
+    <EmbeddedResource Include="Resources\cur.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\default.png" />
+    <EmbeddedResource Include="Resources\default.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\err.png" />
+    <EmbeddedResource Include="Resources\err.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8--windows-20.png" />
+    <EmbeddedResource Include="Resources\icons8--windows-20.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ok.png" />
+    <EmbeddedResource Include="Resources\ok.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -162,6 +165,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico.ico" />
+    <EmbeddedResource Include="Resources\ico.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

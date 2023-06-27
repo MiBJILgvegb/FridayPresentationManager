@@ -508,6 +508,7 @@ namespace FridayPresentationManager
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "FridayPresentationManager";

@@ -416,7 +416,7 @@ namespace FridayPresentationManager
                 {
                     for (int i = 0; i < departments.Count(); i++)
                     {
-                        departments[i].DepartmentDestroy();
+                        departments[i].Destroy();
                     }
                 }
                 PreparePresentataions(sender as ListBox);

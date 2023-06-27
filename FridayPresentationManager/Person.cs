@@ -47,17 +47,13 @@ namespace FridayPresentationManager
             this.PhotoPath = photoPath;
             this.Photo = CreatePhoto();
         }
-        ~Person()
+        public void Destroy()
         {
-            this.photoPath = null;
-            this._defaultPhoto = false;
-            this.title=null;
+            this.fio = "";
+            this.title = "";
+            this.PhotoPath = "";
             this.Photo = null;
-            this.fio=null;
         }
-        public void DrawPhoto(PictureBox pictureBox)
-        {
-            Gui.SetPicture(pictureBox, this.Photo);
-        }
+        public void DrawPhoto(PictureBox pictureBox){ Gui.SetPicture(pictureBox, this.Photo); }
     }
 }

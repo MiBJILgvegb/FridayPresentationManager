@@ -89,15 +89,15 @@ namespace FridayPresentationManager
             else { this.CurrentStatus = Consts._presentationStatusERR; }
             
         }
-        ~Presentation()
+        public void Destroy()
         {
             this.presentation=null;
-            this.presentationPath=null;
+            this.presentationPath="";
             this.marker = null;
             this.exist = false;
             this.defaultMarkers = false;
-            this.name = null;
-            this.currentStatus = null;
+            this.name = "";
+            this.currentStatus = "";
         }
     }
 }

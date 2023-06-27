@@ -156,38 +156,19 @@ namespace FridayPresentationManager
 
             this.avatarPB.MouseClick += this.presentation.Open;
         }
-        public void DepartmentDestroy()
+        public void Destroy()
         {
-            string s = this.fullName;
-            this.departmentHead = null;
-            this.firstDeputy = null;
-            this.deputy = null;
-            this.avatarPB.MouseClick -= this.presentation.Open;
-            this.presentation = null;
-            this.avatarPB = null;
-            this.imagesDirectory = null;
-            this.fullName = null;
-            this.departmentControl = null;
-            this.name = null;
 
-            //MessageBox.Show(s);
-            s = null;
-        }
-        /*
-        ~Department()
-        {
-            string s = this.fullName;
-            this.departmentHead = null;
-            this.firstDeputy = null;
-            this.deputy = null;
+            this.departmentHead.Destroy();
+            this.firstDeputy.Destroy();
+            this.deputy.Destroy();
             this.avatarPB.MouseClick -= this.presentation.Open;
-            this.presentation = null;
+            this.presentation.Destroy();
             this.avatarPB = null;
-            this.imagesDirectory = null;
-            this.fullName = null;
+            this.imagesDirectory = "";
+            this.fullName = "";
             this.departmentControl = null;
-            this.name = null;
+            this.name = "";
         }
-        */
     }
 }

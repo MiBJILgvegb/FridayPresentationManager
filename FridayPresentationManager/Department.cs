@@ -1,10 +1,6 @@
 ﻿using iniFiles;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
@@ -25,17 +21,9 @@ namespace FridayPresentationManager
 
         Control departmentControl;
         PictureBox avatarPB;
-        PictureBox presentationMarkerPB;
 
         ContextMenuStrip contextMenuStrip;
         //=========================================================================
-        private string GetINIInfo(string key)
-        {
-            IniFiles INI = new IniFiles(Consts.iniConfigFileName);
-
-            if (INI.KeyExists(this.name, key)) { return INI.ReadINI(this.name, key); }
-            else { return ""; }
-        }
         private string GetINIInfo(string section,string key)
         {
             IniFiles INI = new IniFiles(Consts.iniConfigFileName);
@@ -45,11 +33,11 @@ namespace FridayPresentationManager
         }
         private ToolStripMenuItem CreateToolStripItem(string name, string text,Image photo, EventHandler eventHandler)
         {
-            ToolStripMenuItem toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            ToolStripMenuItem toolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem.Font = new Font("Segoe UI", 12F);
             toolStripMenuItem.Image = photo;
             toolStripMenuItem.Name = "tsmi" + name;
-            toolStripMenuItem.Size = new System.Drawing.Size(175, 25);
+            toolStripMenuItem.Size = new Size(175, 25);
             toolStripMenuItem.Text = text;
             toolStripMenuItem.Click += eventHandler;
 
@@ -70,12 +58,6 @@ namespace FridayPresentationManager
                 person = this.deputy;
                 tsmiPerson2 = this.departmentHead;
             }
-            /*else 
-            { 
-                person = this.departmentHead;
-                tsmiPerson1 = this.firstDeputy;
-                tsmiPerson2 = this.deputy;
-            }*/
             person.DrawPhoto(this.avatarPB);
             this.PrepareToolTip(this.fullName + "\r\n" + person.fio);
 
@@ -83,7 +65,6 @@ namespace FridayPresentationManager
 
             ToolStripMenuItem item = CreateToolStripMenuItem(tsmiPerson1);
 
-            //ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
             if (item != null) { this.contextMenuStrip.Items.Add(item); }
 
             item = CreateToolStripMenuItem(tsmiPerson2);
@@ -91,12 +72,9 @@ namespace FridayPresentationManager
 
             this.avatarPB.ContextMenuStrip = contextMenuStrip;
         }
-        private void TSMI_MouseClick(object sender, EventArgs e)
+        private void TSMI_Click(object sender, EventArgs e)
         {
-            if ((e as MouseEventArgs).Button == MouseButtons.Left)
-            {
-                TSMIMouseEventHandler(sender as ToolStripMenuItem);
-            }
+            TSMIMouseEventHandler(sender as ToolStripMenuItem);
         }
         //=========================================================================
         private string GetFullDepartmenName()
@@ -121,17 +99,13 @@ namespace FridayPresentationManager
             if (imagePath.Length == 0) { return Path.Combine(Directory.GetCurrentDirectory(), "images"); }
             else { return imagePath; }
         }
-        private string GetPresentationFolder()
-        {
-            return this.GetINIInfo( Consts.configSectionsName_path, Consts.configKeysName_presentationFolder);
-        }
         private string GetPresentationName()
         {
             return this.GetINIInfo(this.name, Consts.configKeysName_departmentpresentationname);
         }
         private ToolStripMenuItem CreateToolStripMenuItem(Person person)
         {
-            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, new System.EventHandler(this.TSMI_MouseClick)); }
+            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, new System.EventHandler(this.TSMI_Click)); }
             else return null;
         }
         //=========================================================================
@@ -149,11 +123,10 @@ namespace FridayPresentationManager
         {
             this.contextMenuStrip = new ContextMenuStrip();
             contextMenuStrip.Name = "cmsPB" + this.name;
-            contextMenuStrip.Size = new System.Drawing.Size(60, 4);
+            contextMenuStrip.Size = new Size(60, 4);
 
             ToolStripMenuItem item = CreateToolStripMenuItem(first);
 
-            //ToolStripMenuItem item = CreateFirstDeputyToolStripMenuItem();
             if (item != null) { this.contextMenuStrip.Items.Add(item); }
 
             item = CreateToolStripMenuItem(second);
@@ -180,15 +153,14 @@ namespace FridayPresentationManager
             this.PrepareContextMenuStrip(this.firstDeputy, this.deputy);
 
             this.PreparePresentation();
-            //this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
-            this.avatarPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.presentation.Open);
+            this.avatarPB.MouseClick += new MouseEventHandler(this.presentation.Open);
         }
         ~Department()
         {
             this.departmentHead = null;
             this.firstDeputy = null;
             this.deputy = null;
-            this.avatarPB.MouseClick -= new System.Windows.Forms.MouseEventHandler(this.presentation.Open);
+            this.avatarPB.MouseClick -= new MouseEventHandler(this.presentation.Open);
             this.presentation = null;
             this.avatarPB = null;
             this.imagesDirectory = null;

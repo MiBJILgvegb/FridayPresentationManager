@@ -476,6 +476,7 @@ namespace FridayPresentationManager
             this.bExploreFolder.TabIndex = 6;
             this.bExploreFolder.Text = "...";
             this.bExploreFolder.UseVisualStyleBackColor = true;
+            this.bExploreFolder.Click += new System.EventHandler(this.bBrowseFolder_Click);
             // 
             // bBrowseFolder
             // 
@@ -487,6 +488,7 @@ namespace FridayPresentationManager
             this.bBrowseFolder.TabIndex = 7;
             this.bBrowseFolder.Text = "...";
             this.bBrowseFolder.UseVisualStyleBackColor = true;
+            this.bBrowseFolder.Click += new System.EventHandler(this.bExploreFolder_Click);
             // 
             // cmsPB
             // 

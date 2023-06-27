@@ -398,7 +398,6 @@ namespace FridayPresentationManager
             }
         }
 
-        /*
         private void bBrowseFolder_Click(object sender, EventArgs e)
         {
             if (folderPresentationsDialog.ShowDialog() == DialogResult.OK)
@@ -411,7 +410,6 @@ namespace FridayPresentationManager
                 MainWindowLoad();
             }
         }
-        */
 
         private void bExploreFolder_Click(object sender, EventArgs e)
         {

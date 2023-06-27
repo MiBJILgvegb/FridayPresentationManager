@@ -181,14 +181,14 @@ namespace FridayPresentationManager
 
             this.PreparePresentation();
             //this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
-            this.avatarPB.Click += new System.EventHandler(this.presentation.Open);
+            this.avatarPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.presentation.Open);
         }
         ~Department()
         {
             this.departmentHead = null;
             this.firstDeputy = null;
             this.deputy = null;
-            this.avatarPB.Click -= new System.EventHandler(this.presentation.Open);
+            this.avatarPB.MouseClick -= new System.Windows.Forms.MouseEventHandler(this.presentation.Open);
             this.presentation = null;
             this.avatarPB = null;
             this.imagesDirectory = null;

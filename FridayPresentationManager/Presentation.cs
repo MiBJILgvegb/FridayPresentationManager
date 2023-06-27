@@ -70,13 +70,14 @@ namespace FridayPresentationManager
             }
         }
         
-        public void Open(object sender, EventArgs e)
+        public void Open(object sender, MouseEventArgs e)
         {
-            this.CurrentStatus = Consts._presentationStatusCUR;
-
-            this.OpenPresentation();
-
-            this.presentation.SlideShowSettings.Run();
+            if (e.Button == MouseButtons.Left)
+            {
+                this.CurrentStatus = Consts._presentationStatusCUR;
+                this.OpenPresentation();
+                this.presentation.SlideShowSettings.Run();
+            }
         }
         //=========================================================================
         public Presentation(string folder, string name, PictureBox marker) 

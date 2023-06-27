@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using System.Reflection;
 using FridayPresentationManager.Properties;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 
@@ -67,12 +68,15 @@ namespace FridayPresentationManager
         
         public void Open(object sender, MouseEventArgs e)
         {
+            /*
             if (e.Button == MouseButtons.Left)
             {
                 this.CurrentStatus = Consts._presentationStatusCUR;
                 this.OpenPresentation();
                 this.presentation.SlideShowSettings.Run();
             }
+            */
+            MessageBox.Show("start");
         }
         //=========================================================================
         public Presentation(string folder, string name, PictureBox marker) 

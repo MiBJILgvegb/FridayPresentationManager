@@ -62,7 +62,7 @@ namespace FridayPresentationManager
         private void bSave_Click(object sender, EventArgs e)
         {
             SaveInfo();
-            MainWindow.mainWindow.PreparePresentataions();
+            MainWindow.mainWindow.PreparePresentataions(MainWindow.mainWindow.lbPresentationsDatesList);
             Close();
         }
         private void DeputyFIOChange(TextBox textBox)

@@ -24,7 +24,7 @@ namespace FridayPresentationManager
         public static MainWindow mainWindow;
         private PictureBox currentPresentationPB = null;
         internal string currentPresentationsPath = "";
-        public Department[] departments;
+        public Department[] departments=null;
 
         public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
         public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
@@ -294,18 +294,8 @@ namespace FridayPresentationManager
                 }
             }
         }
-        internal void PreparePresentataions()
+        internal void PreparePresentataions(ListBox sender)
         {
-            /*
-            SetMarkersDefault();
-
-            if (!PreparePresentationList(GetPresentationsFolderFromListBox())) 
-            {
-                FormToGui.MainWindowFolderList_Clear();
-                return;
-            }
-            PreparePBMarkers_OK(varPresentations);
-            */
             currentPresentationsPath = GetPresentationsFolderFromListBox();
             IniFiles INI = new IniFiles(Consts.iniConfigFileName);
 
@@ -319,7 +309,6 @@ namespace FridayPresentationManager
             for(int i=0;i<departmensNames.Count();i++)
             {
                 departments[i] = new Department(departmensNames[i],this.gbDepartmentList);
-
             }
         }
         private void OpenPresentation(string presentationPath)
@@ -353,7 +342,7 @@ namespace FridayPresentationManager
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
         private void FillYearsList()
@@ -366,7 +355,6 @@ namespace FridayPresentationManager
         {
             PrepareDatesList(cbPresentationByYearsFilter.SelectedItem.ToString());
             FormToGui.MainWindowFolderList_SelectItem(0);
-            
         }
         private void MainWindowLoad()
         {
@@ -418,7 +406,21 @@ namespace FridayPresentationManager
 
         private void lbPresentationsDatesList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PreparePresentataions();
+            /*if((sender as ListBox).SelectedIndex == 1)
+            {
+                MessageBox.Show("");
+            }*/
+            if ((sender as ListBox).Items.Count > 0)
+            {
+                if (departments != null)
+                {
+                    for (int i = 0; i < departments.Count(); i++)
+                    {
+                        departments[i].DepartmentDestroy();
+                    }
+                }
+                PreparePresentataions(sender as ListBox);
+            }
         }
 
         private void cbPresentationByYearsFilter_SelectedIndexChanged(object sender, EventArgs e)

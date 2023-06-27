@@ -105,7 +105,7 @@ namespace FridayPresentationManager
         }
         private ToolStripMenuItem CreateToolStripMenuItem(Person person)
         {
-            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, new System.EventHandler(this.TSMI_Click)); }
+            if (person.fio.Length > 0) { return CreateToolStripItem(this.name + person.title, person.fio, person.photo, /*new System.EventHandler(*/this.TSMI_Click/*)*/); }
             else return null;
         }
         //=========================================================================
@@ -153,14 +153,34 @@ namespace FridayPresentationManager
             this.PrepareContextMenuStrip(this.firstDeputy, this.deputy);
 
             this.PreparePresentation();
-            this.avatarPB.MouseClick += new MouseEventHandler(this.presentation.Open);
+
+            this.avatarPB.MouseClick += this.presentation.Open;
         }
-        ~Department()
+        public void DepartmentDestroy()
         {
+            string s = this.fullName;
             this.departmentHead = null;
             this.firstDeputy = null;
             this.deputy = null;
-            this.avatarPB.MouseClick -= new MouseEventHandler(this.presentation.Open);
+            this.avatarPB.MouseClick -= this.presentation.Open;
+            this.presentation = null;
+            this.avatarPB = null;
+            this.imagesDirectory = null;
+            this.fullName = null;
+            this.departmentControl = null;
+            this.name = null;
+
+            //MessageBox.Show(s);
+            s = null;
+        }
+        /*
+        ~Department()
+        {
+            string s = this.fullName;
+            this.departmentHead = null;
+            this.firstDeputy = null;
+            this.deputy = null;
+            this.avatarPB.MouseClick -= this.presentation.Open;
             this.presentation = null;
             this.avatarPB = null;
             this.imagesDirectory = null;
@@ -168,5 +188,6 @@ namespace FridayPresentationManager
             this.departmentControl = null;
             this.name = null;
         }
+        */
     }
 }

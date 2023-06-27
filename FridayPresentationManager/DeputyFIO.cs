@@ -65,12 +65,6 @@ namespace FridayPresentationManager
             MainWindow.mainWindow.PreparePresentataions(MainWindow.mainWindow.lbPresentationsDatesList);
             Close();
         }
-        private void DeputyFIOChange(TextBox textBox)
-        {
-            string dictKey = textBox.Name.Substring(2, textBox.Name.IndexOf('_') - 2);
-
-            MainWindow.mainWindow.varDepartmentsNamesToDeputyNames[dictKey] = textBox.Text;
-        }
         private void tbDeputyFIO_TextChanged(object sender, EventArgs e)
         {
             //DeputyFIOChange(sender as TextBox);

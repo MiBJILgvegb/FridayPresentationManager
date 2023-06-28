@@ -94,7 +94,6 @@
             this.tbDepartmentOfCityDistrict_HeadFIO.Name = "tbDepartmentOfCityDistrict_HeadFIO";
             this.tbDepartmentOfCityDistrict_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfCityDistrict_HeadFIO.TabIndex = 1;
-            this.tbDepartmentOfCityDistrict_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // tbDepartmentOfPropertyRelations_HeadFIO
             // 
@@ -102,7 +101,6 @@
             this.tbDepartmentOfPropertyRelations_HeadFIO.Name = "tbDepartmentOfPropertyRelations_HeadFIO";
             this.tbDepartmentOfPropertyRelations_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfPropertyRelations_HeadFIO.TabIndex = 3;
-            this.tbDepartmentOfPropertyRelations_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfPropertyRelations_FIO
             // 
@@ -119,7 +117,6 @@
             this.tbDepartmentOfJKH_HeadFIO.Name = "tbDepartmentOfJKH_HeadFIO";
             this.tbDepartmentOfJKH_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfJKH_HeadFIO.TabIndex = 7;
-            this.tbDepartmentOfJKH_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfJKH_FIO
             // 
@@ -136,7 +133,6 @@
             this.tbDepartmentOfSecurityCouncil_HeadFIO.Name = "tbDepartmentOfSecurityCouncil_HeadFIO";
             this.tbDepartmentOfSecurityCouncil_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfSecurityCouncil_HeadFIO.TabIndex = 5;
-            this.tbDepartmentOfSecurityCouncil_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfSecurityCouncil_FIO
             // 
@@ -153,7 +149,6 @@
             this.tbDepartmentOfFinancePolicy_HeadFIO.Name = "tbDepartmentOfFinancePolicy_HeadFIO";
             this.tbDepartmentOfFinancePolicy_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfFinancePolicy_HeadFIO.TabIndex = 15;
-            this.tbDepartmentOfFinancePolicy_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfFinancePolicy_FIO
             // 
@@ -170,7 +165,6 @@
             this.tbDepartmentOfEconomicDevelopment_HeadFIO.Name = "tbDepartmentOfEconomicDevelopment_HeadFIO";
             this.tbDepartmentOfEconomicDevelopment_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfEconomicDevelopment_HeadFIO.TabIndex = 13;
-            this.tbDepartmentOfEconomicDevelopment_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfEconomicDevelopment_FIO
             // 
@@ -187,7 +181,6 @@
             this.tbDepartmentOfSocialDevelopment_HeadFIO.Name = "tbDepartmentOfSocialDevelopment_HeadFIO";
             this.tbDepartmentOfSocialDevelopment_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfSocialDevelopment_HeadFIO.TabIndex = 11;
-            this.tbDepartmentOfSocialDevelopment_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfSocialDevelopment_FIO
             // 
@@ -204,7 +197,6 @@
             this.tbDepartmentOfAKR_HeadFIO.Name = "tbDepartmentOfAKR_HeadFIO";
             this.tbDepartmentOfAKR_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfAKR_HeadFIO.TabIndex = 9;
-            this.tbDepartmentOfAKR_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfAKR_FIO
             // 
@@ -221,7 +213,6 @@
             this.tbMCU_HeadFIO.Name = "tbMCU_HeadFIO";
             this.tbMCU_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbMCU_HeadFIO.TabIndex = 19;
-            this.tbMCU_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lMCU_FIO
             // 
@@ -238,7 +229,6 @@
             this.tbDepartmentOfAPK_HeadFIO.Name = "tbDepartmentOfAPK_HeadFIO";
             this.tbDepartmentOfAPK_HeadFIO.Size = new System.Drawing.Size(212, 20);
             this.tbDepartmentOfAPK_HeadFIO.TabIndex = 17;
-            this.tbDepartmentOfAPK_HeadFIO.TextChanged += new System.EventHandler(this.tbDeputyFIO_TextChanged);
             // 
             // lDeputyOfAPK_FIO
             // 

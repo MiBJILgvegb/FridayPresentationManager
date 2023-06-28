@@ -65,9 +65,5 @@ namespace FridayPresentationManager
             MainWindow.mainWindow.PreparePresentataions(MainWindow.mainWindow.lbPresentationsDatesList);
             Close();
         }
-        private void tbDeputyFIO_TextChanged(object sender, EventArgs e)
-        {
-            //DeputyFIOChange(sender as TextBox);
-        }
     }
 }

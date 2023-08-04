@@ -36,8 +36,9 @@ namespace FridayPresentationManager
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deputyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presentationsNamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pbarStatus = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbPresentationsDatesList = new System.Windows.Forms.ListBox();
             this.cbPresentationByYearsFilter = new System.Windows.Forms.ComboBox();
@@ -66,13 +67,9 @@ namespace FridayPresentationManager
             this.pbMCU = new System.Windows.Forms.PictureBox();
             this.pbMCUMarker = new System.Windows.Forms.PictureBox();
             this.pbDepartmentOfAPK = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbPresentationsFolderPath = new System.Windows.Forms.TextBox();
-            this.bExploreFolder = new System.Windows.Forms.Button();
-            this.bBrowseFolder = new System.Windows.Forms.Button();
-            this.folderPresentationsDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.cmsPB = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ttPB = new System.Windows.Forms.ToolTip(this.components);
+            this.lStatus = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfCityDistrictMarker)).BeginInit();
@@ -117,7 +114,8 @@ namespace FridayPresentationManager
             // 
             this.administrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deputyToolStripMenuItem,
-            this.presentationsNamesToolStripMenuItem});
+            this.presentationsNamesToolStripMenuItem,
+            this.settingsToolStripMenuItem});
             this.administrationToolStripMenuItem.Name = "administrationToolStripMenuItem";
             this.administrationToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.administrationToolStripMenuItem.Text = "Администрирование";
@@ -136,6 +134,13 @@ namespace FridayPresentationManager
             this.presentationsNamesToolStripMenuItem.Text = "Названия презентаций";
             this.presentationsNamesToolStripMenuItem.Click += new System.EventHandler(this.presentationsNamesToolStripMenuItem_Click);
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.settingsToolStripMenuItem.Text = "Настройки";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -143,14 +148,15 @@ namespace FridayPresentationManager
             this.exitToolStripMenuItem.Text = "Выход";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // progressBar1
+            // pbarStatus
             // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pbarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(0, 604);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(800, 22);
-            this.progressBar1.TabIndex = 1;
+            this.pbarStatus.Location = new System.Drawing.Point(0, 552);
+            this.pbarStatus.Name = "pbarStatus";
+            this.pbarStatus.Size = new System.Drawing.Size(800, 10);
+            this.pbarStatus.TabIndex = 1;
+            this.pbarStatus.Visible = false;
             // 
             // groupBox1
             // 
@@ -160,7 +166,7 @@ namespace FridayPresentationManager
             this.groupBox1.Controls.Add(this.cbPresentationByYearsFilter);
             this.groupBox1.Location = new System.Drawing.Point(0, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(133, 577);
+            this.groupBox1.Size = new System.Drawing.Size(133, 506);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -172,7 +178,7 @@ namespace FridayPresentationManager
             this.lbPresentationsDatesList.FormattingEnabled = true;
             this.lbPresentationsDatesList.Location = new System.Drawing.Point(6, 37);
             this.lbPresentationsDatesList.Name = "lbPresentationsDatesList";
-            this.lbPresentationsDatesList.Size = new System.Drawing.Size(121, 537);
+            this.lbPresentationsDatesList.Size = new System.Drawing.Size(121, 459);
             this.lbPresentationsDatesList.TabIndex = 1;
             this.lbPresentationsDatesList.SelectedIndexChanged += new System.EventHandler(this.lbPresentationsDatesList_SelectedIndexChanged);
             // 
@@ -350,7 +356,8 @@ namespace FridayPresentationManager
             // 
             // gbDepartmentList
             // 
-            this.gbDepartmentList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbDepartmentList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbDepartmentList.Controls.Add(this.pbEDDS);
             this.gbDepartmentList.Controls.Add(this.pbEDDSMarker);
@@ -378,7 +385,7 @@ namespace FridayPresentationManager
             this.gbDepartmentList.Controls.Add(this.pbDepartmentOfCityDistrictMarker);
             this.gbDepartmentList.Location = new System.Drawing.Point(139, 27);
             this.gbDepartmentList.Name = "gbDepartmentList";
-            this.gbDepartmentList.Size = new System.Drawing.Size(661, 513);
+            this.gbDepartmentList.Size = new System.Drawing.Size(661, 506);
             this.gbDepartmentList.TabIndex = 3;
             this.gbDepartmentList.TabStop = false;
             // 
@@ -448,70 +455,36 @@ namespace FridayPresentationManager
             this.pbDepartmentOfAPK.TabIndex = 28;
             this.pbDepartmentOfAPK.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 578);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Корневая папка с презентациями";
-            // 
-            // tbPresentationsFolderPath
-            // 
-            this.tbPresentationsFolderPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPresentationsFolderPath.Enabled = false;
-            this.tbPresentationsFolderPath.Location = new System.Drawing.Point(429, 575);
-            this.tbPresentationsFolderPath.Name = "tbPresentationsFolderPath";
-            this.tbPresentationsFolderPath.Size = new System.Drawing.Size(303, 20);
-            this.tbPresentationsFolderPath.TabIndex = 5;
-            // 
-            // bExploreFolder
-            // 
-            this.bExploreFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bExploreFolder.Location = new System.Drawing.Point(769, 572);
-            this.bExploreFolder.Name = "bExploreFolder";
-            this.bExploreFolder.Size = new System.Drawing.Size(25, 25);
-            this.bExploreFolder.TabIndex = 6;
-            this.bExploreFolder.Text = "...";
-            this.bExploreFolder.UseVisualStyleBackColor = true;
-            this.bExploreFolder.Click += new System.EventHandler(this.bBrowseFolder_Click);
-            // 
-            // bBrowseFolder
-            // 
-            this.bBrowseFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bBrowseFolder.Image = ((System.Drawing.Image)(resources.GetObject("bBrowseFolder.Image")));
-            this.bBrowseFolder.Location = new System.Drawing.Point(738, 572);
-            this.bBrowseFolder.Name = "bBrowseFolder";
-            this.bBrowseFolder.Size = new System.Drawing.Size(25, 25);
-            this.bBrowseFolder.TabIndex = 7;
-            this.bBrowseFolder.Text = "...";
-            this.bBrowseFolder.UseVisualStyleBackColor = true;
-            this.bBrowseFolder.Click += new System.EventHandler(this.bExploreFolder_Click);
-            // 
             // cmsPB
             // 
             this.cmsPB.Name = "cmsPB";
             this.cmsPB.Size = new System.Drawing.Size(61, 4);
             // 
+            // lStatus
+            // 
+            this.lStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lStatus.AutoSize = true;
+            this.lStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lStatus.Location = new System.Drawing.Point(6, 536);
+            this.lStatus.Name = "lStatus";
+            this.lStatus.Size = new System.Drawing.Size(0, 13);
+            this.lStatus.TabIndex = 4;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 627);
-            this.Controls.Add(this.bBrowseFolder);
-            this.Controls.Add(this.bExploreFolder);
-            this.Controls.Add(this.tbPresentationsFolderPath);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(800, 566);
+            this.Controls.Add(this.lStatus);
             this.Controls.Add(this.gbDepartmentList);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pbarStatus);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "FridayPresentationManager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -552,7 +525,6 @@ namespace FridayPresentationManager
         private System.Windows.Forms.ToolStripMenuItem administrationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deputyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox1;
         internal PictureBox pbDepartmentOfCityDistrictMarker;
         internal PictureBox pbDepartmentOfCityDistrict;
@@ -577,11 +549,6 @@ namespace FridayPresentationManager
         internal PictureBox pbMCU;
         internal PictureBox pbMCUMarker;
         internal PictureBox pbDepartmentOfAPK;
-        private Label label1;
-        private TextBox tbPresentationsFolderPath;
-        private Button bExploreFolder;
-        private Button bBrowseFolder;
-        private FolderBrowserDialog folderPresentationsDialog;
         internal ListBox lbPresentationsDatesList;
         internal PictureBox pbEDDS;
         internal PictureBox pbEDDSMarker;
@@ -590,6 +557,9 @@ namespace FridayPresentationManager
         private ToolStripMenuItem presentationsNamesToolStripMenuItem;
         internal ContextMenuStrip cmsPB;
         private ToolTip ttPB;
+        private ToolStripMenuItem settingsToolStripMenuItem;
+        internal ProgressBar pbarStatus;
+        internal Label lStatus;
     }
 }
 

@@ -19,16 +19,15 @@ namespace FridayPresentationManager
 
         internal readonly static string iniConfigFileName = "config.ini";
         internal readonly static string configSectionsName_departmentslist = "departmentslist";
-        internal readonly static string configSectionsName_departmenfullname = "departmenfullname";
-        internal readonly static string configSectionsName_deputyfio = "deputyfio";
-        internal readonly static string configSectionsName_firstdeputyfio = "firstdeputyfio";
-        internal readonly static string configSectionsName_deputydeputyfio = "deputydeputyfio";
-        internal readonly static string configSectionsName_presentationsNames = "presentationsNames";
-        internal readonly static string configSectionsName_presentationsExts = "presentationsExts";
-
         internal readonly static string configSectionsName_path = "path";
+        internal readonly static string configSectionsName_settings = "settings";
+
         internal readonly static string configKeysName_presentationFolder = "presentationFolder";
+        internal readonly static string configKeysName_serverFolder = "serverFolder";
         internal readonly static string configKeysName_imagesFolder = "imagesFolder";
+
+        internal readonly static string configKeysName_autostartOpenedPresentation = "autostartOpenedPresentation";
+        internal readonly static string configKeysName_autoupdatePresentations = "autoupdatePresentations";
         
         internal readonly static string configKeysName_departmentfullname = "fullname";
         internal readonly static string configKeysName_departmentheadfio = "headfio";

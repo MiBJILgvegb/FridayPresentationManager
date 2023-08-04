@@ -6,15 +6,17 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FridayPresentationManager.Properties;
+//using FridayPresentationManager.Properties;
 using iniFiles;
-using PowerPoint = Microsoft.Office.Interop.PowerPoint;
+//using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 
 
 namespace FridayPresentationManager
@@ -22,52 +24,21 @@ namespace FridayPresentationManager
     public partial class MainWindow : Form
     {
         public static MainWindow mainWindow;
-        private PictureBox currentPresentationPB = null;
         internal string currentPresentationsPath = "";
         public Department[] departments=null;
+        internal Settings settings;
+        internal Updater updater;
+        internal ProgressStatus progress=null;
 
-        public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
-        public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
+        //public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
+        //public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
 
         //==================================================================================================
-        private void InitializeINIParameters()
-        {//считываем параметры
-            IniFiles INI = new IniFiles(Consts.iniConfigFileName);
-
-            //получаем путь к корневой папке с презентациями
-            if (INI.KeyExists(Consts.configSectionsName_path, Consts.configKeysName_presentationFolder))
-            {
-                mainPresentationsDirectory = INI.ReadINI(Consts.configSectionsName_path, Consts.configKeysName_presentationFolder);
-                tbPresentationsFolderPath.Text = mainPresentationsDirectory;
-            }
-
-            //получаем путь к папке с фотографиями
-            if (INI.KeyExists(Consts.configSectionsName_path, Consts.configKeysName_imagesFolder))
-            {
-                mainImagesDirectory = INI.ReadINI(Consts.configSectionsName_path, Consts.configKeysName_imagesFolder);
-            }
-        }
-        internal void SaveINIConfig(string section,string key,string value)
-        {//сохраняем настройки в файле конфигурации
-            IniFiles INI = new IniFiles(Consts.iniConfigFileName);
-
-            INI.Write(section, key, value);
-        }
         private string GetPresentationsFolderFromListBox()
         {//получаем полный путь к папке с текущими презентациями
             string[] lbItem=lbPresentationsDatesList.SelectedItem.ToString().Split('.');
 
-            return Path.Combine(mainPresentationsDirectory,cbPresentationByYearsFilter.Text, lbItem[1], lbItem[0]);
-        }
-        private void SetCurrentPresentationMarker(string deputyPBName)
-        {//устанавливаем маркер текущей запущеной презентации
-            if (currentPresentationPB != null)
-            {
-                currentPresentationPB.Image= (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesOKPhoto);
-            }
-            
-            (this.Controls["gbDeputyList"].Controls[deputyPBName + "Marker"] as PictureBox).Image = (Image)Properties.Resources.ResourceManager.GetObject(Consts.imagesCurrentPhoto);
-            currentPresentationPB = (this.Controls["gbDeputyList"].Controls[deputyPBName + "Marker"] as PictureBox);
+            return Path.Combine(settings.mainPresentationsDirectory,cbPresentationByYearsFilter.Text, lbItem[1], lbItem[0]);
         }
         //==================================================================================================
         private string[] PrepareYearsList(string folder)
@@ -85,17 +56,16 @@ namespace FridayPresentationManager
         }
         private void PrepareDatesList(string year)
         {//создаем список папок с презентациями за выбранный год
-            string[] months= Directory.GetDirectories(Path.Combine(mainPresentationsDirectory,year));
-            if (months.Count() > 0) FormToGui.MainWindowFolderList_Clear();
-            for(int i= months.Count()-1; i>=0;i--)
+            string[] months= Directory.GetDirectories(Path.Combine(settings.mainPresentationsDirectory,year));
+            if (months.Count() > 0) Gui.Clear(MainWindow.mainWindow.lbPresentationsDatesList);
+            for (int i= months.Count()-1; i>=0;i--)
             {
                 string month = new DirectoryInfo(months[i]).Name;
-                string[] dates= Directory.GetDirectories(Path.Combine(mainPresentationsDirectory, year,month));
+                string[] dates= Directory.GetDirectories(Path.Combine(settings.mainPresentationsDirectory, year,month));
                 for (int j=dates.Count()-1;j>=0;j--)
                 {
-                    FormToGui.MainWindowFolderList_Add(new DirectoryInfo(dates[j]).Name + '.' + month);
+                    Gui.Add(MainWindow.mainWindow.lbPresentationsDatesList, new DirectoryInfo(dates[j]).Name + '.' + month);
                 }
-                
             }
         }
         internal void PreparePresentataions(ListBox sender)
@@ -108,7 +78,8 @@ namespace FridayPresentationManager
 
             for(int i = 0; i < departmensNames.Count(); i++) { departmensNames[i] = departmensNames[i].Split('=')[1]; }
 
-            departments = null;
+            if (departments != null) { for (int i = 0; i < departments.Count(); i++) { departments[i].Destroy(); } }
+            //departments = null;
             departments = new Department[departmensNames.Count()];
             for(int i=0;i<departmensNames.Count();i++)
             {
@@ -120,7 +91,10 @@ namespace FridayPresentationManager
         {
             mainWindow = this;
             InitializeComponent();
-            InitializeINIParameters();
+            settings = new Settings();
+            
+            //updater = new Updater(settings.serverDirectory);
+            //InitializeINIParameters();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,59 +104,60 @@ namespace FridayPresentationManager
 
         private void FillYearsList()
         {
-            FormToGui.MainWindowFolderFilter_Add(PrepareYearsList(mainPresentationsDirectory), false);
-            FormToGui.MainWindowFolderFilter_SelectItem(0);
+            FormToGui.MainWindowFolderFilter_Add(PrepareYearsList(settings.mainPresentationsDirectory), false);
+
+            Gui.SelectIndex(MainWindow.mainWindow.cbPresentationByYearsFilter, 0);
+        }
+        private void FillYearsListAsync()
+        {
+            //BeginInvoke(new Action(() => { FillYearsList(); } ));
+            FormToGui.MainWindowFolderFilter_AddAsync(PrepareYearsList(settings.mainPresentationsDirectory), false);
+            Gui.SelectIndexAsync(MainWindow.mainWindow.cbPresentationByYearsFilter, 0);
         }
         private void FillDatesList()
         {
             PrepareDatesList(cbPresentationByYearsFilter.SelectedItem.ToString());
-            FormToGui.MainWindowFolderList_SelectItem(0);
-        }
-        private void MainWindowLoad()
-        {
-            if (mainPresentationsDirectory.Length > 0)
+            //FormToGui.MainWindowFolderList_SelectItem(0);
+            if (Gui.GetItemsCount(MainWindow.mainWindow.lbPresentationsDatesList) > 0)
             {
-                FillYearsList();
-                FillDatesList();
+                Gui.Select(MainWindow.mainWindow.lbPresentationsDatesList, 0);
+            }
+        }
+        private void FillDatesListAsync()
+        {
+            BeginInvoke(new Action(() => { FillDatesList(); }));
+        }
+        internal void MainWindowLoad(bool async=false)
+        {
+            //MessageBox.Show(updater.ServerCheck(updater.server).ToString());
+            if (settings.mainPresentationsDirectory.Length > 0)
+            {
+                if (!async)
+                {
+                    FillYearsList();
+                    FillDatesList();
+                }
+                else
+                {
+                    FillYearsListAsync();
+                    FillDatesListAsync();
+                }
             }
         }
         private void mainWindow_Load(object sender, EventArgs e)
         {
-            MainWindowLoad();
-        }
-
-        private void deputyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DeputyFIO deputyFIO = new DeputyFIO();
-            deputyFIO.Show();
-        }
-
-        private void bBrowseFolder_Click(object sender, EventArgs e)
-        {
-            if (folderPresentationsDialog.ShowDialog() == DialogResult.OK)
+            if (settings.autoupdatePresentations)
             {
-                tbPresentationsFolderPath.Text = folderPresentationsDialog.SelectedPath;
-                SaveINIConfig(Consts.configSectionsName_path, Consts.configKeysName_presentationFolder, folderPresentationsDialog.SelectedPath);
-
-                mainPresentationsDirectory = tbPresentationsFolderPath.Text;
-
-                MainWindowLoad();
+                updater = new Updater(settings.serverDirectory, settings.mainPresentationsDirectory);
+                //Updater.ServerDirectoryUpdate(settings.serverDirectory, settings.mainPresentationsDirectory);
             }
-        }
-
-        private void bExploreFolder_Click(object sender, EventArgs e)
-        {
-            if (tbPresentationsFolderPath.Text.Length > 0) { Process.Start(tbPresentationsFolderPath.Text); }
+            MainWindowLoad();
         }
 
         private void lbPresentationsDatesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((sender as ListBox).Items.Count > 0)
             {
-                if (departments != null)
-                {
-                    for (int i = 0; i < departments.Count(); i++) { departments[i].Destroy(); }
-                }
                 PreparePresentataions(sender as ListBox);
             }
         }
@@ -193,11 +168,27 @@ namespace FridayPresentationManager
             if (lbPresentationsDatesList.Items.Count > 0)
                 lbPresentationsDatesList.SetSelected(0, true);
         }
-
+        private void deputyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeputyFIO deputyFIO = new DeputyFIO();
+            deputyFIO.Show();
+        }
         private void presentationsNamesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PresentationsNames presentationsNames = new PresentationsNames();
             presentationsNames.Show();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.Show();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (updater != null) { updater.Destroy(); }
+            if (departments != null) { for (int i = 0; i < departments.Count(); i++) { departments[i].Destroy(); } }
         }
     }
 }

@@ -14,15 +14,6 @@ namespace FridayPresentationManager
         }
         private void InitializePreviosSettings()
         {
-            /*
-            for(int i=0;i< MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.Count;i++)
-            {
-                this.Controls["tb"+ MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key+"_FIO"].Text= MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Value;
-                this.Controls["tbFirstDeputyOf" + MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key+"_FIO"].Text= MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Value;
-                this.Controls["tbDeputyOf" + MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key+"_FIO"].Text= MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Value;
-            }
-            */
-
             foreach(Department department in MainWindow.mainWindow.departments)
             {
                 this.Controls["tb"+department.name+"_"+Consts.configKeysName_departmentheadfio].Text= department.departmentHead.fio;
@@ -33,19 +24,6 @@ namespace FridayPresentationManager
         private void SaveInfo()
         {
             IniFiles INI = new IniFiles(Consts.iniConfigFileName);
-
-            /*
-            for(int i=0;i<MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.Count;i++)
-            {
-                INI.Write(Consts.configSectionsName_deputyfio, MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key, this.Controls["tb" + MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key + "_FIO"].Text);
-                INI.Write(Consts.configSectionsName_firstdeputyfio, MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key, this.Controls["tbFirstDeputyOf" + MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text);
-                INI.Write(Consts.configSectionsName_deputydeputyfio, MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key, this.Controls["tbDeputyOf" + MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text);
-
-                MainWindow.mainWindow.varDepartmentsNamesToDeputyNames[MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key] = this.Controls["tb" + MainWindow.mainWindow.varDepartmentsNamesToDeputyNames.ElementAt(i).Key + "_FIO"].Text;
-                MainWindow.mainWindow.varFirstDeputyDeputyNames[MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key] = this.Controls["tb" + MainWindow.mainWindow.varFirstDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text;
-                MainWindow.mainWindow.varDeputyDeputyNames[MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key] = this.Controls["tb" + MainWindow.mainWindow.varDeputyDeputyNames.ElementAt(i).Key + "_FIO"].Text;
-            }
-            */
 
             foreach (Department department in MainWindow.mainWindow.departments)
             {

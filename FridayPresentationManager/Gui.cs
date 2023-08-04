@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,9 +13,11 @@ namespace FridayPresentationManager
     {
         /*ComboBox*/
         public static void Add(ComboBox comboBox, string item) { comboBox.Items.Add(item); }
+        public static void AddAsync(ComboBox comboBox, string item) { comboBox.Invoke(new Action(() => comboBox.Items.Add(item) ));  }
         public static void Fill(ComboBox comboBox, string[] strings) { foreach(string str in strings) { Add(comboBox, str); } }
         public static void Clear(ComboBox comboBox) { comboBox.Items.Clear(); }
         public static void SelectIndex(ComboBox comboBox, int index) { comboBox.SelectedIndex= index; }
+        public static void SelectIndexAsync(ComboBox comboBox, int index) { comboBox.Invoke(new Action(() => comboBox.SelectedIndex = index));  }
         internal static int GetSelectedIndex(ComboBox comboBox) { return comboBox.SelectedIndex; }
         internal static string GetSelectedItem(ComboBox comboBox) { return comboBox.SelectedItem.ToString(); }
         internal static void Enable(ComboBox comboBox) { comboBox.Enabled = true; }

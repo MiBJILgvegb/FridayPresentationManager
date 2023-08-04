@@ -111,7 +111,7 @@ namespace FridayPresentationManager
         //=========================================================================
         public void PreparePresentation()
         {
-            this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox);
+            this.presentation = new Presentation(this.presentationsPath, this.GetPresentationName(), this.departmentControl.Controls["pb" + this.name + "Marker"] as PictureBox,MainWindow.mainWindow.settings.autostartOpenedPresentation);
         }
         //=========================================================================
         private void PrepareToolTip(string tooltipText)

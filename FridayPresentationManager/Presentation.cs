@@ -15,6 +15,7 @@ namespace FridayPresentationManager
 
         bool exist { get; set; } = false;
         bool defaultMarkers { get; set; } = true;
+        bool autostart { get; set; } = false;
 
         PictureBox marker { get; set; }
         PowerPoint.Presentation presentation { get; set; }
@@ -65,22 +66,22 @@ namespace FridayPresentationManager
                 if (File.Exists(this.PresentationPath)) { this.exist = true; }
             }
         }
-        
         public void Open(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 this.CurrentStatus = Consts._presentationStatusCUR;
                 this.OpenPresentation();
-                this.presentation.SlideShowSettings.Run();
+                if(this.autostart) this.presentation.SlideShowSettings.Run();
             }
         }
         //=========================================================================
-        public Presentation(string folder, string name, PictureBox marker) 
+        public Presentation(string folder, string name, PictureBox marker,bool autostart) 
         {
             this.name=name;
             this.PresentationPath=this.GetPresentationPath(folder,name);
             this.marker=marker;
+            this.autostart = autostart;
 
             if (this.exist) { this.CurrentStatus = Consts._presentationStatusOK; }
             else { this.CurrentStatus = Consts._presentationStatusERR; }
@@ -93,6 +94,7 @@ namespace FridayPresentationManager
             this.marker = null;
             this.exist = false;
             this.defaultMarkers = false;
+            this.autostart = false;
             this.name = "";
             this.currentStatus = "";
         }

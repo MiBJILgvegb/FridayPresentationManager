@@ -1,22 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.Remoting;
-using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using FridayPresentationManager.Properties;
 using iniFiles;
-//using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 
 
 namespace FridayPresentationManager
@@ -30,19 +19,18 @@ namespace FridayPresentationManager
         internal Updater updater;
         internal ProgressStatus progress=null;
 
-        //public string mainPresentationsDirectory = Directory.GetCurrentDirectory();
-        //public string mainImagesDirectory = Path.Combine(Directory.GetCurrentDirectory(),"images");
-
         //==================================================================================================
         private string GetPresentationsFolderFromListBox()
-        {//получаем полный путь к папке с текущими презентациями
+        {
+            //получаем полный путь к папке с текущими презентациями
             string[] lbItem=lbPresentationsDatesList.SelectedItem.ToString().Split('.');
 
             return Path.Combine(settings.mainPresentationsDirectory,cbPresentationByYearsFilter.Text, lbItem[1], lbItem[0]);
         }
         //==================================================================================================
         private string[] PrepareYearsList(string folder)
-        {//подготавливаем список папок (учитываются только папки которые начинаются с цифр)
+        {
+            //подготавливаем список папок (учитываются только папки которые начинаются с цифр)
             string[] years = Directory.GetDirectories(folder);
 
             for(int i = 0; i < years.Count(); i++)
@@ -55,7 +43,8 @@ namespace FridayPresentationManager
             
         }
         private void PrepareDatesList(string year)
-        {//создаем список папок с презентациями за выбранный год
+        {
+            //создаем список папок с презентациями за выбранный год
             string[] months= Directory.GetDirectories(Path.Combine(settings.mainPresentationsDirectory,year));
             if (months.Count() > 0) Gui.Clear(MainWindow.mainWindow.lbPresentationsDatesList);
             for (int i= months.Count()-1; i>=0;i--)
@@ -79,7 +68,6 @@ namespace FridayPresentationManager
             for(int i = 0; i < departmensNames.Count(); i++) { departmensNames[i] = departmensNames[i].Split('=')[1]; }
 
             if (departments != null) { for (int i = 0; i < departments.Count(); i++) { departments[i].Destroy(); } }
-            //departments = null;
             departments = new Department[departmensNames.Count()];
             for(int i=0;i<departmensNames.Count();i++)
             {
@@ -129,7 +117,6 @@ namespace FridayPresentationManager
         }
         internal void MainWindowLoad(bool async=false)
         {
-            //MessageBox.Show(updater.ServerCheck(updater.server).ToString());
             if (settings.mainPresentationsDirectory.Length > 0)
             {
                 if (!async)

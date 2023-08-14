@@ -16,6 +16,7 @@ namespace FridayPresentationManager
         string currentDir { get; set; }
         Thread synchonizer = null;
         ProgressStatus status;
+        //---------------------------------------------------------------------------------------
         private string[] DirToDirInfo(string[] strings)
         {
             string[] returnedStrings = strings;
@@ -27,34 +28,48 @@ namespace FridayPresentationManager
 
             return returnedStrings;
         }
+        private bool FileSynchronize(string sourcePath, string destPath)
+        {
+            bool result = false;
+            status.Status(sourcePath);
+            try 
+            { 
+                File.Copy(sourcePath, destPath); 
+                result = true;
+            }
+            catch (Exception e)
+            { 
+                status.Status(e.Message);
+            }
+            
+            status.PerfomsStep();
+            return result;
+        }
+        //---------------------------------------------------------------------------------------
         private void SynchronizeFolder(string source,string dest)
         {
-            Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory(source, dest);
-        }
-        internal bool ServerCheck(string server)
-        {
-            /*Ping pingSender = new Ping();
-            PingOptions options = new PingOptions();
+            //Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory(source, dest);
 
-            // Use the default Ttl value which is 128,
-            // but change the fragmentation behavior.
-            options.DontFragment = true;
-
-            // Create a buffer of 32 bytes of data to be transmitted.
-            string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-            byte[] buffer = Encoding.ASCII.GetBytes(data);
-            int timeout = 120;
-            PingReply reply = pingSender.Send(server, timeout, buffer, options);
-            if (reply.Status == IPStatus.Success)
+            string[] sourceFolders = Directory.GetDirectories(source);
+            foreach(string sFolder in sourceFolders)
             {
-                Console.WriteLine("Address: {0}", reply.Address.ToString());
-                Console.WriteLine("RoundTrip time: {0}", reply.RoundtripTime);
-                Console.WriteLine("Time to live: {0}", reply.Options.Ttl);
-                Console.WriteLine("Don't fragment: {0}", reply.Options.DontFragment);
-                Console.WriteLine("Buffer size: {0}", reply.Buffer.Length);
-            }*/
-            if (server.Length > 0){ return Directory.Exists(server); }
-            else { return false; }
+                if (Directory.Exists(sFolder)) 
+                {
+                    DirectoryInfo directoryInfo = new DirectoryInfo(sFolder);
+
+                    string newDest = Path.Combine(dest, directoryInfo.Name);
+                    Directory.CreateDirectory(newDest);
+                    
+                    SynchronizeFolder(sFolder, newDest); 
+                }
+
+                string[] files=Directory.GetFiles(sFolder);
+                foreach(string sFile in files)
+                {
+                    FileSynchronize(sFile, dest);
+                }
+                    
+            }
         }
         internal void SynchronizePresentations(string serverDir, string currentDir)
         {
@@ -70,11 +85,7 @@ namespace FridayPresentationManager
                     string sourcePath = Path.Combine(serverDir, serverPresentations[i]);
                     string destPath = Path.Combine(currentDir, serverPresentations[i]);
 
-                    status.Status(sourcePath);
-
-                    File.Copy(sourcePath, destPath);
-
-                    status.PerfomsStep();
+                    FileSynchronize(sourcePath, destPath);
                 }
             }
         }
@@ -91,7 +102,8 @@ namespace FridayPresentationManager
             {
                 if (!currentDate.Contains(serverDate[i]))
                 {
-                    SynchronizeFolder(Path.Combine(serverDir, serverDate[i]), Path.Combine(currentDir, serverDate[i]) );
+                    //SynchronizeFolder(Path.Combine(serverDir, serverDate[i]), Path.Combine(currentDir, serverDate[i]) );
+                    Directory.CreateDirectory(Path.Combine(currentDir, serverDate[i]));
                 }
                 SynchronizePresentations(Path.Combine(serverDir, serverDate[i]), Path.Combine(currentDir, serverDate[i]));
             }
@@ -109,7 +121,8 @@ namespace FridayPresentationManager
             {
                 if (!currentMonth.Contains(serverMonth[i]))
                 {
-                    SynchronizeFolder(Path.Combine(serverDir, serverMonth[i]), Path.Combine(currentDir, serverMonth[i]));
+                    //SynchronizeFolder(Path.Combine(serverDir, serverMonth[i]), Path.Combine(currentDir, serverMonth[i]));
+                    Directory.CreateDirectory(Path.Combine(currentDir, serverMonth[i]));
                 }
                 SynchronizeDate(Path.Combine(serverDir, serverMonth[i]), Path.Combine(currentDir, serverMonth[i]));
             }
@@ -127,30 +140,29 @@ namespace FridayPresentationManager
             {
                 if (!currentYears.Contains(serverYears[i]))
                 {
-                    SynchronizeFolder(Path.Combine(serverDir, serverYears[i]), Path.Combine(currentDir, serverYears[i]));
+                    //SynchronizeFolder(Path.Combine(serverDir, serverYears[i]), Path.Combine(currentDir, serverYears[i]));
+                    Directory.CreateDirectory(Path.Combine(currentDir, serverYears[i]));
                 }
                 SynchronizeMonth(Path.Combine(serverDir, serverYears[i]), Path.Combine(currentDir, serverYears[i]));
             }
         }
-        //void Synchronize
         internal void ServerDirectoryUpdate()
         {
-            status = new ProgressStatus(MainWindow.mainWindow.pbarStatus,MainWindow.mainWindow.lStatus);
-            
-            SynchronizeYears(serverDir, currentDir);
-
+            SynchronizeFolder(serverDir, currentDir);
+            //SynchronizeYears(serverDir, currentDir);
             MainWindow.mainWindow.MainWindowLoad(true);
+
             //сделать лок и ожидание
 
-            status.Status("");
-            status.Value(status.Min());
-            status.Visible();
+            status.Destroy();
+            status = null;
         }
 
         public Updater(string serverDir, string currentDir)
         {
             this.serverDir = serverDir;
             this.currentDir = currentDir;
+            this.status = new ProgressStatus(MainWindow.mainWindow.pbarStatus,MainWindow.mainWindow.lStatus);
 
             synchonizer = new Thread(ServerDirectoryUpdate);
             synchonizer.Start();

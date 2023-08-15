@@ -48,7 +48,6 @@ namespace FridayPresentationManager
         {
             this.progressBar = progressBar;
             this.label = label;
-            //Visible(true);
         }
         public void Destroy()
         {

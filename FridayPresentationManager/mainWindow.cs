@@ -119,15 +119,19 @@ namespace FridayPresentationManager
         {
             if (settings.mainPresentationsDirectory.Length > 0)
             {
-                if (!async)
+                string[] dirs = Directory.GetDirectories(settings.mainPresentationsDirectory);
+                if (dirs.Length > 0)
                 {
-                    FillYearsList();
-                    FillDatesList();
-                }
-                else
-                {
-                    FillYearsListAsync();
-                    FillDatesListAsync();
+                    if (!async)
+                    {
+                        FillYearsList();
+                        FillDatesList();
+                    }
+                    else
+                    {
+                        FillYearsListAsync();
+                        FillDatesListAsync();
+                    }
                 }
             }
         }
@@ -176,6 +180,11 @@ namespace FridayPresentationManager
         {
             if (updater != null) { updater.Destroy(); }
             if (departments != null) { for (int i = 0; i < departments.Count(); i++) { departments[i].Destroy(); } }
+        }
+
+        private void bSynchro_Click(object sender, EventArgs e)
+        {
+            updater = new Updater(settings.serverDirectory, settings.mainPresentationsDirectory);
         }
     }
 }

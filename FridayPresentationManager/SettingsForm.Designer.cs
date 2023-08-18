@@ -95,7 +95,6 @@
             // 
             this.tbPresentationsFolderPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPresentationsFolderPath.Enabled = false;
             this.tbPresentationsFolderPath.Location = new System.Drawing.Point(196, 6);
             this.tbPresentationsFolderPath.Name = "tbPresentationsFolderPath";
             this.tbPresentationsFolderPath.Size = new System.Drawing.Size(248, 20);
@@ -137,7 +136,6 @@
             // 
             this.tbServerFolderPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbServerFolderPath.Enabled = false;
             this.tbServerFolderPath.Location = new System.Drawing.Point(196, 37);
             this.tbServerFolderPath.Name = "tbServerFolderPath";
             this.tbServerFolderPath.Size = new System.Drawing.Size(248, 20);

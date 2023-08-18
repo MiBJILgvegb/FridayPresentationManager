@@ -52,7 +52,7 @@ namespace FridayPresentationManager
         public void Destroy()
         {
             Visible();
-            Status("");
+            Status(Consts.updater_done);
             Value(this.PBLimitsMin());
         }
     }

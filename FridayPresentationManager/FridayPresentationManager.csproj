@@ -184,6 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico.ico" />
+    <None Include="Resources\synchro1.ico" />
+    <None Include="Resources\synchro.ico" />
     <EmbeddedResource Include="Resources\ico.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -70,6 +70,7 @@ namespace FridayPresentationManager
             this.cmsPB = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ttPB = new System.Windows.Forms.ToolTip(this.components);
             this.lStatus = new System.Windows.Forms.Label();
+            this.bSynchro = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDepartmentOfCityDistrictMarker)).BeginInit();
@@ -166,7 +167,7 @@ namespace FridayPresentationManager
             this.groupBox1.Controls.Add(this.cbPresentationByYearsFilter);
             this.groupBox1.Location = new System.Drawing.Point(0, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(133, 506);
+            this.groupBox1.Size = new System.Drawing.Size(60, 506);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -178,7 +179,7 @@ namespace FridayPresentationManager
             this.lbPresentationsDatesList.FormattingEnabled = true;
             this.lbPresentationsDatesList.Location = new System.Drawing.Point(6, 37);
             this.lbPresentationsDatesList.Name = "lbPresentationsDatesList";
-            this.lbPresentationsDatesList.Size = new System.Drawing.Size(121, 459);
+            this.lbPresentationsDatesList.Size = new System.Drawing.Size(48, 459);
             this.lbPresentationsDatesList.TabIndex = 1;
             this.lbPresentationsDatesList.SelectedIndexChanged += new System.EventHandler(this.lbPresentationsDatesList_SelectedIndexChanged);
             // 
@@ -189,7 +190,7 @@ namespace FridayPresentationManager
             this.cbPresentationByYearsFilter.FormattingEnabled = true;
             this.cbPresentationByYearsFilter.Location = new System.Drawing.Point(6, 10);
             this.cbPresentationByYearsFilter.Name = "cbPresentationByYearsFilter";
-            this.cbPresentationByYearsFilter.Size = new System.Drawing.Size(121, 21);
+            this.cbPresentationByYearsFilter.Size = new System.Drawing.Size(48, 21);
             this.cbPresentationByYearsFilter.TabIndex = 0;
             this.cbPresentationByYearsFilter.SelectedIndexChanged += new System.EventHandler(this.cbPresentationByYearsFilter_SelectedIndexChanged);
             // 
@@ -470,11 +471,22 @@ namespace FridayPresentationManager
             this.lStatus.Size = new System.Drawing.Size(0, 13);
             this.lStatus.TabIndex = 4;
             // 
+            // bSynchro
+            // 
+            this.bSynchro.Image = global::FridayPresentationManager.Properties.Resources.synchro;
+            this.bSynchro.Location = new System.Drawing.Point(75, 40);
+            this.bSynchro.Name = "bSynchro";
+            this.bSynchro.Size = new System.Drawing.Size(45, 45);
+            this.bSynchro.TabIndex = 5;
+            this.bSynchro.UseVisualStyleBackColor = true;
+            this.bSynchro.Click += new System.EventHandler(this.bSynchro_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 566);
+            this.Controls.Add(this.bSynchro);
             this.Controls.Add(this.lStatus);
             this.Controls.Add(this.gbDepartmentList);
             this.Controls.Add(this.groupBox1);
@@ -560,6 +572,7 @@ namespace FridayPresentationManager
         private ToolStripMenuItem settingsToolStripMenuItem;
         internal ProgressBar pbarStatus;
         internal Label lStatus;
+        private Button bSynchro;
     }
 }
 

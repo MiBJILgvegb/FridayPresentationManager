@@ -59,6 +59,7 @@ namespace FridayPresentationManager
         internal void ServerDirectoryUpdate()
         {
             status.Visible(true);
+            status.Status(Consts.updater_start);
             SynchronizeFolder(serverDir, currentDir);
             MainWindow.mainWindow.MainWindowLoad(true);
 
